@@ -125,7 +125,7 @@ export const DATA = {
       links: [
         {
           type: "Read More",
-          href: "/posts/2024/07/AIPoweredFlappyBirdGameUsingNEATAlgorithm/",
+          href: "/How-Great-Leaders-Inspire-Action",
           icon: <Icons.globe className="size-3" />,
         },
         {

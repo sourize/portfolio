@@ -171,11 +171,7 @@ export default function Page() {
                   tags={project.technologies}
                   image={project.image}
                   video={project.video}
-                  links={project.links.map(link => ({
-                    icon: link.icon,
-                    type: link.title,
-                    href: link.href
-                  }))}
+                  links={project.links}
                 />
               </BlurFade>
             ))}
