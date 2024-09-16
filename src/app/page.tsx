@@ -57,9 +57,9 @@ export default function Page() {
           </BlurFade>
           <BlurFade delay={BLUR_FADE_DELAY * 6}>
             <p className="text-sm text-muted-foreground">
-              If you wanna view my blog, check out{" "}
+              If you&apos;d like to read my blog, please visit{" "}
               <Link href="/blog" className="text-blue-500 hover:underline">
-                the blog
+                My Blog
               </Link>.
             </p>
           </BlurFade>
