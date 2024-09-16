@@ -12,24 +12,6 @@ export const DATA = {
   summary:
     "I'm an undergrad at [MSIT](https://www.linkedin.com/school/meghnadsahainstituteoftechnology/) with a passion for **Artificial Intelligence** and **Machine Learning**. My fascination with technology started early, inspired by the magic of movies like _Iron Man_, and now I'm on a mission to turn that inspiration into innovation.[Click here to know more.](/about)",
   avatarUrl: "/me.png",
-  skills: [
-    "Python",
-    "Java",
-    "C",
-    "Pandas",
-    "NumPy",
-    "Matplotlib",
-    "Scikit-learn",
-    "TensorFlow",
-    "Keras",
-    "OpenCV",
-    "Machine Learning",
-    "Deep Learning",
-    "Data Preprocessing",
-    "Data Visualization",
-    "Git (Basic)",
-    "Google Cloud Platform (GCP)",
-  ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
     { href: "/blog", icon: NotebookIcon, label: "Blog" },
@@ -323,7 +305,7 @@ export const DATA = {
       location: "",
       description:
         "Developing a project that can detect oil spills in marine environment using AIS data and Satellite Imagery.",
-      image:"",
+      image:"SIH2024-logo.webp",
       links: [],
     },
   ],
