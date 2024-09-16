@@ -4,7 +4,6 @@ import { ResumeCard } from "@/components/resume-card";
 import { TimeLineCard } from "@/components/timeline-card";
 import { Badge } from "@/components/ui/badge";
 import { SKILLS } from "@/data/skills.config";
-import { WORK } from "@/data/work.config";
 import Image from "next/image";
 import React from "react";
 import Markdown from "react-markdown";
