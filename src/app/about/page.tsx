@@ -124,7 +124,7 @@ export default function About() {
                     description={work.description}
                     dates={work.start + " - " + work.end}
                     image={work.logoUrl}
-                    links={work.href}
+                    links={[{ icon: null, title: 'Website', href: work.href }]}
                   />
                 </BlurFade>
               ))}
