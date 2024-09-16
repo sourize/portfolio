@@ -209,7 +209,11 @@ export default function Page() {
                     location={project.location}
                     dates={project.dates}
                     image={project.image}
-                    links={project.links}
+                    links={project.links.map(link => ({
+                      icon: link.icon,
+                      title: link.type,
+                      href: link.href
+                    }))}
                   />
                 </BlurFade>
               ))}
