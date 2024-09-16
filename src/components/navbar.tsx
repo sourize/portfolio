@@ -10,7 +10,7 @@ import {
 import { DATA } from "@/data/resume";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import { UserIcon } from "@heroicons/react/outline"; // Assuming you're using @heroicons/react
+import { UserIcon } from "@heroicons/react/24/outline";
 
 export default function Navbar() {
   return (
