@@ -132,7 +132,7 @@ export const DATA = {
       school: "Ram Mohan Mission High School",
       href: "",
       degree: "Class 10th",
-      logoUrl: "/rmmHS.png",
+      logoUrl: "/rmmhs.png",
       start: "2007",
       end: "2020",
     },
