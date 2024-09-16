@@ -10,6 +10,7 @@ import {
 import { DATA } from "@/data/resume";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import { UserIcon } from "@heroicons/react/outline"; // Assuming you're using @heroicons/react
 
 export default function Navbar() {
   return (
@@ -36,6 +37,25 @@ export default function Navbar() {
             </Tooltip>
           </DockIcon>
         ))}
+        <Separator orientation="vertical" className="h-full" />
+        <DockIcon>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Link
+                href="/about"
+                className={cn(
+                  buttonVariants({ variant: "ghost", size: "icon" }),
+                  "size-12"
+                )}
+              >
+                <UserIcon className="size-4" />
+              </Link>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>About Me</p>
+            </TooltipContent>
+          </Tooltip>
+        </DockIcon>
         <Separator orientation="vertical" className="h-full" />
         {Object.entries(DATA.contact.social)
           .filter(([_, social]) => social.navbar)
