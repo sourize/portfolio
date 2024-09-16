@@ -245,7 +245,7 @@ export const DATA = {
         "Data Visualization",
         "Scikit-learn",
       ],
-      llinks: [
+      links: [
         {
           type: "Read More",
           href: "/posts/2024/05/TheNifty50StockPredictionUsingMachineLearning/",
@@ -277,7 +277,7 @@ export const DATA = {
         "Data Visualization",
         "Scikit-learn",
       ],
-      llinks: [
+      links: [
         {
           type: "Read More",
           href: "/posts/2024/07/RealEstatePricePredictionUsingMachineLearning/",
@@ -309,7 +309,7 @@ export const DATA = {
         "Data Visualization",
         "Scikit-learn",
       ],
-      llinks: [
+      links: [
         {
           type: "Read More",
           href: "/posts/2024/05/TheNifty50StockPredictionUsingMachineLearning/",
