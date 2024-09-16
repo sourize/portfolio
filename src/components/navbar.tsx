@@ -48,7 +48,8 @@ export default function Navbar() {
                   "size-12"
                 )}
               >
-                <FaUser className="size-4" />
+                {/* Use an appropriate icon from your existing set */}
+                <UserIcon className="size-4" />
               </Link>
             </TooltipTrigger>
             <TooltipContent>
