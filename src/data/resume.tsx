@@ -125,7 +125,7 @@ export const DATA = {
       links: [
         {
           type: "Read More",
-          href: "/How-Great-Leaders-Inspire-Action",
+          href: "/blog/How-Great-Leaders-Inspire-Action",
           icon: <Icons.globe className="size-3" />,
         },
         {
