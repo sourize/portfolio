@@ -10,7 +10,7 @@ import {
 import { DATA } from "@/data/resume";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import { UserIcon } from "@heroicons/react/24/outline";
+import { FaUser } from "react-icons/fa";
 
 export default function Navbar() {
   return (
@@ -48,7 +48,7 @@ export default function Navbar() {
                   "size-12"
                 )}
               >
-                <UserIcon className="size-4" />
+                <FaUser className="size-4" />
               </Link>
             </TooltipTrigger>
             <TooltipContent>
