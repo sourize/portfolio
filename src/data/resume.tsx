@@ -104,7 +104,6 @@ export const DATA = {
   education: [
     {
       school: "Meghnad Saha Institute of Technology",
-      location: "Kolkata, India",
       href: "https://msit.edu.in",
       degree: "B.Tech in Computer Science and Engineering\nSpecialization in AI & ML",
       logoUrl: "/msit.png",
@@ -113,7 +112,6 @@ export const DATA = {
     },
     {
       school: "DPS Ruby Park",
-      location: "Kolkata, India",
       href: "https://www.dpskolkata.com/",
       degree: "Class 12th",
       logoUrl: "/dpsrpk.png",
@@ -122,7 +120,6 @@ export const DATA = {
     },
     {
       school: "Ram Mohan Mission High School",
-      location: "Kolkata, India",
       href: "",
       degree: "Class 10th",
       logoUrl: "/rmmhs.png",

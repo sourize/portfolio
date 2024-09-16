@@ -99,7 +99,6 @@ export default function About() {
                 logoUrl={education.logoUrl}
                 altText={education.school}
                 title={education.school}
-                location={education.location}
                 subtitle={education.degree}
                 period={`${education.start} - ${education.end}`}
               />
