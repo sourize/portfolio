@@ -10,7 +10,7 @@ export const DATA = {
   description:
     "An Aspiring ML Engineer",
   summary:
-    "I'm an undergrad at [MSIT](https://www.linkedin.com/school/meghnadsahainstituteoftechnology/) with a passion for **Artificial Intelligence** and **Machine Learning**. My fascination with technology started early, inspired by the magic of movies like _Iron Man_, and now I'm on a mission to turn that inspiration into innovation.[Click here to know more.](about)",
+    "I'm an undergrad at [MSIT](https://www.linkedin.com/school/meghnadsahainstituteoftechnology/) with a passion for **Artificial Intelligence** and **Machine Learning**. My fascination with technology started early, inspired by the magic of movies like _Iron Man_, and now I'm on a mission to turn that inspiration into innovation.[Click here to know more.](about.mdx)",
   avatarUrl: "/me.png",
   skills: [
     "Python",
