@@ -3,13 +3,13 @@ import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { ResumeCard } from "@/components/resume-card";
 import { TimeLineCard } from "@/components/timeline-card";
 import { Badge } from "@/components/ui/badge";
-import { DATA } from "@/data/config/site.config";
-import { SKILLS } from "@/data/config/skills.config";
-import { WORK } from "@/data/config/work.config";
+import { SKILLS } from "@/data/skills.config";
+import { WORK } from "@/data/work.config";
 import Image from "next/image";
 import React from "react";
 import Markdown from "react-markdown";
 import { INFO } from "./about";
+import { DATA } from "@/data/resume";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -48,7 +48,7 @@ export default function About() {
           </Markdown>
         </BlurFade>
       </section>
-      <section id="career">
+      <section id="whyAIML">
         <BlurFade delay={BLUR_FADE_DELAY * 3}>
           <h2 className="text-xl font-bold">Why AI and ML?</h2>
         </BlurFade>
@@ -115,7 +115,7 @@ export default function About() {
           </BlurFade>
           <BlurFade delay={BLUR_FADE_DELAY * 14}>
             <ul className="mb-4 ml-4 divide-y divide-dashed border-l">
-              {WORK.map((work, id) => (
+              {DATA.work.map((work, id) => (
                 <BlurFade
                   key={work.title + work.dates}
                   delay={BLUR_FADE_DELAY * 6 + id * 0.05}
