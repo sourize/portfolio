@@ -206,7 +206,7 @@ export default function Page() {
                 Get in Touch
               </h2>
               <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                I'm always excited to collaborate on projects or just chat about tech. Reach out anytime:{" "}
+                I&apos;m always excited to collaborate on projects or just chat about tech. Reach out anytime:{" "}
                 <Link
                   href={DATA.contact.social.X.url}
                   className="text-blue-500 hover:underline"
@@ -227,7 +227,7 @@ export default function Page() {
                 >
                   Email
                 </Link>
-                . I'll respond whenever I can.
+                . I&apos;ll respond whenever I can.
               </p>
             </div>
           </BlurFade>
