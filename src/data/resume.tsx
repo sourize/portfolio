@@ -309,7 +309,7 @@ export const DATA = {
       links: [
         {
           type: "Website",
-          href: "https://www.sih.gov.in/",
+          href: "https://www.sih.gov.in",
           icon: <Icons.globe className="size-3" />,
         },
       ],
