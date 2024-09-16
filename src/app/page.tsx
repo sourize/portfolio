@@ -173,7 +173,7 @@ export default function Page() {
                   video={project.video}
                   links={project.links.map(link => ({
                     icon: link.icon,
-                    title: link.type,
+                    type: link.title,
                     href: link.href
                   }))}
                 />
