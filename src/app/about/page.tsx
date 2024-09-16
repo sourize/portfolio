@@ -135,7 +135,7 @@ export default function About() {
       </section>
       <section id="connect">
         <BlurFade delay={BLUR_FADE_DELAY * 3}>
-          <h2 className="text-xl font-bold">Hook with me</h2>
+          <h2 className="text-xl font-bold">Let's connect</h2>
         </BlurFade>
         <BlurFade delay={BLUR_FADE_DELAY * 4}>
           <Markdown className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
