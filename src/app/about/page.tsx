@@ -125,6 +125,7 @@ export default function About() {
                     dates={work.start + " - " + work.end}
                     image={work.logoUrl}
                     links={[{ icon: null, title: 'Website', href: work.href }]}
+                    location={work.location || 'Remote'}
                   />
                 </BlurFade>
               ))}
