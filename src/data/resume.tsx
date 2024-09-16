@@ -107,8 +107,7 @@ export const DATA = {
       description:
         "- Conducted in-depth analysis and visualization of stock market trends using large, complex datasets\n" +
         "- Generated actionable, data-driven insights to inform strategic decision-making processes\n" +
-        "- Collaborated within a multidisciplinary team to refine and enhance data analysis methodologies\n" +
-        "[View Project on GitHub](https://github.com/Nexalyze){: .btn .btn--info} [View Certificate](https://drive.google.com/file/d/1SuaJ0b2P5EgZkDH_D8b4AQpKMd0qZIxT/view){: .btn .btn--success}",
+        "- Collaborated within a multidisciplinary team to refine and enhance data analysis methodologies",
     },
   ],
   education: [
