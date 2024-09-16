@@ -87,7 +87,7 @@ export const DATA = {
     {
       school: "Meghnad Saha Institute of Technology",
       href: "https://msit.edu.in",
-      degree: "B.Tech in Computer Science and Engineering\nSpecialization in AI & ML",
+      degree: "B.Tech in CSE\nSpecialization in AI & ML",
       logoUrl: "/msit.png",
       start: "2022",
       end: "2026",
