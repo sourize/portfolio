@@ -53,28 +53,16 @@ export default function Page() {
       <section id="blogs">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 5}>
-            <h2 className="text-xl font-bold">Blog Posts</h2>
+            <h2 className="text-xl font-bold">Blog</h2>
           </BlurFade>
-          {blogPosts.length > 0 ? (
-            blogPosts.map((post, id) => (
-              <BlurFade
-                key={post.title}
-                delay={BLUR_FADE_DELAY * 6 + id * 0.05}
-              >
-                <div className="p-4 border rounded-lg">
-                  <h3 className="text-lg font-semibold">{post.title}</h3>
-                  <p className="text-sm text-muted-foreground">{post.summary}</p>
-                  <Link href={`/blog/${post.slug}`} className="text-blue-500 hover:underline">
-                    Read more
-                  </Link>
-                </div>
-              </BlurFade>
-            ))
-          ) : (
-            <BlurFade delay={BLUR_FADE_DELAY * 6}>
-              <p className="text-sm text-muted-foreground">No blog posts available.</p>
-            </BlurFade>
-          )}
+          <BlurFade delay={BLUR_FADE_DELAY * 6}>
+            <p className="text-sm text-muted-foreground">
+              If you wanna view my blog, check out{" "}
+              <Link href="/blog" className="text-blue-500 hover:underline">
+                the blog
+              </Link>.
+            </p>
+          </BlurFade>
         </div>
       </section>
       <section id="work">
