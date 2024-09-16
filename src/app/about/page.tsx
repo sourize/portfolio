@@ -115,17 +115,16 @@ export default function About() {
             <ul className="mb-4 ml-4 divide-y divide-dashed border-l">
               {DATA.work.map((work, id) => (
                 <BlurFade
-                  key={work.title + work.dates}
+                  key={work.company + work.start + work.end}
                   delay={BLUR_FADE_DELAY * 6 + id * 0.05}
                 >
                   <TimeLineCard
-                    title={work.title}
-                    role={work.role}
+                    title={work.company}
+                    role={work.title}
                     description={work.description}
-                    location={work.location}
-                    dates={work.dates}
-                    image={work.image}
-                    links={work.links}
+                    dates={work.start + " - " + work.end}
+                    image={work.logoUrl}
+                    links={work.href}
                   />
                 </BlurFade>
               ))}
