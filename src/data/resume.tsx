@@ -47,7 +47,7 @@ export const DATA = {
         url: "#",
         icon: Icons.email,
 
-        navbar: true,
+        navbar: false,
       },
     },
   },
