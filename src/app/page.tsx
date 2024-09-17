@@ -39,7 +39,6 @@ export default function Page() {
           throw new Error("Failed to fetch blog posts");
         }
         const data = await response.json();
-        console.log("Fetched blog posts:", data);
         setBlogPosts(data);
       } catch (error) {
         console.error("Error fetching blog posts:", error);
@@ -100,7 +99,7 @@ export default function Page() {
                   My thoughts on ... everything
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  I love writing about tech, programming, and life in general. I
+                  I write about tech, projects, and other random stuff. I
                   hope you will click on them by mistake. Here are a few of my
                   latest articles. You can find more on my{" "}
                   <Link href="/blog" className="text-blue-500 hover:underline">
@@ -116,15 +115,12 @@ export default function Page() {
               <ul className="divide-y divide-dashed">
                 {blogPosts
                   .filter((post) => {
-                    console.log('Post featured:', post.metadata.featured);
                     return post.metadata.featured;
                   })
                   .sort((a, b) => {
-                    console.log('Sorting dates:', a.metadata.publishedAt, b.metadata.publishedAt);
                     return new Date(b.metadata.publishedAt).getTime() - new Date(a.metadata.publishedAt).getTime();
                   })
                   .map((post, id) => {
-                    console.log('Rendering post:', post.slug);
                     return (
                       <BlurFade
                         key={post.slug}
