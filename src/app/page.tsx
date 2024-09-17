@@ -51,17 +51,25 @@ export default function Page() {
         </BlurFade>
       </section>
       <section id="blogs">
-        <div className="flex min-h-0 flex-col gap-y-3">
-          <BlurFade delay={BLUR_FADE_DELAY * 5}>
-            <h2 className="text-xl font-bold">Blog</h2>
-          </BlurFade>
-          <BlurFade delay={BLUR_FADE_DELAY * 6}>
-            <p className="text-sm text-muted-foreground">
-              If you&apos;d like to read my blog, please visit{" "}
-              <Link href="/blog" className="text-blue-500 hover:underline">
-                My Blog
-              </Link>.
-            </p>
+        <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full py-12">
+          <BlurFade delay={BLUR_FADE_DELAY * 18}>
+            <div className="space-y-3">
+              <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+                Blogs
+              </div>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                Check out my blogs!!
+              </h2>
+              <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                I&apos;ve written some blogs on my learning journey, AIML, and some other stuff.
+                <Link
+                  href="/blog"
+                  className="text-blue-500 hover:underline"
+                >
+                  Check them out!!
+                </Link>
+              </p>
+            </div>
           </BlurFade>
         </div>
       </section>
