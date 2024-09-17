@@ -56,6 +56,13 @@ export const DATA = {
     {
       company: "Prodigy Infotech",
       href: "https://www.linkedin.com/company/prodigy-infotech/",
+      links: [
+        {
+          type: "GitHub",
+          href: "https://github.com/sourize/Data-Analysis-of-NIFTY-50-Dataset",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
       badges: [],
       location: "Remote",
       title: "Machine Learning Intern",
