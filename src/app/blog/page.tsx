@@ -10,37 +10,59 @@ export const metadata = {
 const BLUR_FADE_DELAY = 0.04;
 
 export default async function BlogPage() {
-  const posts = await getBlogPosts();
+  const BLOGS = await getBlogPosts();
 
   return (
-    <section>
-      <BlurFade delay={BLUR_FADE_DELAY}>
-        <h1 className="font-medium text-2xl mb-8 tracking-tighter">Blog</h1>
-      </BlurFade>
-      {posts
-        .sort((a, b) => {
-          if (
-            new Date(a.metadata.publishedAt) > new Date(b.metadata.publishedAt)
-          ) {
-            return -1;
-          }
-          return 1;
-        })
-        .map((post, id) => (
-          <BlurFade delay={BLUR_FADE_DELAY * 2 + id * 0.05} key={post.slug}>
-            <Link
-              className="flex flex-col space-y-1 mb-4"
-              href={`/blog/${post.slug}`}
-            >
-              <div className="w-full flex flex-col">
-                <p className="tracking-tight">{post.metadata.title}</p>
-                <p className="h-6 text-xs text-muted-foreground">
-                  {post.metadata.publishedAt}
+    <div className="flex flex-col min-h-[100dvh]">
+      <section id="blogs">
+        <div className="space-y-12 w-full">
+          <BlurFade delay={BLUR_FADE_DELAY * 11}>
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                  I write sometimes
+                </h2>
+                <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  Exploring tech, life, and everything in between. Here are my
+                  thoughts on everything. I hope you enjoy reading them.
                 </p>
               </div>
-            </Link>
+            </div>
           </BlurFade>
-        ))}
-    </section>
+          <div className="flex flex-col gap-3 w-full">
+            <BlurFade delay={BLUR_FADE_DELAY * 14}>
+              <ul className="divide-y divide-dashed">
+                {BLOGS.sort((a, b) => {
+                  if (a && b && a.metadata && b.metadata) {
+                    return (
+                      new Date(b.metadata.publishedAt).getTime() -
+                      new Date(a.metadata.publishedAt).getTime()
+                    );
+                  }
+                  return 0;
+                }).map(
+                  (post, id) =>
+                    post && (
+                      <BlurFade
+                        key={post.slug}
+                        delay={BLUR_FADE_DELAY * 12 + id * 0.05}
+                      >
+                        <BlogCard
+                          href={`/blog/${post.slug}`}
+                          title={post.metadata.title}
+                          description={post.metadata.summary}
+                          publishedAt={post.metadata.publishedAt}
+                          iconUrl={post.metadata.icon}
+                          readTime={post.metadata.readTime}
+                        />
+                      </BlurFade>
+                    ),
+                )}
+              </ul>
+            </BlurFade>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 }
