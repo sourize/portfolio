@@ -64,7 +64,7 @@ export const DATA = {
       end: "May 2024",
       description:
         "- Spearheaded four diverse machine learning projects, focusing on:\n- Image classification\n- Predictive modeling\n- Engineered and optimized advanced ML algorithms, significantly enhancing model performance\n- Collaborated effectively with cross-functional teams to deliver high-quality solutions aligned with project objectives",
-      link: "https://github.com/sourize/Data-Analysis-of-NIFTY-50-Dataset",
+      certificate: "https://drive.google.com/file/d/1Bm0SkUWhtAguFByzbxeUJNCFfG8pfwhw/view?usp=sharing",
     },
     {
       company: "Academy of Skill Development",
@@ -77,6 +77,8 @@ export const DATA = {
       end: "Feb 2024",
       description:
         "- Conducted in-depth analysis and visualization of stock market trends using large, complex datasets\n- Generated actionable, data-driven insights to inform strategic decision-making processes\n- Collaborated within a multidisciplinary team to refine and enhance data analysis methodologies",
+        link: "https://github.com/sourize/Data-Analysis-of-NIFTY-50-Dataset",
+        certificate: "https://drive.google.com/file/d/1SuaJ0b2P5EgZkDH_D8b4AQpKMd0qZIxT/view?usp=drive_link",
     },
   ],
   education: [
