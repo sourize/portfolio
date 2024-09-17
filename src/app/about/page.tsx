@@ -29,8 +29,8 @@ export default function About() {
         </BlurFade>
         <BlurFade delay={BLUR_FADE_DELAY * 3}>
           <Image
-            src="/giphy1.gif"
-            alt="Neural Network"
+            src="/land.jpg"
+            alt="Landscape"
             width={1920}
             height={1080}
             className="rounded-xl w-full h-auto object-cover max-h-[300px]"
