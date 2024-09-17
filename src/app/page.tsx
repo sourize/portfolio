@@ -28,7 +28,7 @@ interface BlogsI {
   };
 }
 
-export default function Home() {
+export default function Page() {
   const [blogPosts, setBlogPosts] = useState<BlogsI[]>([]);
 
   useEffect(() => {
