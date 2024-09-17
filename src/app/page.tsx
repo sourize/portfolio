@@ -39,6 +39,7 @@ export default function Page() {
           throw new Error("Failed to fetch blog posts");
         }
         const data = await response.json();
+        console.log("Fetched blog posts:", data); // Add this line
         setBlogPosts(data);
       } catch (error) {
         console.error("Error fetching blog posts:", error);
@@ -112,35 +113,39 @@ export default function Page() {
           </BlurFade>
           <div className="flex flex-col gap-3 w-full">
             <BlurFade delay={BLUR_FADE_DELAY * 14}>
-              <ul className="divide-y divide-dashed">
-                {blogPosts
-                  .filter((post) => {
-                    console.log('Post featured:', post.metadata.featured);
-                    return post.metadata.featured;
-                  })
-                  .sort((a, b) => {
-                    console.log('Sorting dates:', a.metadata.publishedAt, b.metadata.publishedAt);
-                    return new Date(b.metadata.publishedAt).getTime() - new Date(a.metadata.publishedAt).getTime();
-                  })
-                  .map((post, id) => {
-                    console.log('Rendering post:', post.slug);
-                    return (
-                      <BlurFade
-                        key={post.slug}
-                        delay={BLUR_FADE_DELAY * 12 + id * 0.05}
-                      >
-                        <BlogCard
-                          href={`/blog/${post.slug}`}
-                          title={post.metadata.title}
-                          description={post.metadata.summary}
-                          publishedAt={post.metadata.publishedAt}
-                          iconUrl={post.metadata.icon}
-                          readTime={post.metadata.readTime}
-                        />
-                      </BlurFade>
-                    );
-                  })}
-              </ul>
+              {blogPosts.length > 0 ? (
+                <ul className="divide-y divide-dashed">
+                  {blogPosts
+                    .filter((post) => {
+                      console.log('Post featured:', post.metadata.featured);
+                      return post.metadata.featured;
+                    })
+                    .sort((a, b) => {
+                      console.log('Sorting dates:', a.metadata.publishedAt, b.metadata.publishedAt);
+                      return new Date(b.metadata.publishedAt).getTime() - new Date(a.metadata.publishedAt).getTime();
+                    })
+                    .map((post, id) => {
+                      console.log('Rendering post:', post.slug);
+                      return (
+                        <BlurFade
+                          key={post.slug}
+                          delay={BLUR_FADE_DELAY * 12 + id * 0.05}
+                        >
+                          <BlogCard
+                            href={`/blog/${post.slug}`}
+                            title={post.metadata.title}
+                            description={post.metadata.summary}
+                            publishedAt={post.metadata.publishedAt}
+                            iconUrl={post.metadata.icon}
+                            readTime={post.metadata.readTime}
+                          />
+                        </BlurFade>
+                      );
+                    })}
+                </ul>
+              ) : (
+                <p>No blog posts available.</p>
+              )}
             </BlurFade>
           </div>
         </div>
