@@ -44,7 +44,7 @@ export const DATA = {
       },
       email: {
         name: "Send Email",
-        url: "#",
+        url: "contact.sourishchatterjee@gmail.com",
         icon: Icons.email,
 
         navbar: true,
