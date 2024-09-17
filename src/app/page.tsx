@@ -11,12 +11,23 @@ import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown";
 import { useState, useEffect } from 'react';
-import { Blogs } from '@/data/blogs';
 
 const BLUR_FADE_DELAY = 0.04;
 
+interface BlogsI {
+  slug: string;
+  metadata: {
+    title: string;
+    summary: string;
+    publishedAt: string;
+    icon: string;
+    featured: boolean;
+    readTime: string;
+  };
+}
+
 export default function Page() {
-  const [blogPosts, setBlogPosts] = useState<Blogs[]>([]);
+  const [blogPosts, setBlogPosts] = useState<BlogsI[]>([]);
 
   useEffect(() => {
     const fetchBlogPosts = async () => {
@@ -100,30 +111,31 @@ export default function Page() {
           <div className="flex flex-col gap-3 w-full">
             <BlurFade delay={BLUR_FADE_DELAY * 19}>
               <ul className="divide-y divide-dashed">
-                {blogPosts
-                  .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
-                  .slice(0, 3) // Display only the 3 most recent posts
+                {(blogPosts as BlogsI[])
+                  .filter((post) => post.metadata.featured)
+                  .sort((a, b) => new Date(b.metadata.publishedAt).getTime() - new Date(a.metadata.publishedAt).getTime())
+                  .slice(0, 3)
                   .map((post, index) => (
-                    <BlurFade key={post.id} delay={BLUR_FADE_DELAY * 19 + index * 0.05}>
+                    <BlurFade key={post.slug} delay={BLUR_FADE_DELAY * 19 + index * 0.05}>
                       <li className="py-4">
                         <Link href={`/blog/${post.slug}`} className="block hover:bg-muted/50 rounded-lg transition-colors p-4">
                           <div className="flex items-center space-x-4">
                             <div className="flex-shrink-0">
-                              {post.icon && (
-                                <img src={post.icon} alt="" className="w-12 h-12 rounded-full" />
+                              {post.metadata.icon && (
+                                <img src={post.metadata.icon} alt="" className="w-12 h-12 rounded-full" />
                               )}
                             </div>
                             <div className="flex-grow">
-                              <h3 className="text-lg font-semibold">{post.title}</h3>
-                              <p className="text-sm text-muted-foreground">{post.excerpt}</p>
+                              <h3 className="text-lg font-semibold">{post.metadata.title}</h3>
+                              <p className="text-sm text-muted-foreground">{post.metadata.summary}</p>
                             </div>
                           </div>
                           <div className="mt-2 flex items-center text-xs text-muted-foreground">
-                            <span>{new Date(post.date).toLocaleDateString()}</span>
-                            {post.readTime && (
+                            <span>{new Date(post.metadata.publishedAt).toLocaleDateString()}</span>
+                            {post.metadata.readTime && (
                               <>
                                 <span className="mx-2">•</span>
-                                <span>{post.readTime} min read</span>
+                                <span>{post.metadata.readTime} min read</span>
                               </>
                             )}
                           </div>
