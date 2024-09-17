@@ -56,7 +56,7 @@ export const DATA = {
     {
       company: "Prodigy Infotech",
       href: "https://www.linkedin.com/company/prodigy-infotech/",
-      links: [
+      linked: [
         {
           type: "GitHub",
           href: "https://github.com/sourize/Data-Analysis-of-NIFTY-50-Dataset",
