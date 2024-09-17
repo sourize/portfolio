@@ -114,27 +114,32 @@ export default function Home() {
             <BlurFade delay={BLUR_FADE_DELAY * 14}>
               <ul className="divide-y divide-dashed">
                 {blogPosts
-                  .filter((post) => post.metadata.featured)
-                  .sort(
-                    (a, b) =>
-                      new Date(b.metadata.publishedAt).getTime() -
-                      new Date(a.metadata.publishedAt).getTime()
-                  )
-                  .map((post, id) => (
-                    <BlurFade
-                      key={post.slug}
-                      delay={BLUR_FADE_DELAY * 12 + id * 0.05}
-                    >
-                      <BlogCard
-                        href={`/blog/${post.slug}`}
-                        title={post.metadata.title}
-                        description={post.metadata.summary}
-                        publishedAt={post.metadata.publishedAt}
-                        iconUrl={post.metadata.icon}
-                        readTime={post.metadata.readTime}
-                      />
-                    </BlurFade>
-                  ))}
+                  .filter((post) => {
+                    console.log('Post featured:', post.metadata.featured);
+                    return post.metadata.featured;
+                  })
+                  .sort((a, b) => {
+                    console.log('Sorting dates:', a.metadata.publishedAt, b.metadata.publishedAt);
+                    return new Date(b.metadata.publishedAt).getTime() - new Date(a.metadata.publishedAt).getTime();
+                  })
+                  .map((post, id) => {
+                    console.log('Rendering post:', post.slug);
+                    return (
+                      <BlurFade
+                        key={post.slug}
+                        delay={BLUR_FADE_DELAY * 12 + id * 0.05}
+                      >
+                        <BlogCard
+                          href={`/blog/${post.slug}`}
+                          title={post.metadata.title}
+                          description={post.metadata.summary}
+                          publishedAt={post.metadata.publishedAt}
+                          iconUrl={post.metadata.icon}
+                          readTime={post.metadata.readTime}
+                        />
+                      </BlurFade>
+                    );
+                  })}
               </ul>
             </BlurFade>
           </div>
