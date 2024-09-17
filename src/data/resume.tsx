@@ -63,11 +63,7 @@ export const DATA = {
       start: "Apr 2024",
       end: "May 2024",
       description:
-        "- Spearheaded four diverse machine learning projects, focusing on:\n" +
-        "  • Image classification\n" +
-        "  • Predictive modeling\n" +
-        "- Engineered and optimized advanced ML algorithms, significantly enhancing model performance\n" +
-        "- Collaborated effectively with cross-functional teams to deliver high-quality solutions aligned with project objectives",
+        "- Spearheaded four diverse machine learning projects, focusing on:\n- Image classification\n- Predictive modeling\n- Engineered and optimized advanced ML algorithms, significantly enhancing model performance\n- Collaborated effectively with cross-functional teams to deliver high-quality solutions aligned with project objectives",
     },
     {
       company: "Academy of Skill Development",
@@ -79,9 +75,7 @@ export const DATA = {
       start: "Jan 2024",
       end: "Feb 2024",
       description:
-        "- Conducted in-depth analysis and visualization of stock market trends using large, complex datasets\n" +
-        "- Generated actionable, data-driven insights to inform strategic decision-making processes\n" +
-        "- Collaborated within a multidisciplinary team to refine and enhance data analysis methodologies",
+        "- Conducted in-depth analysis and visualization of stock market trends using large, complex datasets\n- Generated actionable, data-driven insights to inform strategic decision-making processes\n- Collaborated within a multidisciplinary team to refine and enhance data analysis methodologies",
     },
   ],
   education: [
