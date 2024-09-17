@@ -26,7 +26,7 @@ export const DATA = {
         url: "https://github.com/sourize",
         icon: Icons.github,
 
-        navbar: true,
+        navbar: false,
       },
       LinkedIn: {
         name: "LinkedIn",
@@ -47,7 +47,7 @@ export const DATA = {
         url: "#",
         icon: Icons.email,
 
-        navbar: false,
+        navbar: true,
       },
     },
   },
