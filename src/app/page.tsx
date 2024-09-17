@@ -9,10 +9,33 @@ import { SKILLS } from "@/data/skills.config";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown";
+import { useState, useEffect } from 'react';
+import { Blogs } from '@/data/blogs';
 
 const BLUR_FADE_DELAY = 0.04;
 
 export default function Page() {
+  const [blogPosts, setBlogPosts] = useState<Blogs[]>([]);
+
+  useEffect(() => {
+    const fetchBlogPosts = async () => {
+      try {
+        const response = await fetch("/api/blogs");
+        if (!response.ok) {
+          throw new Error("Failed to fetch blog posts");
+        }
+        const data = await response.json();
+        setBlogPosts(data);
+      } catch (error) {
+        console.error("Error fetching blog posts:", error);
+      }
+    };
+
+    if (blogPosts.length === 0) {
+      fetchBlogPosts();
+    }
+  }, [blogPosts.length]);
+
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10">
       <section id="hero">
@@ -51,26 +74,65 @@ export default function Page() {
         </BlurFade>
       </section>
       <section id="blogs">
-        <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full py-12">
+        <div className="space-y-12 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 18}>
-            <div className="space-y-3">
-              <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-                Blogs
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+                  Latest Articles
+                </div>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                  My thoughts on ... everything
+                </h2>
+                <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  I love writing about tech, programming, and life in general. I
+                  hope you will click on them by mistake. Here are a few of my
+                  latest articles. You can find more on my{" "}
+                  <Link href="/blog" className="text-blue-500 hover:underline">
+                    blog page
+                  </Link>
+                  .
+                </p>
               </div>
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                Check out my blogs!!
-              </h2>
-              <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                I&apos;ve written some blogs on my learning journey, projects, ML, and some other stuff.{" "} 
-                <Link
-                  href="/blog"
-                  className="text-blue-500 hover:underline"
-                >
-                  Check them out!!
-                </Link>
-              </p>
             </div>
           </BlurFade>
+          <div className="flex flex-col gap-3 w-full">
+            <BlurFade delay={BLUR_FADE_DELAY * 19}>
+              <ul className="divide-y divide-dashed">
+                {blogPosts
+                  .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+                  .slice(0, 3) // Display only the 3 most recent posts
+                  .map((post, index) => (
+                    <BlurFade key={post.id} delay={BLUR_FADE_DELAY * 19 + index * 0.05}>
+                      <li className="py-4">
+                        <Link href={`/blog/${post.slug}`} className="block hover:bg-muted/50 rounded-lg transition-colors p-4">
+                          <div className="flex items-center space-x-4">
+                            <div className="flex-shrink-0">
+                              {post.icon && (
+                                <img src={post.icon} alt="" className="w-12 h-12 rounded-full" />
+                              )}
+                            </div>
+                            <div className="flex-grow">
+                              <h3 className="text-lg font-semibold">{post.title}</h3>
+                              <p className="text-sm text-muted-foreground">{post.excerpt}</p>
+                            </div>
+                          </div>
+                          <div className="mt-2 flex items-center text-xs text-muted-foreground">
+                            <span>{new Date(post.date).toLocaleDateString()}</span>
+                            {post.readTime && (
+                              <>
+                                <span className="mx-2">•</span>
+                                <span>{post.readTime} min read</span>
+                              </>
+                            )}
+                          </div>
+                        </Link>
+                      </li>
+                    </BlurFade>
+                  ))}
+              </ul>
+            </BlurFade>
+          </div>
         </div>
       </section>
       <section id="work">
