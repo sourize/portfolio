@@ -61,7 +61,7 @@ export default function Page() {
                 Check out my blogs!!
               </h2>
               <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                I&apos;ve written some blogs on my learning journey, projects, ML, and some other stuff.
+                I&apos;ve written some blogs on my learning journey, projects, ML, and some other stuff. 
                 <Link
                   href="/blog"
                   className="text-blue-500 hover:underline"
