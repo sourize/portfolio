@@ -3,7 +3,7 @@ import { HomeIcon, NotebookIcon } from "lucide-react";
 
 export const INFO = {
   Sourish: 
-  "I'm a tech enthusiast with a deep passion for AI and ML. My journey began at Ram Mohan Mission High School, where my curiosity for technology first took root. It blossomed into a full-fledged passion at DPS Ruby Park as I delved into the world of Computer Science.",
+  "I'm a tech enthusiast with a deep passion for AI and ML. My journey began at Ram Mohan Mission High School, where my curiosity for technology first took root. It blossomed into a full-fledged passion at DPS Ruby Park as I delved into the world of Computer Science.\n- Checkout [my Resume](/Sourish_Chatterjee.pdf)",
 
   WhyAIandML: "It all started with a spark—a fascination with how technology could unlock the mysteries of the universe, inspired by the genius of _Tony Stark_. Today, I channel that spark into\n- Crafting models that push the boundaries of Artificial Intelligence\n- Predicting stock markets\n- Evolving game AI",
 
