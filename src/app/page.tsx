@@ -1,3 +1,6 @@
+"use client";
+
+import { useState, useEffect } from 'react';
 import { HackathonCard } from "@/components/hackathon-card";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
@@ -5,16 +8,14 @@ import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
-import { BlogCard } from "@/components/blog-card";
 import { SKILLS } from "@/data/skills.config";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown";
-import { useState, useEffect } from 'react';
 
 const BLUR_FADE_DELAY = 0.04;
 
-interface BlogsI {
+interface BlogsI { 
   slug: string;
   metadata: {
     title: string;
@@ -26,7 +27,7 @@ interface BlogsI {
   };
 }
 
-export default function Page() {
+export default function Home() {
   const [blogPosts, setBlogPosts] = useState<BlogsI[]>([]);
 
   useEffect(() => {
@@ -111,7 +112,7 @@ export default function Page() {
           <div className="flex flex-col gap-3 w-full">
             <BlurFade delay={BLUR_FADE_DELAY * 19}>
               <ul className="divide-y divide-dashed">
-                {(blogPosts as BlogsI[])
+                {blogPosts
                   .filter((post) => post.metadata.featured)
                   .sort((a, b) => new Date(b.metadata.publishedAt).getTime() - new Date(a.metadata.publishedAt).getTime())
                   .slice(0, 3)
