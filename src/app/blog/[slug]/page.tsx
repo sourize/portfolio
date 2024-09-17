@@ -19,26 +19,13 @@ export async function generateMetadata({
 }): Promise<Metadata | undefined> {
   let post = await getPost(params.slug);
 
-  // Add a null check for post
-  if (!post) {
-    return {
-      title: 'Post Not Found',
-      description: 'The requested blog post could not be found.',
-    };
-  }
-
   let {
     title,
     publishedAt: publishedTime,
     summary: description,
     image,
   } = post.metadata;
-
-  // Ensure these values are strings
-  title = String(title);
-  description = String(description);
-  
-  let ogImage = image ? `${DATA.url}${image}` : `${DATA.url}/og?title=${encodeURIComponent(title)}`;
+  let ogImage = image ? `${DATA.url}${image}` : `${DATA.url}/og?title=${title}`;
 
   return {
     title,
@@ -77,9 +64,6 @@ export default async function Blog({
     notFound();
   }
 
-  // Ensure post.source is a string
-  const postContent = typeof post.source === 'string' ? post.source : '';
-
   return (
     <section id="blog">
       <script
@@ -116,7 +100,7 @@ export default async function Blog({
       </div>
       <article
         className="prose dark:prose-invert"
-        dangerouslySetInnerHTML={{ __html: postContent }}
+        dangerouslySetInnerHTML={{ __html: post.source }}
       ></article>
     </section>
   );
