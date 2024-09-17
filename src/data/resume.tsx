@@ -56,13 +56,6 @@ export const DATA = {
     {
       company: "Prodigy Infotech",
       href: "https://www.linkedin.com/company/prodigy-infotech/",
-      linked: [
-        {
-          type: "GitHub",
-          href: "https://github.com/sourize/Data-Analysis-of-NIFTY-50-Dataset",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
       badges: [],
       location: "Remote",
       title: "Machine Learning Intern",
@@ -71,6 +64,7 @@ export const DATA = {
       end: "May 2024",
       description:
         "- Spearheaded four diverse machine learning projects, focusing on:\n- Image classification\n- Predictive modeling\n- Engineered and optimized advanced ML algorithms, significantly enhancing model performance\n- Collaborated effectively with cross-functional teams to deliver high-quality solutions aligned with project objectives",
+      link: "https://github.com/sourize/Data-Analysis-of-NIFTY-50-Dataset",
     },
     {
       company: "Academy of Skill Development",

@@ -126,7 +126,7 @@ export default function About() {
                     image={work.logoUrl}
                     links={[
                       { icon: null, title: 'Website', href: work.href },
-                      { icon: null, title: "GitHub", href: work.linked[0].href }
+                      ...(work.link ? [{ icon: null, title: "GitHub", href: work.link }] : [])
                     ]}
                     location={work.location || 'Remote'}
                   />
