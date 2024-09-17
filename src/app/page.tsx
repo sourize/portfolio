@@ -39,6 +39,7 @@ export default function Page() {
           throw new Error("Failed to fetch blog posts");
         }
         const data = await response.json();
+        console.log("Fetched blog posts:", data);
         setBlogPosts(data);
       } catch (error) {
         console.error("Error fetching blog posts:", error);
