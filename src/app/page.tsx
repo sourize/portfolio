@@ -12,10 +12,11 @@ import { SKILLS } from "@/data/skills.config";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown";
+import { BlogCard } from "@/components/blog-card";
 
 const BLUR_FADE_DELAY = 0.04;
 
-interface BlogsI { 
+interface BlogsI {
   slug: string;
   metadata: {
     title: string;
@@ -88,7 +89,7 @@ export default function Home() {
       </section>
       <section id="blogs">
         <div className="space-y-12 w-full py-12">
-          <BlurFade delay={BLUR_FADE_DELAY * 18}>
+          <BlurFade delay={BLUR_FADE_DELAY * 11}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
@@ -97,7 +98,7 @@ export default function Home() {
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
                   My thoughts on ... everything
                 </h2>
-                <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   I love writing about tech, programming, and life in general. I
                   hope you will click on them by mistake. Here are a few of my
                   latest articles. You can find more on my{" "}
@@ -110,38 +111,28 @@ export default function Home() {
             </div>
           </BlurFade>
           <div className="flex flex-col gap-3 w-full">
-            <BlurFade delay={BLUR_FADE_DELAY * 19}>
+            <BlurFade delay={BLUR_FADE_DELAY * 14}>
               <ul className="divide-y divide-dashed">
                 {blogPosts
                   .filter((post) => post.metadata.featured)
-                  .sort((a, b) => new Date(b.metadata.publishedAt).getTime() - new Date(a.metadata.publishedAt).getTime())
-                  .slice(0, 3)
-                  .map((post, index) => (
-                    <BlurFade key={post.slug} delay={BLUR_FADE_DELAY * 19 + index * 0.05}>
-                      <li className="py-4">
-                        <Link href={`/blog/${post.slug}`} className="block hover:bg-muted/50 rounded-lg transition-colors p-4">
-                          <div className="flex items-center space-x-4">
-                            <div className="flex-shrink-0">
-                              {post.metadata.icon && (
-                                <img src={post.metadata.icon} alt="" className="w-12 h-12 rounded-full" />
-                              )}
-                            </div>
-                            <div className="flex-grow">
-                              <h3 className="text-lg font-semibold">{post.metadata.title}</h3>
-                              <p className="text-sm text-muted-foreground">{post.metadata.summary}</p>
-                            </div>
-                          </div>
-                          <div className="mt-2 flex items-center text-xs text-muted-foreground">
-                            <span>{new Date(post.metadata.publishedAt).toLocaleDateString()}</span>
-                            {post.metadata.readTime && (
-                              <>
-                                <span className="mx-2">•</span>
-                                <span>{post.metadata.readTime} min read</span>
-                              </>
-                            )}
-                          </div>
-                        </Link>
-                      </li>
+                  .sort(
+                    (a, b) =>
+                      new Date(b.metadata.publishedAt).getTime() -
+                      new Date(a.metadata.publishedAt).getTime()
+                  )
+                  .map((post, id) => (
+                    <BlurFade
+                      key={post.slug}
+                      delay={BLUR_FADE_DELAY * 12 + id * 0.05}
+                    >
+                      <BlogCard
+                        href={`/blog/${post.slug}`}
+                        title={post.metadata.title}
+                        description={post.metadata.summary}
+                        publishedAt={post.metadata.publishedAt}
+                        iconUrl={post.metadata.icon}
+                        readTime={post.metadata.readTime}
+                      />
                     </BlurFade>
                   ))}
               </ul>
