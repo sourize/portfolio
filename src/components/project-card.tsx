@@ -47,13 +47,17 @@ export function ProjectCard({
 }: Props) {
   return (
     <Card
-      className={
-        "flex flex-col overflow-hidden border hover:shadow-lg transition-all duration-300 ease-out h-full"
-      }
+      className={cn(
+        "flex flex-col overflow-hidden border hover:shadow-lg transition-all duration-300 ease-out h-full",
+        {
+          "border-green-500 dark:border-green-700": active,
+          "opacity-70": archived,
+        }
+      )}
     >
       <Link
         href={href || "#"}
-        className={cn("block cursor-pointer", className)}
+        className={cn("block cursor-pointer relative", className)}
       >
         {video && (
           <video
@@ -73,6 +77,16 @@ export function ProjectCard({
             height={300}
             className="h-40 w-full overflow-hidden object-cover object-top"
           />
+        )}
+        {active && (
+          <Badge className="absolute top-2 right-2 bg-green-500 text-white">
+            Active
+          </Badge>
+        )}
+        {archived && (
+          <Badge className="absolute top-2 right-2 bg-gray-500 text-white">
+            Archived
+          </Badge>
         )}
       </Link>
       <CardHeader className="px-2">

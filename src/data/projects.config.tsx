@@ -6,6 +6,8 @@ export const PROJECTS = [
     href: "https://github.com/sourize/AI-Powered-Flappy-Bird-Game-Using-NEAT-Algorithm",
     dates: "Jun 2024 - Jul 2024",
     featured: true,
+    active: true,
+    archived: false,
     description:
       "An AI powered Flappy Bird Game Using NEAT (NeuroEvolution of Augmenting Topologies) Algorithm",
     technologies: [
@@ -34,6 +36,7 @@ export const PROJECTS = [
     dates: "Aug 2024",
     featured: true,
     active: true,
+    archived: false,
     description:
       "A Analysis of Nifty 50 Stocks over the years.",
     technologies: [
@@ -65,6 +68,8 @@ export const PROJECTS = [
     href: "https://github.com/sourize/EnergyConsumption",
     dates: "Jul 2024 - Aug 2024",
     featured: false,
+    active: true,
+    archived: false,
     description:
       "A Predictive Model to predict Energy Consumption based on some features as input.",
     technologies: [
@@ -89,7 +94,7 @@ export const PROJECTS = [
         icon: <Icons.github className="size-3" />,
       },
     ],
-    image: "EC.jpg",
+    image: "Energy2.jpg",
     video: "",
   },
   {
@@ -98,6 +103,7 @@ export const PROJECTS = [
     dates: "April 2023 - March 2024",
     featured: false,
     active: true,
+    archived: false,
     description:
       "A Predictive Model to predict Nifty-50 Stock.",
     technologies: [
