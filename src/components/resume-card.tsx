@@ -13,6 +13,7 @@ interface ResumeCardProps {
   logoUrl: string;
   altText: string;
   title: string;
+  location?: string;
   subtitle?: string;
   href?: string;
   badges?: readonly string[];
@@ -23,6 +24,7 @@ export const ResumeCard = ({
   logoUrl,
   altText,
   title,
+  location,
   subtitle,
   href,
   badges,
@@ -61,7 +63,7 @@ export const ResumeCard = ({
               <h3 className="inline-flex items-center justify-center font-semibold leading-none text-xs sm:text-sm">
                 {title}
                 {badges && (
-                  <span className="inline-flex gap-x-1">
+                  <span className="inline-flex gap-x-1 ml-auto">
                     {badges.map((badge, index) => (
                       <Badge
                         variant="secondary"
@@ -76,7 +78,7 @@ export const ResumeCard = ({
                 <ChevronRightIcon
                   className={cn(
                     "size-4 translate-x-0 transform opacity-0 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:opacity-100",
-                    isExpanded ? "rotate-90" : "rotate-0"
+                    isExpanded ? "rotate-90" : "rotate-0",
                   )}
                 />
               </h3>
@@ -84,6 +86,11 @@ export const ResumeCard = ({
                 {period}
               </div>
             </div>
+            {location && (
+              <div className="font-sans text-xs text-muted-foreground">
+                {location}
+              </div>
+            )}
             {subtitle && <div className="font-sans text-xs">{subtitle}</div>}
           </CardHeader>
           {description && (

@@ -24,8 +24,8 @@ export default async function BlogPage() {
                   I write sometimes
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Exploring tech, life, and everything in between. These are my
-                  thoughts and insights on a little bit of everything. I hope you enjoy reading them!
+                  Exploring tech, life, and everything in between. Here are my
+                  thoughts on everything. I hope you enjoy reading them.
                 </p>
               </div>
             </div>

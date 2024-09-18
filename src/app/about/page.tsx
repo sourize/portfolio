@@ -3,12 +3,12 @@ import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { ResumeCard } from "@/components/resume-card";
 import { TimeLineCard } from "@/components/timeline-card";
 import { Badge } from "@/components/ui/badge";
-import { SKILLS } from "@/data/skills.config";
+import { DATA } from "@/data/config/site.config";
+import { SKILLS } from "@/data/config/skills.config";
+import { WORK } from "@/data/config/work.config";
 import Image from "next/image";
 import React from "react";
 import Markdown from "react-markdown";
-import { INFO } from "./about";
-import { DATA } from "@/data/resume";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -20,17 +20,18 @@ export default function About() {
           delay={BLUR_FADE_DELAY}
           className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
           yOffset={8}
-          text={`Hey There, I'm Sourish 👋🏼`}
+          text={`Fyi, I'm ${DATA.name} 🧠`}
         />
         <BlurFade delay={BLUR_FADE_DELAY * 2}>
           <p className="text-lg text-muted-foreground mb-6">
-            Welcome to my digital abode!
+            Welcome to my little corner of the internet. I&apos;m thrilled
+            you&apos;re here!
           </p>
         </BlurFade>
         <BlurFade delay={BLUR_FADE_DELAY * 3}>
           <Image
-            src="/land.jpg"
-            alt="Landscape"
+            src="/quote.jpeg"
+            alt="quote"
             width={1920}
             height={1080}
             className="rounded-xl w-full h-auto object-cover max-h-[300px]"
@@ -39,21 +40,21 @@ export default function About() {
       </section>
       <section id="about">
         <BlurFade delay={BLUR_FADE_DELAY * 3}>
-          <h2 className="text-xl font-bold">About me</h2>
+          <h2 className="text-xl font-bold">About</h2>
         </BlurFade>
         <BlurFade delay={BLUR_FADE_DELAY * 4}>
           <Markdown className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
-            {INFO.Sourish}
+            {DATA.about}
           </Markdown>
         </BlurFade>
       </section>
-      <section id="whyAIML">
+      <section id="career">
         <BlurFade delay={BLUR_FADE_DELAY * 3}>
-          <h2 className="text-xl font-bold">Why AI and ML?</h2>
+          <h2 className="text-xl font-bold">Career</h2>
         </BlurFade>
         <BlurFade delay={BLUR_FADE_DELAY * 4}>
           <Markdown className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
-            {INFO.WhyAIandML}
+            {DATA.careerFull}
           </Markdown>
         </BlurFade>
       </section>
@@ -99,6 +100,7 @@ export default function About() {
                 logoUrl={education.logoUrl}
                 altText={education.school}
                 title={education.school}
+                location={education.location}
                 subtitle={education.degree}
                 period={`${education.start} - ${education.end}`}
               />
@@ -113,23 +115,19 @@ export default function About() {
           </BlurFade>
           <BlurFade delay={BLUR_FADE_DELAY * 14}>
             <ul className="mb-4 ml-4 divide-y divide-dashed border-l">
-              {DATA.work.map((work, id) => (
+              {WORK.map((work, id) => (
                 <BlurFade
-                  key={work.company + work.start + work.end}
+                  key={work.title + work.dates}
                   delay={BLUR_FADE_DELAY * 6 + id * 0.05}
                 >
                   <TimeLineCard
-                    title={work.company}
-                    role={work.title}
+                    title={work.title}
+                    role={work.role}
                     description={work.description}
-                    dates={work.start + " - " + work.end}
-                    image={work.logoUrl}
-                    links={[
-                      { icon: null, title: 'Website', href: work.href },
-                      ...('link' in work ? [{ icon: null, title: "GitHub", href: work.link }] : []),
-                      ...('certificate' in work ? [{ icon: null, title: "Certificate", href: work.certificate }] : [])
-                    ]}
-                    location={work.location || 'Remote'}
+                    location={work.location}
+                    dates={work.dates}
+                    image={work.image}
+                    links={work.links}
                   />
                 </BlurFade>
               ))}
@@ -139,11 +137,11 @@ export default function About() {
       </section>
       <section id="connect">
         <BlurFade delay={BLUR_FADE_DELAY * 3}>
-          <h2 className="text-xl font-bold">Lets connect</h2>
+          <h2 className="text-xl font-bold">Hook with me</h2>
         </BlurFade>
         <BlurFade delay={BLUR_FADE_DELAY * 4}>
           <Markdown className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
-            {INFO.connect}
+            {DATA.connect}
           </Markdown>
         </BlurFade>
       </section>
