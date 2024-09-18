@@ -26,6 +26,9 @@ interface Props {
     href: string;
   }[];
   className?: string;
+  // Add these new props
+  active?: boolean;
+  archived?: boolean;
 }
 
 export function ProjectCard({
@@ -39,6 +42,8 @@ export function ProjectCard({
   video,
   links,
   className,
+  active,
+  archived,
 }: Props) {
   return (
     <Card
