@@ -16,6 +16,7 @@ export const DATA = {
     { href: "/", icon: HomeIcon, label: "Home" },
     { href: "/blog", icon: NotebookIcon, label: "Blog" },
     { href: "/about", icon: UserIcon, label: "About" },
+    { href: "/projects", icon: HammerIcon, label: "Projects" },
   ],
   contact: {
     email: "sourishchatterjee0@gmail.com",
