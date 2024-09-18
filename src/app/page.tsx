@@ -13,7 +13,7 @@ import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown";
 import { BlogCard } from "@/components/blog-card";
-import { getBlogPosts } from '@/data/blog';
+import { getBlogPosts } from '@/lib/getBlogPosts';
 
 const BLUR_FADE_DELAY = 0.04;
 
