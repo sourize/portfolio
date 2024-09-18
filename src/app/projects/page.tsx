@@ -47,7 +47,7 @@ export default function Projects() {
                   key={project.title}
                   title={project.title}
                   description={project.description}
-                  dates={project.dates}
+                  dates={project.dates || ''} // Provide a default empty string if dates is undefined
                   tags={project.technologies}
                   image={project.image}
                   video={project.video}
