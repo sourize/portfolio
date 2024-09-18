@@ -18,7 +18,7 @@ export const PROJECTS = [
     links: [
       {
         type: "Read More",
-        href: "/blog/AI-Powered-Flappy-Bird-Game-Using-NEAT-Algorithm",
+        href: "/blog/Flappy-Bird-Game-Using-NEAT-Algorithm",
         icon: <Icons.globe className="size-3" />,
       },
       {
@@ -51,7 +51,7 @@ export const PROJECTS = [
     links: [
       {
         type: "Read More",
-        href: "/posts/2024/08/DataAnalysisofNifty50/",
+        href: "/blog/Data-Analysis-of-Nifty50",
         icon: <Icons.globe className="size-3" />,
       },
       {
@@ -85,7 +85,7 @@ export const PROJECTS = [
     links: [
       {
         type: "Read More",
-        href: "/blog/EnergyConsumptionModel/",
+        href: "/blog/Energy-Consumption",
         icon: <Icons.globe className="size-3" />,
       },
       {
@@ -119,7 +119,7 @@ export const PROJECTS = [
     links: [
       {
         type: "Read More",
-        href: "/posts/2024/05/TheNifty50StockPredictionUsingMachineLearning/",
+        href: "/blog/The-Nifty-50-Stock-Prediction-Using-Machine-Learning",
         icon: <Icons.globe className="size-3" />,
       },
       {
@@ -153,7 +153,7 @@ export const PROJECTS = [
     links: [
       {
         type: "Read More",
-        href: "/posts/2024/07/RealEstatePricePredictionUsingMachineLearning/",
+        href: "/blog/Real-Estate-Price-Prediction-Using-Machine-Learning",
         icon: <Icons.globe className="size-3" />,
       },
       {
@@ -187,7 +187,7 @@ export const PROJECTS = [
     links: [
       {
         type: "Read More",
-        href: "/posts/2024/05/RestaurantReviewSentimentAnalysisModel/",
+        href: "/blog/Restaurant-Review-Sentiment-Analysis-Model",
         icon: <Icons.globe className="size-3" />,
       },
       {
