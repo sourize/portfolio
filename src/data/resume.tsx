@@ -48,7 +48,7 @@ export const DATA = {
         url: "mailto:contact.sourishchatterjee@gmail.com",
         icon: Icons.email,
 
-        navbar: true,
+        navbar: false,
       },
     },
   },

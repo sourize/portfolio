@@ -6,7 +6,7 @@ export const PROJECTS = [
     href: "https://github.com/sourize/AI-Powered-Flappy-Bird-Game-Using-NEAT-Algorithm",
     dates: "Jun 2024 - Jul 2024",
     featured: true,
-    active: true,
+    active: false,
     archived: false,
     description:
       "An AI powered Flappy Bird Game Using NEAT (NeuroEvolution of Augmenting Topologies) Algorithm",
@@ -35,7 +35,7 @@ export const PROJECTS = [
     href: "https://github.com/sourize/Data-Analysis-of-NIFTY-50-Dataset",
     dates: "Aug 2024",
     featured: true,
-    active: true,
+    active: false,
     archived: false,
     description:
       "A Analysis of Nifty 50 Stocks over the years.",
@@ -68,7 +68,7 @@ export const PROJECTS = [
     href: "https://github.com/sourize/EnergyConsumption",
     dates: "Jul 2024 - Aug 2024",
     featured: false,
-    active: true,
+    active: false,
     archived: false,
     description:
       "A Predictive Model to predict Energy Consumption based on some features as input.",
@@ -101,8 +101,8 @@ export const PROJECTS = [
     title: "NIFTY-50 Model",
     href: "https://github.com/sourize/The-Nifty-50-Stock-Prediction-using-Machine-Learning",
     dates: "April 2023 - March 2024",
-    featured: false,
-    active: true,
+    featured: true,
+    active: false,
     archived: false,
     description:
       "A Predictive Model to predict Nifty-50 Stock.",
@@ -135,9 +135,9 @@ export const PROJECTS = [
     title: "Real Estate Price Prediction",
     href: "https://github.com/sourize/Real-Estate-Price-Prediction-using-Machine-Learning",
     dates: "April 2023 - March 2024",
-    featured: false,
-    active: true,
-    archived: true,
+    featured: true,
+    active: false,
+    archived: false,
     description:
       "A Predictive Model to predict Real Estate Price based on some features as input.",
     technologies: [
@@ -171,7 +171,7 @@ export const PROJECTS = [
     dates: "April 2023 - March 2024",
     featured: false,
     active: true,
-    archived: true,
+    archived: false,
     description:
       "An NLP Model to predict whether a review is positive or negative.",
     technologies: [
