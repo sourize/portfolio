@@ -29,7 +29,7 @@ interface BlogsI {
   };
 }
 
-async function getBlogPosts() {
+async function fetchBlogPosts() {
   const res = await fetch('http://localhost:3000/api/getBlogPosts', { next: { revalidate: 3600 } });
   if (!res.ok) {
     throw new Error('Failed to fetch blog posts');
@@ -38,7 +38,7 @@ async function getBlogPosts() {
 }
 
 export default async function Home() {
-  const blogPosts = await getBlogPosts();
+  const blogPosts = await fetchBlogPosts();
 
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10">
