@@ -29,6 +29,14 @@ interface BlogsI {
   };
 }
 
+async function getBlogPosts() {
+  const res = await fetch('http://localhost:3000/api/getBlogPosts', { next: { revalidate: 3600 } });
+  if (!res.ok) {
+    throw new Error('Failed to fetch blog posts');
+  }
+  return res.json();
+}
+
 export default async function Home() {
   const blogPosts = await getBlogPosts();
 
