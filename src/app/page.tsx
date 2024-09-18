@@ -50,6 +50,10 @@ export default function Page() {
     }
   }, [blogPosts.length]);
 
+  useEffect(() => {
+    console.log('blogPosts:', blogPosts);
+  }, [blogPosts]);
+
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10">
       <section id="hero">
