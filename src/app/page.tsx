@@ -159,7 +159,9 @@ export default function Page() {
                           Some of my cool shits
                         </h2>
                         <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                          I&apos;ve worked on a variety of ML projects, Data Analytics projects. Here are a few of my favorites.{" "}
+                          I&apos;ve worked on a variety of cool shits, from simple websites
+                          to mobile apps to complex IoT projects. Here are a few of my favorites.
+                          You can find more on my{" "}
                           <Link
                             href="/projects"
                             className="text-blue-500 hover:underline"
@@ -171,24 +173,28 @@ export default function Page() {
                       </div>
                     </div>
                     <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto mt-8">
-                      {DATA.projects.slice(0, 4).map((project, id) => (
-                        <BlurFade
-                          key={project.title}
-                          delay={BLUR_FADE_DELAY * 12 + id * 0.05}
-                        >
-                          <ProjectCard
-                            href={project.href}
+                      {DATA.projects.filter((project) => project.featured).map(
+                        (project, id) => (
+                          <BlurFade
                             key={project.title}
-                            title={project.title}
-                            description={project.description}
-                            dates={project.dates}
-                            tags={project.technologies}
-                            image={project.image}
-                            video={project.video}
-                            links={project.links}
-                          />
-                        </BlurFade>
-                      ))}
+                            delay={BLUR_FADE_DELAY * 12 + id * 0.05}
+                          >
+                            <ProjectCard
+                              href={project.href}
+                              active={project.active}
+                              archived={project.archived}
+                              key={project.title}
+                              title={project.title}
+                              description={project.description}
+                              dates={project.dates}
+                              tags={project.technologies}
+                              image={project.image}
+                              video={project.video}
+                              links={project.links}
+                            />
+                          </BlurFade>
+                        )
+                      )}
                     </div>
                   </div>
                 </BlurFade>
