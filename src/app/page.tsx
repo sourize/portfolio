@@ -110,7 +110,8 @@ export default function Page() {
           </BlurFade>
           <div className="flex flex-col gap-3 w-full">
             <BlurFade delay={BLUR_FADE_DELAY * 14}>
-              <ul className="divide-y divide-dashed">
+              <ul className="divide-y divide-dashed" style={{backgroundColor: 'yellow'}}>
+                <li>Test item</li>
                 {blogPosts
                   .filter((post) => post.metadata.featured)
                   .sort(
@@ -123,14 +124,7 @@ export default function Page() {
                       key={post.slug}
                       delay={BLUR_FADE_DELAY * 12 + id * 0.05}
                     >
-                      <BlogCard
-                        href={`/blog/${post.slug}`}
-                        title={post.metadata.title}
-                        description={post.metadata.summary}
-                        publishedAt={post.metadata.publishedAt}
-                        iconUrl={post.metadata.icon}
-                        readTime={post.metadata.readTime}
-                      />
+                      <div>{post.metadata.title}</div>
                     </BlurFade>
                   ))}
               </ul>
