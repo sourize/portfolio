@@ -131,6 +131,7 @@ export const PROJECTS = [
     dates: "April 2023 - March 2024",
     featured: false,
     active: true,
+    archived: true,
     description:
       "A Predictive Model to predict Real Estate Price based on some features as input.",
     technologies: [
@@ -164,6 +165,7 @@ export const PROJECTS = [
     dates: "April 2023 - March 2024",
     featured: false,
     active: true,
+    archived: true,
     description:
       "An NLP Model to predict whether a review is positive or negative.",
     technologies: [
