@@ -112,8 +112,12 @@ export default function Page() {
             <BlurFade delay={BLUR_FADE_DELAY * 14}>
               <ul className="divide-y divide-dashed" style={{backgroundColor: 'yellow'}}>
                 <li>Test item</li>
+                {console.log('blogPosts:', blogPosts)}
                 {blogPosts
-                  .filter((post) => post.metadata.featured)
+                  .filter((post) => {
+                    console.log('Filtering post:', post.slug, 'Featured:', post.metadata.featured);
+                    return post.metadata.featured;
+                  })
                   .sort(
                     (a, b) =>
                       new Date(b.metadata.publishedAt).getTime() -
