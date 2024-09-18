@@ -173,8 +173,9 @@ export default function Page() {
                       </div>
                     </div>
                     <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto mt-8">
-                      {DATA.projects.filter((project) => project.featured).map(
-                        (project, id) => (
+                      {DATA.projects
+                        .filter(project => project?.featured && !project?.archived)
+                        .map((project, id) => (
                           <BlurFade
                             key={project.title}
                             delay={BLUR_FADE_DELAY * 12 + id * 0.05}
@@ -183,7 +184,6 @@ export default function Page() {
                               href={project.href}
                               active={project.active}
                               archived={project.archived}
-                              key={project.title}
                               title={project.title}
                               description={project.description}
                               dates={project.dates}
@@ -193,8 +193,7 @@ export default function Page() {
                               links={project.links}
                             />
                           </BlurFade>
-                        )
-                      )}
+                        ))}
                     </div>
                   </div>
                 </BlurFade>
