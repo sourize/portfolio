@@ -50,10 +50,6 @@ export default function Page() {
     }
   }, [blogPosts.length]);
 
-  useEffect(() => {
-    console.log('blogPosts:', blogPosts);
-  }, [blogPosts]);
-
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10">
       <section id="hero">
@@ -116,28 +112,28 @@ export default function Page() {
             <BlurFade delay={BLUR_FADE_DELAY * 14}>
               <ul className="divide-y divide-dashed" style={{backgroundColor: 'yellow'}}>
                 <li>Test item</li>
-                {blogPosts.length > 0 ? (
-                  blogPosts
-                    .filter((post) => {
-                      console.log('Filtering post:', post.slug, 'Featured:', post.metadata.featured);
-                      return post.metadata.featured;
-                    })
-                    .sort(
-                      (a, b) =>
-                        new Date(b.metadata.publishedAt).getTime() -
-                        new Date(a.metadata.publishedAt).getTime()
-                    )
-                    .map((post, id) => (
-                      <BlurFade
-                        key={post.slug}
-                        delay={BLUR_FADE_DELAY * 12 + id * 0.05}
-                      >
-                        <div>{post.metadata.title}</div>
-                      </BlurFade>
-                    ))
-                ) : (
-                  <li>No blog posts available</li>
-                )}
+                {blogPosts
+                  .filter((post) => post.metadata.featured)
+                  .sort(
+                    (a, b) =>
+                      new Date(b.metadata.publishedAt).getTime() -
+                      new Date(a.metadata.publishedAt).getTime()
+                  )
+                  .map((post, id) => (
+                    <BlurFade
+                      key={post.slug}
+                      delay={BLUR_FADE_DELAY * 12 + id * 0.05}
+                    >
+                      <BlogCard
+                        href={`/blog/${post.slug}`}
+                        title={post.metadata.title}
+                        description={post.metadata.summary}
+                        publishedAt={post.metadata.publishedAt}
+                        iconUrl={post.metadata.icon}
+                        readTime={post.metadata.readTime}
+                      />
+                    </BlurFade>
+                  ))}
               </ul>
             </BlurFade>
           </div>
