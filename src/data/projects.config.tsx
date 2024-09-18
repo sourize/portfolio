@@ -170,7 +170,7 @@ export const PROJECTS = [
     href: "https://github.com/sourize/Restaurant-Review-Sentiment-Analysis-Model",
     dates: "April 2023 - March 2024",
     featured: false,
-    active: true,
+    active: false,
     archived: false,
     description:
       "An NLP Model to predict whether a review is positive or negative.",
