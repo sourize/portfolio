@@ -1,6 +1,6 @@
 import BlurFade from "@/components/magicui/blur-fade";
 import { ProjectCard } from "@/components/project-card";
-import { PROJECTS } from "@/data/config/projects.config";
+import { PROJECTS } from "@/data/projects.config";
 import React from "react";
 import {
   Tabs,
