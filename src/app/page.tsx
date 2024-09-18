@@ -29,7 +29,19 @@ interface BlogsI {
   };
 }
 
-async function fetchBlogPosts() {
+interface BlogPost {
+  slug: string;
+  metadata: {
+    title: string;
+    summary: string;
+    publishedAt: string;
+    icon: string;
+    featured: boolean;
+    readTime: string;
+  };
+}
+
+async function fetchBlogPosts(): Promise<BlogPost[]> {
   const res = await fetch('http://localhost:3000/api/getBlogPosts', { next: { revalidate: 3600 } });
   if (!res.ok) {
     throw new Error('Failed to fetch blog posts');
@@ -104,13 +116,13 @@ export default async function Home() {
                 <li>Test item</li>
                 {blogPosts.length > 0 ? (
                   blogPosts
-                    .filter((post) => post.metadata.featured)
+                    .filter((post: BlogPost) => post.metadata.featured)
                     .sort(
-                      (a, b) =>
+                      (a: BlogPost, b: BlogPost) =>
                         new Date(b.metadata.publishedAt).getTime() -
                         new Date(a.metadata.publishedAt).getTime()
                     )
-                    .map((post, id) => (
+                    .map((post: BlogPost, id: number) => (
                       <BlurFade
                         key={post.slug}
                         delay={BLUR_FADE_DELAY * 12 + id * 0.05}
