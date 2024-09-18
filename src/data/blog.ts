@@ -72,5 +72,24 @@ async function getAllPosts(dir: string) {
 }
 
 export async function getBlogPosts() {
-  return getAllPosts(path.join(process.cwd(), "content"));
+  const postsDirectory = path.join(process.cwd(), 'posts');
+  const fileNames = fs.readdirSync(postsDirectory);
+
+  const posts = fileNames.map((fileName) => {
+    const slug = fileName.replace(/\.md$/, '');
+    const fullPath = path.join(postsDirectory, fileName);
+    const fileContents = fs.readFileSync(fullPath, 'utf8');
+    const { data: metadata, content } = matter(fileContents);
+
+    return {
+      slug,
+      metadata: {
+        ...metadata,
+        featured: metadata.featured || false,
+      },
+      content,
+    };
+  });
+
+  return posts;
 }

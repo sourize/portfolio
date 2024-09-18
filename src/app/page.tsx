@@ -13,6 +13,7 @@ import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown";
 import { BlogCard } from "@/components/blog-card";
+import { getBlogPosts } from '@/data/blog';
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -28,27 +29,8 @@ interface BlogsI {
   };
 }
 
-export default function Page() {
-  const [blogPosts, setBlogPosts] = useState<BlogsI[]>([]);
-
-  useEffect(() => {
-    const fetchBlogPosts = async () => {
-      try {
-        const response = await fetch("/api/blogs");
-        if (!response.ok) {
-          throw new Error("Failed to fetch blog posts");
-        }
-        const data = await response.json();
-        setBlogPosts(data);
-      } catch (error) {
-        console.error("Error fetching blog posts:", error);
-      }
-    };
-
-    if (blogPosts.length === 0) {
-      fetchBlogPosts();
-    }
-  }, [blogPosts.length]);
+export default async function Home() {
+  const blogPosts = await getBlogPosts();
 
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10">
@@ -110,30 +92,34 @@ export default function Page() {
           </BlurFade>
           <div className="flex flex-col gap-3 w-full">
             <BlurFade delay={BLUR_FADE_DELAY * 14}>
-              <ul className="divide-y divide-dashed" style={{backgroundColor: 'yellow'}}>
+              <ul className="divide-y divide-dashed">
                 <li>Test item</li>
-                {blogPosts
-                  .filter((post) => post.metadata.featured)
-                  .sort(
-                    (a, b) =>
-                      new Date(b.metadata.publishedAt).getTime() -
-                      new Date(a.metadata.publishedAt).getTime()
-                  )
-                  .map((post, id) => (
-                    <BlurFade
-                      key={post.slug}
-                      delay={BLUR_FADE_DELAY * 12 + id * 0.05}
-                    >
-                      <BlogCard
-                        href={`/blog/${post.slug}`}
-                        title={post.metadata.title}
-                        description={post.metadata.summary}
-                        publishedAt={post.metadata.publishedAt}
-                        iconUrl={post.metadata.icon}
-                        readTime={post.metadata.readTime}
-                      />
-                    </BlurFade>
-                  ))}
+                {blogPosts.length > 0 ? (
+                  blogPosts
+                    .filter((post) => post.metadata.featured)
+                    .sort(
+                      (a, b) =>
+                        new Date(b.metadata.publishedAt).getTime() -
+                        new Date(a.metadata.publishedAt).getTime()
+                    )
+                    .map((post, id) => (
+                      <BlurFade
+                        key={post.slug}
+                        delay={BLUR_FADE_DELAY * 12 + id * 0.05}
+                      >
+                        <BlogCard
+                          href={`/blog/${post.slug}`}
+                          title={post.metadata.title}
+                          description={post.metadata.summary}
+                          publishedAt={post.metadata.publishedAt}
+                          iconUrl={post.metadata.icon}
+                          readTime={post.metadata.readTime}
+                        />
+                      </BlurFade>
+                    ))
+                ) : (
+                  <li>No blog posts available</li>
+                )}
               </ul>
             </BlurFade>
           </div>
