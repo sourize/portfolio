@@ -109,6 +109,7 @@ export const DATA = {
     },
   ],
   projects: [
+    /*
     {
       title: "AI-Powered Flappy Bird Game",
       href: "https://github.com/sourize/AI-Powered-Flappy-Bird-Game-Using-NEAT-Algorithm",
@@ -296,6 +297,7 @@ export const DATA = {
       image: "Restaurant1.jpg",
       video:"",
     },
+    */
   ],
   hackathons: [
     {
