@@ -5,7 +5,7 @@ export const DATA = {
   name: "Sourish Chatterjee",
   initials: "SC",
   url: "https://sourish.vercel.app",
-  resume: "/Sourish_Chatterjee_Resume.pdf",
+  resume: "/Sourish_Chatterjee.pdf",
   location: "WB, India",
   timeZone: "Asia/Kolkata",
   localCode: "en-IN",
