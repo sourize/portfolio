@@ -26,11 +26,11 @@ export default function Projects() {
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  Some cool stuff I&apos;ve built
+                  Some of my projects that I have worked on
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  I&apos;ve worked on a variety of projects, from simple
-                  websites to complex web applications. Here are all of them.
+                  I&apos;ve worked on a variety of ML projects and Data Analytics projects. Here are a few of my favorites.
+                  You can find more on my{" "}
                 </p>
               </div>
             </div>
