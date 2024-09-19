@@ -11,7 +11,7 @@ export default function Projects() {
       <section id="projects">
         <BlurFade delay={BLUR_FADE_DELAY * 11}>
           <div className="space-y-12 w-full">
-            // ... existing header content ...
+            {/* existing header content */}
             <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
               {PROJECTS.map((project, id) => (
                 <BlurFade
