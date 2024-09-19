@@ -8,7 +8,7 @@ import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
-import { LocateFixed, AlarmClock, Paperclip } from 'lucide-react';
+import { LocateFixed, Paperclip } from 'lucide-react';
 import { SKILLS } from "@/data/skills.config";
 import { PROJECTS } from "@/data/projects.config";
 import { DATA } from "@/data/resume";
@@ -33,7 +33,6 @@ interface BlogsI {
 
 export default function Page() {
   const [blogPosts, setBlogPosts] = useState<BlogsI[]>([]);
-  const [currentTime, setCurrentTime] = useState(new Date());
 
   useEffect(() => {
     const fetchBlogPosts = async () => {
@@ -52,9 +51,6 @@ export default function Page() {
     if (blogPosts.length === 0) {
       fetchBlogPosts();
     }
-
-    const timer = setInterval(() => setCurrentTime(new Date()), 1000);
-    return () => clearInterval(timer);
   }, [blogPosts.length]);
 
   return (
@@ -67,7 +63,7 @@ export default function Page() {
                 delay={BLUR_FADE_DELAY}
                 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
                 yOffset={8}
-                text={`Hi, I'm ${DATA.name.split(" ")[0]} 👋`}
+                text={`Hi, I'm ${DATA.name.split(" ")[0]} 👻`}
               />
               <BlurFadeText
                 className="max-w-[600px] md:text-lg mt-2"
@@ -80,20 +76,10 @@ export default function Page() {
                     <LocateFixed className="size-4 mr-1" />
                     {DATA.location}
                   </Badge>
-                  <Badge variant="secondary" className="cursor-pointer">
-                    <AlarmClock className="size-4 mr-1" />
-                    {currentTime.toLocaleTimeString(DATA.localCode, {
-                      timeZone: DATA.timeZone,
-                      hour: "2-digit",
-                      minute: "2-digit",
-                      second: "2-digit",
-                      hour12: true,
-                    })}
-                  </Badge>
                   <Link href={DATA.resume}>
                     <Badge
                       variant="secondary"
-                      className="hidden md:flex cursor-pointer"
+                      className="flex cursor-pointer"
                     >
                       <Paperclip className="size-4 mr-1" />
                       Resume
