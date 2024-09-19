@@ -1,5 +1,5 @@
 import { Icons } from "@/components/icons";
-import { HomeIcon, NotebookIcon, UserIcon, HammerIcon } from "lucide-react";
+import { HomeIcon, NotebookIcon, UserIcon, FolderKanban } from "lucide-react";
 
 export const DATA = {
   name: "Sourish Chatterjee",
@@ -19,7 +19,7 @@ export const DATA = {
     { href: "/", icon: HomeIcon, label: "Home" },
     { href: "/blog", icon: NotebookIcon, label: "Blog" },
     { href: "/about", icon: UserIcon, label: "About" },
-    { href: "/projects", icon: HammerIcon, label: "Projects" },
+    { href: "/projects", icon: FolderKanban, label: "Projects" },
   ],
   contact: {
     email: "sourishchatterjee0@gmail.com",
