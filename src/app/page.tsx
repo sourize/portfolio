@@ -70,38 +70,38 @@ export default function Page() {
                 text={`Hi, I'm ${DATA.name.split(" ")[0]} 👋`}
               />
               <BlurFadeText
-                className="max-w-[600px] md:text-xl"
+                className="max-w-[600px] md:text-lg mt-2"
                 delay={BLUR_FADE_DELAY}
                 text={DATA.description}
               />
-            </div>
-            <BlurFade delay={BLUR_FADE_DELAY}>
-              <div className="flex flex-wrap gap-1 h-full w-full">
-                <Badge variant="secondary" className="cursor-pointer">
-                  <LocateFixed className="size-4 mr-1" />
-                  {DATA.location}
-                </Badge>
-                <Badge variant="secondary" className="cursor-pointer">
-                  <AlarmClock className="size-4 mr-1" />
-                  {currentTime.toLocaleTimeString(DATA.localCode, {
-                    timeZone: DATA.timeZone,
-                    hour: "2-digit",
-                    minute: "2-digit",
-                    second: "2-digit",
-                    hour12: true,
-                  })}
-                </Badge>
-                <Link href={DATA.resume}>
-                  <Badge
-                    variant="secondary"
-                    className="hidden md:flex cursor-pointer"
-                  >
-                    <Paperclip className="size-4 mr-1" />
-                    Resume
+              <BlurFade delay={BLUR_FADE_DELAY}>
+                <div className="flex flex-wrap gap-1 h-full w-full">
+                  <Badge variant="secondary" className="cursor-pointer">
+                    <LocateFixed className="size-4 mr-1" />
+                    {DATA.location}
                   </Badge>
-                </Link>
-              </div>
-            </BlurFade>
+                  <Badge variant="secondary" className="cursor-pointer">
+                    <AlarmClock className="size-4 mr-1" />
+                    {currentTime.toLocaleTimeString(DATA.localCode, {
+                      timeZone: DATA.timeZone,
+                      hour: "2-digit",
+                      minute: "2-digit",
+                      second: "2-digit",
+                      hour12: true,
+                    })}
+                  </Badge>
+                  <Link href={DATA.resume}>
+                    <Badge
+                      variant="secondary"
+                      className="hidden md:flex cursor-pointer"
+                    >
+                      <Paperclip className="size-4 mr-1" />
+                      Resume
+                    </Badge>
+                  </Link>
+                </div>
+              </BlurFade>
+            </div>
             <BlurFade delay={BLUR_FADE_DELAY}>
               <Avatar className="size-28 border">
                 <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
