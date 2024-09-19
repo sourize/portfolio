@@ -307,13 +307,13 @@ export default function Page() {
       </section>
       <footer className="mt-20 pb-8 text-center text-sm text-muted-foreground">
         <BlurFade delay={BLUR_FADE_DELAY * 19}>
-          <p>© Sourish Chatterjee, 2024</p>
+          <p>© Sourish Chatterjee 2024</p>
           <p className="mt-2">
             Template by{" "}
             <Link href="https://x.com/dillionverma" className="text-blue-500 hover:underline">
               Dhillon Verma
             </Link>
-            , adding some more by{" "}
+            , modified by{" "}
             <Link href="https://x.com/SaidevDhal" className="text-blue-500 hover:underline">
               Saidev Dhal
             </Link>
