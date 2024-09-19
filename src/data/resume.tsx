@@ -13,7 +13,7 @@ export const DATA = {
   description:
     "An Aspiring ML Engineer",
   summary:
-    "I'm an undergrad at [MSIT](https://www.linkedin.com/school/meghnadsahainstituteoftechnology/) with a passion for **Artificial Intelligence** and **Machine Learning**. My fascination with technology started early, inspired by the magic of movies like _Iron Man_, and now I'm on a mission to turn that inspiration into innovation. Curently I am focused learning my college courses and working on some projects on my free time as I learn more about the field simultaneously. [Click here to know more.](/about)",
+    "I'am an undergrad currently pursuing a B. Tech in Computer Science and Engineering with a specialization in Artificial Intelligence and Machine Learning at [MSIT](https://www.linkedin.com/school/meghnadsahainstituteoftechnology/). My academic journey includes courses like an 'A-Z machine learning'  and working on foundational projects to deepen my understanding of AI/ML concepts, which are featured in my project section.While I haven't yet gained industry experience, my focus is on developing expertise in machine learning, data science, and data analysis. Through my coursework and projects, I have honed my skills in Python, pandas, numpy, and scikit-learn.Looking ahead, I am eager to build and contribute to innovative solutions, particularly in the field of AI/ML, where I aim to make a meaningful impact by solving real-world challenges with data-driven approaches.[Click here to know more.](/about)",
   avatarUrl: "/me.png",
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
@@ -30,7 +30,7 @@ export const DATA = {
         url: "https://github.com/sourize",
         icon: Icons.github,
 
-        navbar: false,
+        navbar: true,
       },
       LinkedIn: {
         name: "LinkedIn",
