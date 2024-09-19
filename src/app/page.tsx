@@ -8,6 +8,7 @@ import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
+import { LocateFixed, AlarmClock, Paperclip } from 'lucide-react';
 import { SKILLS } from "@/data/skills.config";
 import { PROJECTS } from "@/data/projects.config";
 import { DATA } from "@/data/resume";
@@ -32,6 +33,7 @@ interface BlogsI {
 
 export default function Page() {
   const [blogPosts, setBlogPosts] = useState<BlogsI[]>([]);
+  const [currentTime, setCurrentTime] = useState(new Date());
 
   useEffect(() => {
     const fetchBlogPosts = async () => {
@@ -50,6 +52,9 @@ export default function Page() {
     if (blogPosts.length === 0) {
       fetchBlogPosts();
     }
+
+    const timer = setInterval(() => setCurrentTime(new Date()), 1000);
+    return () => clearInterval(timer);
   }, [blogPosts.length]);
 
   return (
@@ -70,6 +75,33 @@ export default function Page() {
                 text={DATA.description}
               />
             </div>
+            <BlurFade delay={BLUR_FADE_DELAY}>
+              <div className="flex flex-wrap gap-1 h-full w-full">
+                <Badge variant="secondary" className="cursor-pointer">
+                  <LocateFixed className="size-4 mr-1" />
+                  {DATA.location}
+                </Badge>
+                <Badge variant="secondary" className="cursor-pointer">
+                  <AlarmClock className="size-4 mr-1" />
+                  {currentTime.toLocaleTimeString(DATA.localCode, {
+                    timeZone: DATA.timeZone,
+                    hour: "2-digit",
+                    minute: "2-digit",
+                    second: "2-digit",
+                    hour12: true,
+                  })}
+                </Badge>
+                <Link href={DATA.resume}>
+                  <Badge
+                    variant="secondary"
+                    className="hidden md:flex cursor-pointer"
+                  >
+                    <Paperclip className="size-4 mr-1" />
+                    Resume
+                  </Badge>
+                </Link>
+              </div>
+            </BlurFade>
             <BlurFade delay={BLUR_FADE_DELAY}>
               <Avatar className="size-28 border">
                 <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
