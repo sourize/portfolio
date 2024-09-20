@@ -13,12 +13,12 @@ const images = [
 export function ImageGallery() {
   return (
     <BlurFade delay={0.1}>
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
+      <div className="grid grid-cols-3 gap-2 auto-rows-auto">
         {images.map((img, index) => (
-          <div 
-            key={index} 
+          <div
+            key={index}
             className={`relative ${
-              index === 2 ? 'col-span-2 row-span-2 aspect-square md:aspect-[2/1]' : 'aspect-square'
+              index % 5 === 0 ? 'col-span-2 row-span-2' : ''
             }`}
           >
             <Image
