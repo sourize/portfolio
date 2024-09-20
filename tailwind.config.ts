@@ -77,7 +77,7 @@ const config = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
       fontSize: {
-        base: ['1.0625rem', '1.75'], // Increased from default 1rem (16px) to 1.0625rem (17px)
+        paragraph: '16px',
       },
     },
   },
