@@ -92,9 +92,8 @@ export default function Page() {
       </section>
       <section id="gallery">
         <BlurFade delay={BLUR_FADE_DELAY * 5}>
-          <h2 className="text-2xl font-bold mb-4">My Journey in Pictures</h2>
+          <ImageGallery />
         </BlurFade>
-        <ImageGallery />
       </section>
       <section id="blogs">
         <div className="space-y-12 w-full py-12">
@@ -104,7 +103,7 @@ export default function Page() {
                 <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
                   Latest Articles
                 </div>
-                <h2 className="text-2xl font-bold tracking-tighter sm:text-4xl">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
                   Insights from My Journey
                 </h2>
                 <p className="text-paragraph text-muted-foreground md:text-xl/relaxed lg:text-paragraph/relaxed xl:text-xl/relaxed">
@@ -156,7 +155,7 @@ export default function Page() {
             <div className="space-y-12 w-full">
               <div className="flex flex-col items-center justify-center space-y-4 text-center">
                 <div className="space-y-2">
-                  <h2 className="text-2xl font-bold tracking-tighter sm:text-4xl mt-2">
+                  <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl mt-2">
                     Some of my projects
                   </h2>
                   <p className="text-paragraph text-muted-foreground md:text-xl/relaxed lg:text-paragraph/relaxed xl:text-xl/relaxed">
@@ -208,7 +207,7 @@ export default function Page() {
                 <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
                   Hackathons
                 </div>
-                <h2 className="text-2xl font-bold tracking-tighter sm:text-4xl">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
                   I like building things
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
