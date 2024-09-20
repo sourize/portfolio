@@ -73,9 +73,6 @@
     body {
       @apply bg-background text-foreground;
     }
-    body {
-      @apply text-[1.0625rem]; /* This is 17px, 1px larger than the default 16px */
-    }
   }
 
   h3 code {
