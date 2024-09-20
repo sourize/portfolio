@@ -15,6 +15,7 @@ import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown";
 import { BlogCard } from "@/components/blog-card";
+import { ImageGallery } from "@/components/ImageGallery";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -105,6 +106,12 @@ export default function Page() {
             {DATA.summary}
           </Markdown>
         </BlurFade>
+      </section>
+      <section id="gallery">
+        <BlurFade delay={BLUR_FADE_DELAY * 5}>
+          <h2 className="text-xl font-bold mb-4">My Journey in Pictures</h2>
+        </BlurFade>
+        <ImageGallery />
       </section>
       <section id="blogs">
         <div className="space-y-12 w-full py-12">
