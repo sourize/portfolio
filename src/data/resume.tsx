@@ -11,7 +11,7 @@ export const DATA = {
   localCode: "en-IN",
   locationLink: "",
   description:
-    "An Aspiring ML Engineer turning data into impactful insights, with hands-on experience in machine learning and real-world problem-solving.",
+    "An Aspiring ML Engineer turning data into impactful insights.",
   summary:
     "I'm an undergrad at [MSIT](https://www.linkedin.com/school/meghnadsahainstituteoftechnology/) with a passion for **Artificial Intelligence** and **Machine Learning**. My fascination with technology started early, inspired by the magic of movies like _Iron Man_, and now I'm on a mission to turn that inspiration into innovation.\n\nCurrently I am focused learning my college courses and working on some projects on my free time as I learn more about the field simultaneously.\n\n[Click here to know more.](/about)",
   avatarUrl: "/me.png",
