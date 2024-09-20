@@ -12,17 +12,26 @@ const images = [
 export function ImageGallery() {
   return (
     <BlurFade delay={0.1}>
-      <div className="grid grid-cols-2 md:grid-cols-2 gap-2">
+      <div className="grid grid-cols-4 gap-0">
         {images.map((img, index) => (
-          <div key={index} className={`relative ${index === 4 ? 'col-span-2 row-span-2' : ''}`}>
+          <div
+            key={index}
+            className={`relative ${
+              index === 0 ? 'col-span-2 row-span-2' :
+              index === 1 ? 'col-span-2' :
+              index === 2 ? 'col-span-2' :
+              index === 3 ? 'row-span-2' :
+              ''
+            }`}
+          >
             <Image
               src={img.src}
               alt={img.alt}
               layout="responsive"
               width={100}
-              height={100}
+              height={index === 0 || index === 3 ? 200 : 100}
               objectFit="cover"
-              className="rounded-lg"
+              className="w-full h-full"
             />
           </div>
         ))}
