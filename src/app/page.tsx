@@ -70,23 +70,6 @@ export default function Page() {
                 delay={BLUR_FADE_DELAY}
                 text={DATA.description}
               />
-              <BlurFade delay={BLUR_FADE_DELAY}>
-                <div className="flex flex-wrap gap-1 h-full w-full">
-                  <Badge variant="secondary" className="cursor-pointer">
-                    <LocateFixed className="size-4 mr-1" />
-                    {DATA.location}
-                  </Badge>
-                  <Link href={DATA.resume}>
-                    <Badge
-                      variant="secondary"
-                      className="flex cursor-pointer"
-                    >
-                      <Paperclip className="size-4 mr-1" />
-                      Resume
-                    </Badge>
-                  </Link>
-                </div>
-              </BlurFade>
             </div>
             <BlurFade delay={BLUR_FADE_DELAY}>
               <Avatar className="size-28 border">
