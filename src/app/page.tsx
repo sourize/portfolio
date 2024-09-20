@@ -85,7 +85,7 @@ export default function Page() {
           <h2 className="text-2xl font-bold">About</h2>
         </BlurFade>
         <BlurFade delay={BLUR_FADE_DELAY * 4}>
-          <Markdown className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
+          <Markdown className="prose max-w-full text-pretty font-sans text-paragraph text-muted-foreground dark:prose-invert">
             {DATA.summary}
           </Markdown>
         </BlurFade>
@@ -107,8 +107,8 @@ export default function Page() {
                 <h2 className="text-2xl font-bold tracking-tighter sm:text-4xl">
                   Insights from My Journey
                 </h2>
-                <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                I&apos;ve written some blogs on my learning journey, projects, ML, and some other stuff.{" "}
+                <p className="text-paragraph text-muted-foreground md:text-xl/relaxed lg:text-paragraph/relaxed xl:text-xl/relaxed">
+                  I&apos;ve written some blogs on my learning journey, projects, ML, and some other stuff.{" "}
                   <Link href="/blog" className="text-blue-500 hover:underline">
                     checkout my blog page
                   </Link>
@@ -159,7 +159,7 @@ export default function Page() {
                   <h2 className="text-2xl font-bold tracking-tighter sm:text-4xl mt-2">
                     Some of my projects
                   </h2>
-                  <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  <p className="text-paragraph text-muted-foreground md:text-xl/relaxed lg:text-paragraph/relaxed xl:text-xl/relaxed">
                     I&apos;ve worked on a variety of ML projects and Data Analytics projects. Here are a few of my favorites.
                     You can find more on my{" "}
                     <Link
@@ -253,7 +253,7 @@ export default function Page() {
               <h2 className="text-2xl font-bold tracking-tighter sm:text-4xl">
                 Get in Touch
               </h2>
-              <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+              <p className="mx-auto max-w-[600px] text-paragraph text-muted-foreground md:text-xl/relaxed lg:text-paragraph/relaxed xl:text-xl/relaxed">
                 I&apos;m always excited to collaborate on projects or just chat about tech. Reach out anytime:{" "}
                 <Link
                   href={DATA.contact.social.X.url}
