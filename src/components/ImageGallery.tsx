@@ -12,17 +12,15 @@ const images = [
 export function ImageGallery() {
   return (
     <BlurFade delay={0.1}>
-      <div className="grid grid-cols-2 md:grid-cols-2 gap-2">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
         {images.map((img, index) => (
-          <div key={index} className={`relative ${index === 4 ? 'col-span-2 row-span-2' : ''}`}>
+          <div key={index} className={`relative aspect-square ${index === 4 ? 'md:col-span-2 md:row-span-2' : ''}`}>
             <Image
               src={img.src}
               alt={img.alt}
-              layout="responsive"
-              width={100}
-              height={100}
-              objectFit="cover"
-              className="rounded-lg"
+              fill
+              sizes="(max-width: 768px) 50vw, 33vw"
+              className="object-cover rounded-lg"
             />
           </div>
         ))}
