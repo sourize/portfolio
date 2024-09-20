@@ -74,7 +74,7 @@
       @apply bg-background text-foreground;
     }
     body {
-      @apply text-base; /* or text-lg for a larger increase */
+      @apply text-[1.0625rem]; /* This is 17px, 1px larger than the default 16px */
     }
   }
 
