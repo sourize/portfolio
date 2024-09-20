@@ -4,6 +4,7 @@ import BlurFade from './magicui/blur-fade';
 const images = [
   { src: '/gallery/1.jpg', alt: '' },
   { src: '/gallery/4.jpg', alt: '' },
+  { src: '/gallery/3.jpg', alt: '' },
   { src: '/gallery/5.jpg', alt: '' },
   { src: '/gallery/6.jpg', alt: '' },
   { src: '/gallery/7.jpg', alt: '' },
