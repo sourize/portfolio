@@ -15,7 +15,12 @@ export function ImageGallery() {
     <BlurFade delay={0.1}>
       <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
         {images.map((img, index) => (
-          <div key={index} className={`relative aspect-square ${index === 2 ? 'col-span-2 row-span-2' : ''}`}>
+          <div 
+            key={index} 
+            className={`relative ${
+              index === 2 ? 'col-span-2 row-span-2 aspect-square md:aspect-[2/1]' : 'aspect-square'
+            }`}
+          >
             <Image
               src={img.src}
               alt={img.alt}
