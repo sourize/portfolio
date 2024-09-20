@@ -73,6 +73,9 @@
     body {
       @apply bg-background text-foreground;
     }
+    body {
+      @apply text-base; /* or text-lg for a larger increase */
+    }
   }
 
   h3 code {
