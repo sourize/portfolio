@@ -11,9 +11,9 @@ export const DATA = {
   localCode: "en-IN",
   locationLink: "",
   description:
-    "An Aspiring ML Engineer",
+    "An Aspiring ML Engineer passionate about transforming data into impactful insights, with hands-on experience in machine learning, data science, and real-world problem-solving.",
   summary:
-    "I'm an undergrad at [MSIT](https://www.linkedin.com/school/meghnadsahainstituteoftechnology/) with a passion for **Artificial Intelligence** and **Machine Learning**. My fascination with technology started early, inspired by the magic of movies like _Iron Man_, and now I'm on a mission to turn that inspiration into innovation. Curently I am focused learning my college courses and working on some projects on my free time as I learn more about the field simultaneously.\n\n[Click here to know more.](/about)",
+    "I'm an undergrad at [MSIT](https://www.linkedin.com/school/meghnadsahainstituteoftechnology/) with a passion for **Artificial Intelligence** and **Machine Learning**. My fascination with technology started early, inspired by the magic of movies like _Iron Man_, and now I'm on a mission to turn that inspiration into innovation.\nCurrently I am focused learning my college courses and working on some projects on my free time as I learn more about the field simultaneously.\n\n[Click here to know more.](/about)",
   avatarUrl: "/me.png",
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
