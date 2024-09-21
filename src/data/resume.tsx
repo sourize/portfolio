@@ -1,5 +1,5 @@
 import { Icons } from "@/components/icons";
-import { HomeIcon, NotebookIcon, UserIcon, Code } from "lucide-react";
+import { HomeIcon, UserIcon, PencilLine, Code } from "lucide-react";
 
 export const DATA = {
   name: "Sourish Chatterjee",
@@ -13,14 +13,15 @@ export const DATA = {
   description:
     "An Aspiring ML Engineer turning data into impactful insights.",
   summary:
-    "I'm an undergrad at [MSIT](https://www.linkedin.com/school/meghnadsahainstituteoftechnology/) with a passion for **Artificial Intelligence** and **Machine Learning**. My fascination with technology started early, inspired by the magic of movies like _Iron Man_, and now I'm on a mission to turn that inspiration into innovation.\n\nCurrently I am focused learning my college courses and working on some projects on my free time as I learn more about the field simultaneously.\n\n[Click here to know more.](/about)",
+    "I'm an undergrad at [MSIT](https://www.linkedin.com/school/meghnadsahainstituteoftechnology/) with a passion for **Artificial Intelligence** and **Machine Learning**. My fascination with technology started early, inspired by the magic of movies like _Iron Man_, and now I'm on a mission to turn that inspiration into innovation. Currently I am focused learning my college courses and working on some projects on my free time as I learn more about the field simultaneously.\n\n[Click here to know more.](/about)",
   avatarUrl: "/me.png",
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
-    { href: "/blog", icon: NotebookIcon, label: "Blog" },
     { href: "/about", icon: UserIcon, label: "About" },
+    { href: "/blog", icon: PencilLine, label: "Blog" },
     { href: "/projects", icon: Code, label: "Projects" },
   ],
+
   contact: {
     email: "sourishchatterjee0@gmail.com",
     tel: "",
