@@ -13,7 +13,7 @@ export const DATA = {
   description:
     "An Aspiring ML Engineer turning data into impactful insights.",
   summary:
-    "I'm an undergrad at [MSIT](https://www.linkedin.com/school/meghnadsahainstituteoftechnology/) with a passion for **Artificial Intelligence** and **Machine Learning**. My fascination with technology started early, inspired by the magic of movies like _Iron Man_, and now I'm on a mission to turn that inspiration into innovation. Currently I am focused learning my college courses and working on some projects on my free time as I learn more about the field simultaneously.\n\n[Click here to know more.](/about)",
+    "I'm **Sourish Chatterjee**, an undergrad at [MSIT](https://www.linkedin.com/school/meghnadsahainstituteoftechnology/) studying **Computer Science ** focused on **Artificial Intelligence** and **Machine Learning**. I use **data** and **technology** to solve **real-world problems** and make a **positive difference**. My interest in **AI/ML** comes from a passion for how **technology** can improve **industries** and **people's lives**. Through my projects in **data**\n\n[Click here to know more.](/about)",
   avatarUrl: "/me.png",
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
