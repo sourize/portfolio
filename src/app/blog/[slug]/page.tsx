@@ -114,9 +114,9 @@ export default async function Blog({
           {post.metadata.title}
         </h1>
         <div className="flex justify-start items-center mt-2 mb-8 text-sm max-w-[650px]">
-          <p className="text-sm text-neutral-600 dark:text-neutral-400 ml-1">
+          {/* <p className="text-sm text-neutral-600 dark:text-neutral-400 ml-1">
             - it&apos;s a &quot;{post.metadata.readTime} read&quot; blog.
-          </p>
+          </p> */}
         </div>
         <article
           className="prose dark:prose-invert md:mb-0 mb-10"
