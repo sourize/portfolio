@@ -61,7 +61,7 @@ export const BlogCard = ({
                 />
               </h3>
               <div className="text-xs sm:text-sm tabular-nums text-muted-foreground text-right">
-                {readTime} read
+                {/* {readTime} read */}
               </div>
             </div>
             {publishedAt && (
