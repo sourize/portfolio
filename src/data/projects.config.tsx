@@ -94,11 +94,11 @@ export const PROJECTS = [
         icon: <Icons.github className="size-3" />,
       },
     ],
-    image: "Energy2.jpeg",
+    image: "Energy.jpeg",
     video: "",
   },
   {
-    title: "NIFTY-50 Stock PredictionModel",
+    title: "NIFTY-50 Stock Prediction Model",
     href: "",
     dates: "April 2023 - March 2024",
     featured: true,
