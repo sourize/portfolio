@@ -319,6 +319,11 @@ export const DATA = {
           href: "https://www.sih.gov.in",
           icon: <Icons.globe className="size-3" />,
         },
+        {
+          type: "Read More",
+          href: "/blog/SIH2024",
+          icon: <Icons.globe className="size-3" />,
+        },
       ],
     },
   ],
