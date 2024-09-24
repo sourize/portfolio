@@ -2,7 +2,6 @@ import Image from 'next/image';
 import BlurFade from './magicui/blur-fade';
 
 const images = [
-  { src: '/gallery/1.jpg', alt: '' },
   { src: '/gallery/2.jpg', alt: '' },
   { src: '/gallery/4.jpg', alt: '' },
   { src: '/gallery/3.jpg', alt: '' },
