@@ -6,9 +6,9 @@ const images = [
   { src: '/gallery/4.jpg', alt: '' },
   { src: '/gallery/3.jpg', alt: '' },
   { src: '/gallery/5.jpg', alt: '' },
+  { src: '/gallery/8.jpg', alt: '' },
   { src: '/gallery/6.jpg', alt: '' },
   { src: '/gallery/7.jpg', alt: '' },
-  { src: '/gallery/8.jpg', alt: '' },
 ];
 
 export function ImageGallery() {
