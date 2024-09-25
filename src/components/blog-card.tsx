@@ -36,7 +36,7 @@ export const BlogCard = ({
             <AvatarFallback>{title[0]}</AvatarFallback>
           </Avatar>
         </div>
-        <div className="flex-grow ml-4 items-center flex-col group">
+        <div className="flex-grow ml-6 items-center flex-col group"> {/* Changed ml-4 to ml-6 */}
           <CardHeader>
             <div className="flex items-center justify-between gap-x-2 text-base">
               <h3 className="inline-flex items-center justify-center font-semibold leading-none md:text-base text-sm">
