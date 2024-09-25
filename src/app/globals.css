@@ -63,6 +63,9 @@
       --border: 0 0% 14.9%;
       --input: 0 0% 14.9%;
       --ring: 0 0% 83.1%;
+
+      /* Add this new variable for navbar hover */
+      --navbar-hover: 210 70% 30%; /* Slightly lighter blue for hover effect */
     }
   }
 
@@ -141,4 +144,9 @@ code[data-line-numbers-max-digits="2"] > [data-line]::before {
  
 code[data-line-numbers-max-digits="3"] > [data-line]::before {
   width: 3rem;
+}
+
+/* Add this new rule at the end of the file */
+.dark .navbar a:hover {
+  background-color: hsl(var(--navbar-hover));
 }
