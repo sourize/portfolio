@@ -54,9 +54,9 @@ export default function Page() {
   }, [blogPosts.length]);
 
   return (
-    <main className="flex flex-col min-h-[100dvh] space-y-10 max-w-[90%] mx-auto">
+    <main className="flex flex-col min-h-[100dvh] space-y-10">
       <section id="hero">
-        <div className="mx-auto w-full max-w-full space-y-8">
+        <div className="mx-auto w-full max-w-2xl space-y-8">
           <div className="gap-2 flex justify-between">
             <div className="flex-col flex flex-1 space-y-1.5">
               <BlurFadeText
@@ -85,7 +85,7 @@ export default function Page() {
           <h2 className="text-2xl font-bold">About</h2>
         </BlurFade>
         <BlurFade delay={BLUR_FADE_DELAY * 4}>
-          <Markdown className="prose max-w-full text-pretty font-sans text-paragraph text-muted-foreground dark:prose-invert leading-tight tracking-tighter">
+          <Markdown className="prose max-w-full text-pretty font-sans text-paragraph text-muted-foreground dark:prose-invert tracking-tighter">
             {DATA.summary}
           </Markdown>
         </BlurFade>
