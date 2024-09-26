@@ -23,7 +23,7 @@ export default function About() {
           text={`Hey There, I'm Sourish 👋🏼`}
         />
         <BlurFade delay={BLUR_FADE_DELAY * 2}>
-          <p className="text-paragraph text-muted-foreground mb-6">
+          <p className="text-base text-muted-foreground mb-6">
             Welcome to my digital abode!
           </p>
         </BlurFade>
@@ -42,7 +42,7 @@ export default function About() {
           <h2 className="text-xl font-bold">About me</h2>
         </BlurFade>
         <BlurFade delay={BLUR_FADE_DELAY * 4}>
-          <Markdown className="prose max-w-full text-pretty font-sans text-paragraph text-muted-foreground dark:prose-invert">
+          <Markdown className="prose max-w-full text-pretty font-sans text-base text-muted-foreground dark:prose-invert">
             {INFO.Sourish}
           </Markdown>
         </BlurFade>
@@ -52,7 +52,7 @@ export default function About() {
           <h2 className="text-xl font-bold">Why AI and ML?</h2>
         </BlurFade>
         <BlurFade delay={BLUR_FADE_DELAY * 4}>
-          <Markdown className="prose max-w-full text-pretty font-sans text-paragraph text-muted-foreground dark:prose-invert">
+          <Markdown className="prose max-w-full text-pretty font-sans text-base text-muted-foreground dark:prose-invert">
             {INFO.WhyAIandML}
           </Markdown>
         </BlurFade>
@@ -68,7 +68,7 @@ export default function About() {
                 key={skillCategory.category}
                 delay={BLUR_FADE_DELAY * 10 + id * 0.05}
               >
-                <p key={skillCategory.category} className="text-paragraph mb-1">
+                <p key={skillCategory.category} className="text-base mb-1">
                   {skillCategory.category}
                 </p>
                 <div className="flex flex-wrap gap-1">
@@ -142,7 +142,7 @@ export default function About() {
           <h2 className="text-xl font-bold">Lets connect</h2>
         </BlurFade>
         <BlurFade delay={BLUR_FADE_DELAY * 4}>
-          <Markdown className="prose max-w-full text-pretty font-sans text-paragraph text-muted-foreground dark:prose-invert">
+          <Markdown className="prose max-w-full text-pretty font-sans text-base text-muted-foreground dark:prose-invert">
             {INFO.connect}
           </Markdown>
         </BlurFade>
