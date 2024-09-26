@@ -85,7 +85,7 @@ export default function Page() {
           <h2 className="text-2xl font-bold">About</h2>
         </BlurFade>
         <BlurFade delay={BLUR_FADE_DELAY * 4}>
-          <Markdown className="prose max-w-full text-pretty font-sans text-lg text-muted-foreground dark:prose-invert">
+          <Markdown className="prose max-w-full text-pretty font-sans text-base text-muted-foreground dark:prose-invert">
             {DATA.summary}
           </Markdown>
         </BlurFade>
@@ -100,13 +100,13 @@ export default function Page() {
           <BlurFade delay={BLUR_FADE_DELAY * 11}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+                <div className="inline-block rounded-lg bg-foreground text-background px-4 py-1 text-sm">
                   Latest Articles
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
                   Insights from My Journey
                 </h2>
-                <p className="text-paragraph text-muted-foreground md:text-xl/relaxed lg:text-paragraph/relaxed xl:text-xl/relaxed">
+                <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   I&apos;ve written some blogs on my learning journey, projects, ML, and some other stuff.{" "}
                   <Link href="/blog" className="text-blue-500 hover:underline">
                     checkout my blog page
@@ -155,10 +155,10 @@ export default function Page() {
             <div className="space-y-12 w-full">
               <div className="flex flex-col items-center justify-center space-y-4 text-center">
                 <div className="space-y-2">
-                  <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl mt-2">
+                  <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl mt-2">
                     Some of my projects
                   </h2>
-                  <p className="text-paragraph text-muted-foreground md:text-xl/relaxed lg:text-paragraph/relaxed xl:text-xl/relaxed">
+                  <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                     I&apos;ve worked on a variety of ML projects and Data Analytics projects. Here are a few of my favorites.
                     You can find more on my{" "}
                     <Link
@@ -207,7 +207,7 @@ export default function Page() {
                 <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
                   Hackathons
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
                   I like building things
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
@@ -249,10 +249,10 @@ export default function Page() {
               <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
                 Contact
               </div>
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
                 Get in Touch
               </h2>
-              <p className="mx-auto max-w-[600px] text-paragraph text-muted-foreground md:text-xl/relaxed lg:text-paragraph/relaxed xl:text-xl/relaxed">
+              <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                 I&apos;m always excited to collaborate on projects or just chat about tech. Reach out anytime:{" "}
                 <Link
                   href={DATA.contact.social.X.url}
