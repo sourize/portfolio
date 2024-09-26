@@ -54,11 +54,11 @@ export default function Page() {
   }, [blogPosts.length]);
 
   return (
-    <main className="flex flex-col min-h-[100dvh] space-y-15">
+    <main className="flex flex-col min-h-[100dvh] space-y-10">
       <section id="hero">
-        <div className="mx-auto w-full max-w-2xl space-y-10">
+        <div className="mx-auto w-full max-w-2xl space-y-8">
           <div className="gap-2 flex justify-between">
-            <div className="flex-col flex flex-1 space-y-2.5">
+            <div className="flex-col flex flex-1 space-y-1.5">
               <BlurFadeText
                 delay={BLUR_FADE_DELAY}
                 className="text-3xl font-bold tracking-tighter sm:text-4xl xl:text-5xl/none"
