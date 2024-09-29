@@ -17,22 +17,20 @@ const images = [
 export function ImageGallery() {
   return (
     <BlurFade delay={0.1}>
-      <div className="grid grid-cols-3 gap-1 sm:gap-2 md:gap-3 max-w-full overflow-x-auto">
+      <div className="grid grid-cols-3 gap-1 sm:gap-2 md:gap-3">
         {images.map((img, index) => (
           <div 
             key={index} 
-            className="relative"
+            className="relative w-full"
             style={{
-              width: '197px',
-              height: index % 3 === 1 ? '147px' : '172px',
-              minWidth: '197px',
+              paddingBottom: index % 3 === 1 ? '74.62%' : '87.31%',
             }}
           >
             <Image
               src={img.src}
               alt={img.alt}
               fill
-              sizes="197px"
+              sizes="(max-width: 768px) 33vw, 25vw"
               className="rounded-lg object-cover"
               quality={90}
             />
