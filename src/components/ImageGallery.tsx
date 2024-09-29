@@ -16,7 +16,7 @@ const images = [
 export function ImageGallery() {
   return (
     <BlurFade delay={0.1}>
-      <div className="grid grid-cols-3 gap-2 sm:gap-3 md:gap-4">
+      <div className="grid grid-cols-3 gap-x-2 gap-y-6 sm:gap-x-3 sm:gap-y-8 md:gap-x-4 md:gap-y-10">
         {images.map((img, index) => (
           <div 
             key={index} 
@@ -42,17 +42,17 @@ export function ImageGallery() {
 
 function getImageClass(index: number): string {
   const classes = [
+    'transform translate-y-0',
     'transform translate-y-2',
     'transform -translate-y-2',
-    'transform translate-y-4',
-    'transform -translate-y-4',
     'transform translate-y-3',
     'transform -translate-y-3',
+    'transform translate-y-1',
   ];
   return classes[index % classes.length];
 }
 
 function getAspectRatio(index: number): string {
-  const ratios = ['100%', '90%', '110%', '95%', '105%', '100%'];
+  const ratios = ['100%', '95%', '105%', '98%', '102%', '100%'];
   return ratios[index % ratios.length];
 }
