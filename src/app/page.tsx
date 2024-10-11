@@ -82,7 +82,7 @@ export default function Page() {
       </section>
       <section id="about">
         <BlurFade delay={BLUR_FADE_DELAY * 3}>
-          <h2 className="text-2xl font-bold">About</h2>
+          <h2 className="text-2xl font-bold">About Me</h2>
         </BlurFade>
         <BlurFade delay={BLUR_FADE_DELAY * 4}>
           <Markdown className="prose max-w-full text-pretty font-sans text-base text-muted-foreground dark:prose-invert justify">
@@ -96,7 +96,7 @@ export default function Page() {
             const isLandscape = i % 2 === 0;
             const width = isLandscape ? 800 : 600;
             const height = isLandscape ? 600 : 800;
-            return `/gallery/${i + 1}.jpg`; // Updated to point to the public/gallery folder
+            return `/gallery/${i + 1}.jpg`;
           }).map((imageUrl, idx) => (
             <BlurFade key={imageUrl} delay={0.25 + idx * 0.05} inView>
               <img
