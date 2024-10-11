@@ -82,7 +82,7 @@ export function ImageGallery() {
   return (
     <div className="image-gallery">
       {images.map((src, index) => (
-        <BlurFade key={index}>
+        <BlurFade key={index} delay={0.25 * index} inView>
           <img src={src} alt={`Image ${index + 1}`} />
         </BlurFade>
       ))}
