@@ -26,42 +26,20 @@ interface BlurFadeProps {
   blur?: string;
 }
 
-export function BlurFade({
-  children,
-  className,
-  variant,
-  duration = 0.4,
-  delay = 0,
-  yOffset = 6,
-  inView = false,
-  inViewMargin = "-50px",
-  blur = "6px",
-}: BlurFadeProps) {
-  const ref = useRef(null);
-  const inViewResult = useInView(ref, { once: true, margin: inViewMargin });
-  const isInView = !inView || inViewResult;
-  const defaultVariants: Variants = {
-    hidden: { y: yOffset, opacity: 0, filter: `blur(${blur})` },
-    visible: { y: -yOffset, opacity: 1, filter: `blur(0px)` },
-  };
-  const combinedVariants = variant || defaultVariants;
+export function BlurFadeDemo() {  // Keep this as a named export
   return (
-    <AnimatePresence>
-      <motion.div
-        ref={ref}
-        initial="hidden"
-        animate={isInView ? "visible" : "hidden"}
-        exit="hidden"
-        variants={combinedVariants}
-        transition={{
-          delay: 0.04 + delay,
-          duration,
-          ease: "easeOut",
-        }}
-        className={className}
-      >
-        {children}
-      </motion.div>
-    </AnimatePresence>
+    <section id="photos">
+      <div className="columns-2 gap-4 sm:columns-3">
+        {images.map((imageUrl, idx) => (
+          <BlurFade key={imageUrl} delay={0.25 + idx * 0.05} inView>
+            <img
+              className="mb-4 size-full rounded-lg object-contain"
+              src={imageUrl}
+              alt={`Random stock image ${idx + 1}`}
+            />
+          </BlurFade>
+        ))}
+      </div>
+    </section>
   );
 }
