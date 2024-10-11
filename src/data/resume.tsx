@@ -13,7 +13,7 @@ export const DATA = {
   description:
     "An Aspiring ML Engineer/Data Scientist turning data into impactful insights.",
   summary:
-    "I'm Sourish Chatterjee, an undergrad at [Meghnad Saha Institute of Technology](https://www.linkedin.com/school/meghnadsahainstituteoftechnology) studying Computer Science with a focus on Artificial Intelligence and Machine Learning. I use data and technology to solve real-world problems and make a positive difference.\n\nMy interest in AI/ML comes from a passion for how technology can improve industries and people's lives. Through my projects in data science and machine learning, I work to create smarter solutions for a better future.\n[Click here to know more.](/about)",
+    "Hi, I'm Sourish Chatterjee, a Computer Science undergrad specializing in Artificial Intelligence and Machine Learning at [Meghnad Saha Institute of Technology](https://www.linkedin.com/school/meghnadsahainstituteoftechnology). I'm passionate about using data and technology to solve real-world problems and drive positive change. My work in AI and machine learning is focused on building smart, impactful solutions for the future. [Want to learn more? Click here](/about).",
   avatarUrl: "/me.png",
   navbar: [
 
