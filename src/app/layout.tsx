@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
 import "./globals.css";
+import Meteor from "@/components/magicui/Meteors"; // Importing Meteor component
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -63,6 +64,7 @@ export default function RootLayout({
       >
         <ThemeProvider attribute="class" defaultTheme="light">
           <TooltipProvider delayDuration={0}>
+            <Meteor /> {/* Using Meteor component */}
             {children}
             <Navbar />
           </TooltipProvider>
