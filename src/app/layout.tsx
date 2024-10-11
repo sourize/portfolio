@@ -62,7 +62,7 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
-        <RetroGrid className="your-custom-class" angle={45} /> {/* Add RetroGrid here */}
+        <RetroGrid className="absolute inset-0" angle={45} /> {/* Center RetroGrid */}
         <ThemeProvider attribute="class" defaultTheme="light">
           <TooltipProvider delayDuration={0}>
             {children}
