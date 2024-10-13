@@ -109,37 +109,7 @@ export default function Page() {
           ))}
         </div>
       </section> */}
-      <section id="work">
-        <div className="flex min-h-0 flex-col gap-y-3">
-          <BlurFade delay={BLUR_FADE_DELAY * 5}>
-            <h2 className="text-xl font-bold">Work Experience</h2>
-          </BlurFade>
-          <BlurFade delay={BLUR_FADE_DELAY * 14}>
-            <ul className="mb-4 ml-4 divide-y divide-dashed border-l">
-              {DATA.work.map((work, id) => (
-                <BlurFade
-                  key={work.company + work.start + work.end}
-                  delay={BLUR_FADE_DELAY * 6 + id * 0.05}
-                >
-                  <TimeLineCard
-                    title={work.company}
-                    role={work.title}
-                    description={work.description}
-                    dates={work.start + " - " + work.end}
-                    image={work.logoUrl}
-                    links={[
-                      { icon: null, title: 'Website', href: work.href },
-                      ...('link' in work ? [{ icon: null, title: "GitHub", href: work.link }] : []),
-                      ...('certificate' in work ? [{ icon: null, title: "Certificate", href: work.certificate }] : [])
-                    ]}
-                    location={work.location || 'Remote'}
-                  />
-                </BlurFade>
-              ))}
-            </ul>
-          </BlurFade>
-        </div>
-      </section>
+    
       <section id="blogs">
         <div className="space-y-12 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 11}>
