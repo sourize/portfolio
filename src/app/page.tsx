@@ -7,6 +7,7 @@ import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { TimeLineCard } from "@/components/timeline-card";
 import { Badge } from "@/components/ui/badge";
 import { LocateFixed, Paperclip } from 'lucide-react';
 import { SKILLS } from "@/data/skills.config";
@@ -108,6 +109,37 @@ export default function Page() {
           ))}
         </div>
       </section> */}
+      <section id="work">
+        <div className="flex min-h-0 flex-col gap-y-3">
+          <BlurFade delay={BLUR_FADE_DELAY * 5}>
+            <h2 className="text-xl font-bold">Work Experience</h2>
+          </BlurFade>
+          <BlurFade delay={BLUR_FADE_DELAY * 14}>
+            <ul className="mb-4 ml-4 divide-y divide-dashed border-l">
+              {DATA.work.map((work, id) => (
+                <BlurFade
+                  key={work.company + work.start + work.end}
+                  delay={BLUR_FADE_DELAY * 6 + id * 0.05}
+                >
+                  <TimeLineCard
+                    title={work.company}
+                    role={work.title}
+                    description={work.description}
+                    dates={work.start + " - " + work.end}
+                    image={work.logoUrl}
+                    links={[
+                      { icon: null, title: 'Website', href: work.href },
+                      ...('link' in work ? [{ icon: null, title: "GitHub", href: work.link }] : []),
+                      ...('certificate' in work ? [{ icon: null, title: "Certificate", href: work.certificate }] : [])
+                    ]}
+                    location={work.location || 'Remote'}
+                  />
+                </BlurFade>
+              ))}
+            </ul>
+          </BlurFade>
+        </div>
+      </section>
       <section id="blogs">
         <div className="space-y-12 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 11}>
@@ -121,7 +153,7 @@ export default function Page() {
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   I&apos;ve written some blogs on my learning journey, projects, ML, and some other stuff.{" "}
-                  <Link href="/blog" className="text-brown-500 hover:underline">
+                  <Link href="/blog" className="text-blue-500 hover:underline">
                     checkout my blog page
                   </Link>
                   .
