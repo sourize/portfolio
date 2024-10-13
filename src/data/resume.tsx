@@ -312,7 +312,7 @@ export const DATA = {
       location: "",
       description:
         "Developing a project that can detect oil spills in marine environment using AIS data and Satellite Imagery.",
-      image:"SIH2024-logo.webp",
+      image:"SIH-Logo.png",
       links: [
         {
           type: "Website",
