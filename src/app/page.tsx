@@ -90,7 +90,7 @@ export default function Page() {
           </Markdown>
         </BlurFade>
       </section>
-      <section id="photos">
+      {/* <section id="photos">
         <div className="columns-2 gap-4 sm:columns-3">
           {Array.from({ length: 9 }, (_, i) => {
             const isLandscape = i % 2 === 0;
@@ -107,7 +107,7 @@ export default function Page() {
             </BlurFade>
           ))}
         </div>
-      </section>
+      </section> */}
       <section id="blogs">
         <div className="space-y-12 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 11}>
@@ -121,7 +121,7 @@ export default function Page() {
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   I&apos;ve written some blogs on my learning journey, projects, ML, and some other stuff.{" "}
-                  <Link href="/blog" className="text-blue-500 hover:underline">
+                  <Link href="/blog" className="text-brown-500 hover:underline">
                     checkout my blog page
                   </Link>
                   .
