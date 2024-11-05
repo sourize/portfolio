@@ -22,6 +22,9 @@ export default function About() {
           yOffset={8}
           text={`Hey There, I'm Sourish 👋🏼`}
         />
+        <br>
+        
+        </br>
         <BlurFade delay={BLUR_FADE_DELAY * 2}>
           <p className="text-base text-muted-foreground mb-6">
             Welcome to my digital abode!

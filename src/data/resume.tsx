@@ -4,7 +4,7 @@ import { HomeIcon, UserIcon, PencilLine, Code } from "lucide-react";
 export const DATA = {
   name: "Sourish Chatterjee",
   initials: "SC",
-  url: "https://sourish.vercel.app",
+  url: "https://sourish.xyz",
   resume: "/Sourish_Chatterjee.pdf",
   location: "WB, India",
   timeZone: "Asia/Kolkata",
@@ -13,7 +13,7 @@ export const DATA = {
   description:
     "An Aspiring ML Engineer/Data Scientist turning data into impactful insights.",
   summary:
-    "Hi, I'm Sourish Chatterjee, a Computer Science undergrad specializing in Artificial Intelligence and Machine Learning at [Meghnad Saha Institute of Technology](https://msit.edu.in). I'm passionate about using data and technology to solve real-world problems and drive positive change. My work in AI and machine learning is focused on building smart, impactful solutions for the future. Want to learn more? [Click here](/about).",
+    "I'm a Computer Science undergrad specializing in AI & ML at <Badge href='https://msit.edu.in'>Meghnad Saha Institute of Technology</Badge>. I'm passionate about using data and technology to solve real-world problems and drive positive change. My work in AI and machine learning is focused on building smart, impactful solutions for the future. Want to learn more? [Click here](/about).",
   avatarUrl: "/me.png",
   navbar: [
 

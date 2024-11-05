@@ -62,7 +62,7 @@ export default function Page() {
             <div className="flex-col flex flex-1 space-y-1.5">
               <BlurFadeText
                 delay={BLUR_FADE_DELAY}
-                className="text-3xl font-bold tracking-tighter sm:text-4xl xl:text-5xl/none"
+                className="text-2xl font-bold tracking-tighter sm:text-4xl xl:text-5xl/none"
                 yOffset={8}
                 text={`Hey, I'm ${DATA.name.split(" ")[0]} 👋`}
               />
@@ -86,7 +86,7 @@ export default function Page() {
           <h2 className="text-2xl font-bold">About Me</h2>
         </BlurFade>
         <BlurFade delay={BLUR_FADE_DELAY * 4}>
-          <Markdown className="prose max-w-full text-pretty font-sans text-base text-muted-foreground dark:prose-invert justify">
+          <Markdown className="prose max-w-full text-pretty font-sans text-base text-muted-foreground dark:prose-invert justify tracking tighter">
             {DATA.summary}
           </Markdown>
         </BlurFade>
@@ -110,7 +110,7 @@ export default function Page() {
         </div>
       </section> */}
     
-      <section id="blogs">
+      {/* <section id="blogs">
         <div className="space-y-12 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 11}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -160,7 +160,7 @@ export default function Page() {
             </BlurFade>
           </div>
         </div>
-      </section>
+      </section> */}
       <section id="projects">
         <div className="flex flex-col items-center">
           <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
