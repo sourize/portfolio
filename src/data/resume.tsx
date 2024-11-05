@@ -13,7 +13,7 @@ export const DATA = {
   description:
     "An Aspiring ML Engineer/Data Scientist turning data into impactful insights.",
   summary:
-    "I'm a Computer Science undergrad specializing in AI & ML at <Badge href='https://msit.edu.in'>Meghnad Saha Institute of Technology</Badge>. I'm passionate about using data and technology to solve real-world problems and drive positive change. My work in AI and machine learning is focused on building smart, impactful solutions for the future. Want to learn more? [Click here](/about).",
+    "I'm a Computer Science undergrad specializing in AI & ML at [Meghnad Saha Institute of Technology](https://msit.edu.in). I'm passionate about using data and technology to solve real-world problems and drive positive change. My work in AI and machine learning is focused on building smart, impactful solutions for the future. Want to learn more? [Click here](/about).",
   avatarUrl: "/me.png",
   navbar: [
 
