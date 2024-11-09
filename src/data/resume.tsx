@@ -15,7 +15,7 @@ export const DATA = {
     "An Aspiring ML Engineer/Data Scientist turning data into impactful insights.",
   summary:
     "I'm a Computer Science undergrad specializing in AI & ML at " +
-    <a href="https://msit.edu.in"><Badge>MSIT</Badge></a> + 
+    <a href="https://msit.edu.in">MSIT</a> + 
     ". I'm passionate about using data and technology to solve real-world problems and drive positive change. My work in AI and machine learning is focused on building smart, impactful solutions for the future. Want to learn more? [Click here](/about).",
   avatarUrl: "/me.png",
   navbar: [
