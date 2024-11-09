@@ -93,7 +93,7 @@ export default function Page() {
       </section>
       <section id="career">
         <BlurFade delay={BLUR_FADE_DELAY * 3}>
-          <h2 className="text-2xl font-bold">Career</h2>
+          <h2 className="text-2xl font-bold">Professional Focus</h2>
         </BlurFade>
         <BlurFade delay={BLUR_FADE_DELAY * 4}>
           <Markdown className="prose max-w-full text-pretty font-sans text-base text-muted-foreground dark:prose-invert justify tracking tighter">
