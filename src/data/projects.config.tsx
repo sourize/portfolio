@@ -33,7 +33,7 @@ export const PROJECTS = [
       },
       {
         type: "Live Website",
-        href: "https://https://nifty50stockprediction.streamlit.app/",
+        href: "https://nifty50stockprediction.streamlit.app/",
         icon: <Icons.github className="size-3" />,
       },
     ],
