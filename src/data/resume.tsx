@@ -12,6 +12,8 @@ export const DATA = {
   localCode: "en-IN",
   locationLink: "",
   description:
+    "An Aspiring ML Engineer/Data Scientist turning data into impactful insights.",
+  summary:
     "I'm a Computer Science undergrad specializing in AI & ML at " +
     <a href="https://msit.edu.in"><Badge>MSIT</Badge></a> + 
     ". I'm passionate about using data and technology to solve real-world problems and drive positive change. My work in AI and machine learning is focused on building smart, impactful solutions for the future. Want to learn more? [Click here](/about).",
