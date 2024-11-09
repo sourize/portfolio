@@ -91,6 +91,16 @@ export default function Page() {
           </Markdown>
         </BlurFade>
       </section>
+      <section id="career">
+        <BlurFade delay={BLUR_FADE_DELAY * 3}>
+          <h2 className="text-2xl font-bold">Career</h2>
+        </BlurFade>
+        <BlurFade delay={BLUR_FADE_DELAY * 4}>
+          <Markdown className="prose max-w-full text-pretty font-sans text-base text-muted-foreground dark:prose-invert justify tracking tighter">
+            {DATA.career}
+          </Markdown>
+        </BlurFade>
+      </section>
       {/* <section id="photos">
         <div className="columns-2 gap-4 sm:columns-3">
           {Array.from({ length: 9 }, (_, i) => {
@@ -163,7 +173,7 @@ export default function Page() {
       </section> */}
       <section id="projects">
         <div className="flex flex-col items-center">
-        <BlurFade delay={BLUR_FADE_DELAY * 3}>
+        <BlurFade delay={BLUR_FADE_DELAY * 5}>
           <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
             Featured Projects
           </div>
