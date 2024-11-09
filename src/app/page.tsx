@@ -34,7 +34,6 @@ interface BlogsI {
 
 export default function Page() {
   const [blogPosts, setBlogPosts] = useState<BlogsI[]>([]);
-  const [showProjects, setShowProjects] = useState(false);
 
   useEffect(() => {
     const fetchBlogPosts = async () => {
@@ -54,14 +53,6 @@ export default function Page() {
       fetchBlogPosts();
     }
   }, [blogPosts.length]);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowProjects(true);
-    }, 1000); // Delay of 1 second
-
-    return () => clearTimeout(timer);
-  }, []); // Run once on component mount
 
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10">
@@ -172,11 +163,9 @@ export default function Page() {
       </section> */}
       <section id="projects">
         <div className="flex flex-col items-center">
-          {showProjects && ( // Only render if showProjects is true
-            <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-              Featured Projects
-            </div>
-          )}
+          <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+            Featured Projects
+          </div>
           <BlurFade delay={BLUR_FADE_DELAY * 11}>
             <div className="space-y-12 w-full">
               <div className="flex flex-col items-center justify-center space-y-4 text-center">
