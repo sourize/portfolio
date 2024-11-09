@@ -1,35 +1,45 @@
 import { Icons } from "@/components/icons";
 
 export const PROJECTS = [
-  // {
-  //   title: "AI-Powered Flappy Bird Game",
-  //   href: "https://github.com/sourize/AI-Powered-Flappy-Bird-Game-Using-NEAT-Algorithm",
-  //   dates: "Jun 2024 - Jul 2024",
-  //   featured: true,
-  //   active: false,
-  //   archived: false,
-  //   description:
-  //     "An AI powered Flappy Bird Game Using NEAT (NeuroEvolution of Augmenting Topologies) Algorithm",
-  //   technologies: [
-  //     "Python",
-  //     "NEAT",
-  //     "Pygame",
-  //   ],
-  //   links: [
-  //     {
-  //       type: "Read More",
-  //       href: "/blog/Flappy-Bird-Game-Using-NEAT-Algorithm",
-  //       icon: <Icons.globe className="size-3" />,
-  //     },
-  //     {
-  //       type: "Code",
-  //       href: "https://github.com/sourize/AI-Powered-Flappy-Bird-Game-Using-NEAT-Algorithm",
-  //       icon: <Icons.github className="size-3" />,
-  //     },
-  //   ],
-  //   image: "Flappy3D.webp",
-  //   video: "",
-  // },
+  {
+    title: "NIFTY-50 Stock Prediction Model",
+    href: "",
+    dates: "April 2023 - March 2024",
+    featured: true,
+    active: true,
+    archived: false,
+    description:
+      "A Predictive Model to predict Nifty-50 Stock.",
+    technologies: [
+      "Python",
+      "Pandas",
+      "Numpy",
+      "Matplotlib",
+      "Data Preprocessing",
+      "Data Cleaning",
+      "Data Visualization",
+      "Scikit-learn",
+    ],
+    links: [
+      {
+        type: "Read More",
+        href: "/blog/The-Nifty-50-Stock-Prediction-Using-Machine-Learning",
+        icon: <Icons.globe className="size-3" />,
+      },
+      {
+        type: "Code",
+        href: "https://github.com/sourize/The-Nifty-50-Stock-Prediction-using-Machine-Learning",
+        icon: <Icons.github className="size-3" />,
+      },
+      {
+        type: "Live Website",
+        href: "https://https://nifty50stockprediction.streamlit.app/",
+        icon: <Icons.github className="size-3" />,
+      },
+    ],
+    image: "nifty50.jpeg",
+    video: "",
+  },
   {
     title: "Data Analysis of NIFTY 50 Dataset",
     href: "",
@@ -95,40 +105,6 @@ export const PROJECTS = [
       },
     ],
     image: "Energy.jpeg",
-    video: "",
-  },
-  {
-    title: "NIFTY-50 Stock Prediction Model",
-    href: "",
-    dates: "April 2023 - March 2024",
-    featured: true,
-    active: false,
-    archived: false,
-    description:
-      "A Predictive Model to predict Nifty-50 Stock.",
-    technologies: [
-      "Python",
-      "Pandas",
-      "Numpy",
-      "Matplotlib",
-      "Data Preprocessing",
-      "Data Cleaning",
-      "Data Visualization",
-      "Scikit-learn",
-    ],
-    links: [
-      {
-        type: "Read More",
-        href: "/blog/The-Nifty-50-Stock-Prediction-Using-Machine-Learning",
-        icon: <Icons.globe className="size-3" />,
-      },
-      {
-        type: "Code",
-        href: "https://github.com/sourize/The-Nifty-50-Stock-Prediction-using-Machine-Learning",
-        icon: <Icons.github className="size-3" />,
-      },
-    ],
-    image: "nifty50.jpeg",
     video: "",
   },
   {
