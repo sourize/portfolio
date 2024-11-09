@@ -164,8 +164,10 @@ export default function Page() {
       <section id="projects">
         <div className="flex flex-col items-center">
           <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+          <BlurFade>
             delay={BLUR_FADE_DELAY}
             Featured Projects
+            </BlurFade>
           </div>
           <BlurFade delay={BLUR_FADE_DELAY * 11}>
             <div className="space-y-12 w-full">
