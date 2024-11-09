@@ -318,8 +318,8 @@ export const DATA = {
       image:"SIH-Logo.png",
       links: [
         {
-          type: "Website",
-          href: "https://www.sih.gov.in",
+          type: "My Certificate",
+          href: "https://drive.google.com/file/d/1UOKtQBU_DYfdNyYWVwgtItTOhUabEaKI/view?usp=sharing",
           icon: <Icons.globe className="size-3" />,
         },
         {
