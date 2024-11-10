@@ -10,7 +10,7 @@ import Link from "next/link";
 import React from "react";
 
 interface BlogCardProps {
-  iconUrl: string;
+  // iconUrl: string;
   title: string;
   // readTime?: string;
   href?: string;
@@ -23,7 +23,7 @@ export const BlogCard = ({
   href,
   badges,
   description,
-  iconUrl,
+  // iconUrl,
   // readTime,
   publishedAt,
 }: BlogCardProps) => {
@@ -32,7 +32,7 @@ export const BlogCard = ({
       <Card className="flex bg-background py-4">
         <div className="flex-none">
           <Avatar className="size-12 m-auto rounded-lg bg-muted-foreground border-2">
-            <AvatarImage src={iconUrl} alt={title} className="object-contain" />
+            {/* <AvatarImage src={iconUrl} alt={title} className="object-contain" /> */}
             <AvatarFallback>{title[0]}</AvatarFallback>
           </Avatar>
         </div>
