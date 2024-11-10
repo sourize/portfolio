@@ -3,7 +3,7 @@ import { Icons } from "@/components/icons";
 export const PROJECTS = [
   {
     title: "NIFTY-50 Stock Prediction Model",
-    href: "",
+    href: "/blog/The-Nifty-50-Stock-Prediction-Using-Machine-Learning",
     dates: "April 2023 - March 2024",
     featured: true,
     active: true,
@@ -42,7 +42,7 @@ export const PROJECTS = [
   },
   {
     title: "Data Analysis of NIFTY 50 Dataset",
-    href: "",
+    href: "/blog/Data-Analysis-of-Nifty50",
     dates: "Aug 2024",
     featured: false,
     active: false,
@@ -75,7 +75,7 @@ export const PROJECTS = [
   },
   {
     title: "Energy Consumption Prediction Model",
-    href: "",
+    href: "/blog/Energy-Consumption",
     dates: "Jul 2024 - Aug 2024",
     featured: true,
     active: false,
@@ -109,7 +109,7 @@ export const PROJECTS = [
   },
   {
     title: "Real Estate Price Prediction Model",
-    href: "",
+    href: "/blog/Real-Estate-Price-Prediction-Using-Machine-Learning",
     dates: "April 2023 - March 2024",
     featured: true,
     active: false,
@@ -143,7 +143,7 @@ export const PROJECTS = [
   },
   {
     title: "Restaurant Review Sentiment Analysis Model",
-    href: "",
+    href: "/blog/Restaurant-Review-Sentiment-Analysis-Model",
     dates: "April 2023 - March 2024",
     featured: false,
     active: false,
