@@ -18,7 +18,7 @@ export default async function BlogPage() {
         <h1 className="font-medium text-2xl mb-8 tracking-tighter">Thoughts & Insights</h1>
       </BlurFade>
       <BlurFade delay={BLUR_FADE_DELAY}>
-        <h3 className="font-medium text-xl mb-7 tracking-tighter text-muted-foreground dark:prose-invert">Exploring tech, life, and everything in between. Join me as I share my perspectives on various topics. I hope you find something intriguing!</h3>
+        <h3 className="font-light text-xl mb-7 tracking-tighter text-muted-foreground dark:prose-invert">Exploring tech, life, and everything in between. Join me as I share my perspectives on various topics. I hope you find something intriguing!</h3>
       </BlurFade>
       {posts
         .sort((a, b) => {
