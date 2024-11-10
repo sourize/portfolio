@@ -62,7 +62,7 @@ export default function Page() {
             <div className="flex-col flex flex-1 space-y-1.5">
               <BlurFadeText
                 delay={BLUR_FADE_DELAY}
-                className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
+                className="text-3xl font-bold tracking-tighter sm:text-4xl xl:text-5xl/none"
                 yOffset={8}
                 text={`Hey, I'm ${DATA.name.split(" ")[0]} 👋`}
               />
@@ -83,7 +83,7 @@ export default function Page() {
       </section>
       <section id="about">
         <BlurFade delay={BLUR_FADE_DELAY * 3}>
-          <h2 className="text-2xl font-bold">About Me</h2>
+          <h2 className="text-1xl font-bold">About Me</h2>
         </BlurFade>
         <BlurFade delay={BLUR_FADE_DELAY * 4}>
           <Markdown className="prose max-w-full text-pretty font-sans text-base text-muted-foreground dark:prose-invert">
@@ -93,7 +93,7 @@ export default function Page() {
       </section>
       <section id="career">
         <BlurFade delay={BLUR_FADE_DELAY * 3}>
-          <h2 className="text-2xl font-bold">Professional Focus</h2>
+          <h2 className="text-1xl font-bold">Professional Focus</h2>
         </BlurFade>
         <BlurFade delay={BLUR_FADE_DELAY * 4}>
           <Markdown className="prose max-w-full text-pretty font-sans text-base text-muted-foreground dark:prose-invert">
