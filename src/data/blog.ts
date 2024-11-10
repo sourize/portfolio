@@ -7,6 +7,13 @@ import remarkParse from "remark-parse";
 import remarkRehype from "remark-rehype";
 import { unified } from "unified";
 
+type Metadata = {
+  title: string;
+  publishedAt: string;
+  summary: string;
+  image?: string;
+};
+
 function getMDXFiles(dir: string) {
   return fs.readdirSync(dir).filter((file) => path.extname(file) === ".mdx");
 }
@@ -31,25 +38,14 @@ export async function markdownToHTML(markdown: string) {
 
 export async function getPost(slug: string) {
   const filePath = path.join("content", `${slug}.mdx`);
-
-  try {
-    // Attempt to read the file
-    const source = fs.readFileSync(filePath, "utf-8");
-    const { content: rawContent, data: metadata } = matter(source);
-    const content = await markdownToHTML(rawContent);
-
-    return {
-      source: content,
-      metadata,
-      slug,
-    };
-  } catch (error: any) {
-    if (error.code === "ENOENT") {
-      return false;
-    } else {
-      throw false;
-    }
-  }
+  let source = fs.readFileSync(filePath, "utf-8");
+  const { content: rawContent, data: metadata } = matter(source);
+  const content = await markdownToHTML(rawContent);
+  return {
+    source: content,
+    metadata,
+    slug,
+  };
 }
 
 async function getAllPosts(dir: string) {
@@ -57,17 +53,13 @@ async function getAllPosts(dir: string) {
   return Promise.all(
     mdxFiles.map(async (file) => {
       let slug = path.basename(file, path.extname(file));
-      let result = await getPost(slug);
-      if (result === false) {
-        return null;
-      }
-      let { metadata, source } = result;
+      let { metadata, source } = await getPost(slug);
       return {
         metadata,
         slug,
         source,
       };
-    }),
+    })
   );
 }
 
