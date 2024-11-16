@@ -53,7 +53,6 @@ export function ProjectCard({
           "opacity-70": archived,
         }
       )}
-      style={{ transform: "scale(1)", transformOrigin: "center" }}
     >
       <Link
         href={href || "#"}
@@ -73,20 +72,41 @@ export function ProjectCard({
           <Image
             src={image}
             alt={title}
-            width={1920} // Higher resolution for desktop
+            layout="responsive"
+            width={1920}
             height={1080}
-            className="h-40 w-full overflow-hidden object-cover object-top"
-            quality={100} // Ensure high-quality rendering
-            priority // Prioritize loading
+            quality={100} // Ensure maximum quality
+            priority
+            className="h-40 w-full object-cover object-top"
+            style={{
+              imageRendering: "crisp-edges", // For sharper images
+              backfaceVisibility: "hidden",
+            }}
           />
         )}
         {active && (
-          <Badge className="absolute top-2 right-2 bg-green-500 text-white">
+          <Badge
+            className="absolute top-2 right-2 bg-green-500 text-white"
+            style={{
+              fontSize: "0.75rem",
+              fontWeight: "bold",
+              WebkitFontSmoothing: "antialiased",
+              transform: "scale(1.1)",
+            }}
+          >
             Active
           </Badge>
         )}
         {archived && (
-          <Badge className="absolute top-2 right-2 bg-gray-500 text-white">
+          <Badge
+            className="absolute top-2 right-2 bg-gray-500 text-white"
+            style={{
+              fontSize: "0.75rem",
+              fontWeight: "bold",
+              WebkitFontSmoothing: "antialiased",
+              transform: "scale(1.1)",
+            }}
+          >
             Archived
           </Badge>
         )}
@@ -124,6 +144,11 @@ export function ProjectCard({
                 className="px-1 py-0 text-[10px]"
                 variant="secondary"
                 key={tag}
+                style={{
+                  fontSize: "0.75rem",
+                  fontWeight: "500",
+                  WebkitFontSmoothing: "antialiased",
+                }}
               >
                 {tag}
               </Badge>
@@ -136,7 +161,15 @@ export function ProjectCard({
           <div className="flex flex-row flex-wrap items-start gap-1">
             {links?.map((link, idx) => (
               <Link href={link?.href} key={idx} target="_blank">
-                <Badge key={idx} className="flex gap-2 px-2 py-1 text-[10px]">
+                <Badge
+                  key={idx}
+                  className="flex gap-2 px-2 py-1 text-[10px]"
+                  style={{
+                    fontSize: "0.75rem",
+                    fontWeight: "500",
+                    WebkitFontSmoothing: "antialiased",
+                  }}
+                >
                   {link.icon}
                   {link.type}
                 </Badge>
