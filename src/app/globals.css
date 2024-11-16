@@ -4,7 +4,7 @@
 
 @layer base {
     :root {
-      --background: 45, 29%, 97%; /* Changed to off-white/cream */
+      --background: 58, 79%, 91%; /* Changed to off-white/cream */
       --foreground: 210 11.1% 10%; /* Adjusted for better contrast */
 
       --card: 0 0% 100%;
