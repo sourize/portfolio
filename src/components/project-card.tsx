@@ -47,7 +47,7 @@ export function ProjectCard({
   return (
     <Card
       className={cn(
-        "flex flex-col overflow-hidden border-2 hover:shadow-lg transition-all duration-300 ease-out h-full",
+        "flex flex-col overflow-hidden border-3 hover:shadow-lg transition-all duration-300 ease-out h-full",
         {
           "border-green-500 dark:border-green-700": active,
           "opacity-70": archived,
@@ -163,9 +163,9 @@ export function ProjectCard({
               <Link href={link?.href} key={idx} target="_blank">
                 <Badge
                   key={idx}
-                  className="flex gap-2 px-2 py-1 text-[10px]"
+                  className="flex gap-2 px-2 py-1 text-[9px]"
                   style={{
-                    fontSize: "0.75rem",
+                    fontSize: "0.65rem",
                     fontWeight: "500",
                     WebkitFontSmoothing: "antialiased",
                   }}
