@@ -5,13 +5,13 @@
 @layer base {
   :root {
     --background: 45 36% 96%; /* Light background */
-    --foreground: 45 36% 96%; /* Complementary dark foreground for readability */
+    --foreground: 210 11.1% 3.53%; /* Complementary dark foreground for readability */
 
     --card: 45 36% 96%; /* Match background for consistency */
-    --card-foreground: 45 10% 15%;
+    --card-foreground: 210 11.1% 3.53%;
 
     --popover: 45 36% 96%;
-    --popover-foreground: 45 10% 15%;
+    --popover-foreground: 210 11.1% 3.53%;
 
     --primary: 45 25% 50%; /* Muted green */
     --primary-foreground: 45 36% 96%; /* Light foreground for contrast */
