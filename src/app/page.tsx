@@ -91,7 +91,7 @@ interface BlogsI {
                   <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl mt-2">
                     Some of my projects
                   </h2>
-                  <p className="text-muted-foreground md:text-l/relaxed lg:text-base/relaxed l:text-l/relaxed">
+                  <p className="text-muted-foreground md:text-l/relaxed lg:text-base/relaxed">
                     I&apos;ve worked on a variety of ML projects and Data Analytics projects. Here are a few of my favorites.
                     You can find more on my{" "}
                     <Link
