@@ -163,9 +163,9 @@ export function ProjectCard({
               <Link href={link?.href} key={idx} target="_blank">
                 <Badge
                   key={idx}
-                  className="flex gap-2 px-2 py-1 text-[9px]"
+                  className="flex gap-2 px-2 py-1 text-[10px]"
                   style={{
-                    fontSize: "0.65rem",
+                    fontSize: "0.75rem",
                     fontWeight: "500",
                     WebkitFontSmoothing: "antialiased",
                   }}
