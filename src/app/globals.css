@@ -7,8 +7,8 @@
     --background: 45 36% 96%; /* Light background */
     --foreground: 45 10% 15%; /* Complementary dark foreground for readability */
 
-    --card: 0 0% 100%; /* Match background for consistency */
-    --card-foreground: 210 11.1% 3.53%;
+    --card: 45 36% 96%; /* Match background for consistency */
+    --card-foreground: 45 10% 15%;
 
     --popover: 45 36% 96%;
     --popover-foreground: 45 10% 15%;
@@ -19,8 +19,8 @@
     --secondary: 45 36% 80%; /* Light greenish shade */
     --secondary-foreground: 45 10% 15%; /* Darker for readability */
 
-    --muted: 45 36% 85%; /* Muted light tone */
-    --muted-foreground: 45 15% 25%; /* Slightly darker text */
+    --muted: 0 0% 96.1%; /* Muted light tone */
+    --muted-foreground: 0 0% 45.1%; /* Slightly darker text */
 
     --accent: 45 25% 50%; /* Matches primary */
     --accent-foreground: 45 36% 96%;
