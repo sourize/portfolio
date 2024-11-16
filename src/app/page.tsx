@@ -16,6 +16,7 @@ import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown";
 
+
 const BLUR_FADE_DELAY = 0.04;
 
 interface BlogsI {
@@ -29,6 +30,28 @@ interface BlogsI {
     readTime: string;
   };
 }
+
+export default function Page() {
+  const [blogPosts, setBlogPosts] = useState<BlogsI[]>([]);
+
+  useEffect(() => {
+    const fetchBlogPosts = async () => {
+      try {
+        const response = await fetch("/api/blogs");
+        if (!response.ok) {
+          throw new Error("Failed to fetch blog posts");
+        }
+        const data = await response.json();
+        setBlogPosts(data);
+      } catch (error) {
+        console.error("Error fetching blog posts:", error);
+      }
+    };
+
+    if (blogPosts.length === 0) {
+      fetchBlogPosts();
+    }
+  }, [blogPosts.length]);
 
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10">
@@ -59,7 +82,7 @@ interface BlogsI {
       </section>
       <section id="about">
         <BlurFade delay={BLUR_FADE_DELAY * 3}>
-          <h2 className="text-xl font-bold">About Me</h2>
+          <h2 className="text-l font-bold">About Me</h2>
         </BlurFade>
         <BlurFade delay={BLUR_FADE_DELAY * 4}>
           <Markdown className="prose max-w-full text-pretty font-sans text-base text-muted-foreground dark:prose-invert">
@@ -69,14 +92,84 @@ interface BlogsI {
       </section>
       <section id="career">
         <BlurFade delay={BLUR_FADE_DELAY * 3}>
-          <h2 className="text-xl font-bold">Professional Focus</h2>
+          <h2 className="text-l font-bold">Professional Focus</h2>
         </BlurFade>
         <BlurFade delay={BLUR_FADE_DELAY * 4}>
           <Markdown className="prose max-w-full text-pretty font-sans text-base text-muted-foreground dark:prose-invert">
             {DATA.career}
           </Markdown>
         </BlurFade>
-      </section>   
+      </section>
+      {/* <section id="photos">
+        <div className="columns-2 gap-4 sm:columns-3">
+          {Array.from({ length: 9 }, (_, i) => {
+            const isLandscape = i % 2 === 0;
+            const width = isLandscape ? 800 : 600;
+            const height = isLandscape ? 600 : 800;
+            return `/gallery/${i + 1}.jpg`;
+          }).map((imageUrl, idx) => (
+            <BlurFade key={imageUrl} delay={0.25 + idx * 0.05} inView>
+              <img
+                className="mb-4 size-full rounded-lg object-contain"
+                src={imageUrl}
+                alt={`Random stock image ${idx + 1}`}
+              />
+            </BlurFade>
+          ))}
+        </div>
+      </section> */}
+    
+      {/* <section id="blogs">
+        <div className="space-y-12 w-full py-12">
+          <BlurFade delay={BLUR_FADE_DELAY * 11}>
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+                  Latest Articles
+                </div>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                  Insights from My Journey
+                </h2>
+                <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  I&apos;ve written some blogs on my learning journey, projects, ML, and some other stuff.{" "}
+                  <Link href="/blog" className="text-blue-500 hover:underline">
+                    checkout my blog page
+                  </Link>
+                  .
+                </p>
+              </div>
+            </div>
+          </BlurFade>
+          <div className="flex flex-col gap-3 w-full">
+            <BlurFade delay={BLUR_FADE_DELAY * 14}>
+              <ul className="divide-y divide-dashed">
+                {blogPosts
+                  .filter((post) => post.metadata.featured)
+                  .sort(
+                    (a, b) =>
+                      new Date(b.metadata.publishedAt).getTime() -
+                      new Date(a.metadata.publishedAt).getTime()
+                  )
+                  .map((post, id) => (
+                    <BlurFade
+                      key={post.slug}
+                      delay={BLUR_FADE_DELAY * 12 + id * 0.05}
+                    >
+                      <BlogCard
+                        href={`/blog/${post.slug}`}
+                        title={post.metadata.title}
+                        description={post.metadata.summary}
+                        publishedAt={post.metadata.publishedAt}
+                        iconUrl={post.metadata.icon}
+                        // readTime={post.metadata.readTime}
+                      />
+                    </BlurFade>
+                  ))}
+              </ul>
+            </BlurFade>
+          </div>
+        </div>
+      </section> */}
       <section id="projects">
         <div className="flex flex-col items-center">
         <BlurFade delay={BLUR_FADE_DELAY * 5}>
@@ -91,7 +184,7 @@ interface BlogsI {
                   <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl mt-2">
                     Some of my projects
                   </h2>
-                  <p className="text-muted-foreground md:text-l/relaxed lg:text-base/relaxed">
+                  <p className="text-muted-foreground md:text-l/relaxed lg:text-base/relaxed l:text-l/relaxed">
                     I&apos;ve worked on a variety of ML projects and Data Analytics projects. Here are a few of my favorites.
                     You can find more on my{" "}
                     <Link
