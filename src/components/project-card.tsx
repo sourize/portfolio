@@ -26,7 +26,6 @@ interface Props {
     href: string;
   }[];
   className?: string;
-  // Add these new props
   active?: boolean;
   archived?: boolean;
 }
@@ -54,6 +53,7 @@ export function ProjectCard({
           "opacity-70": archived,
         }
       )}
+      style={{ transform: "scale(1)", transformOrigin: "center" }}
     >
       <Link
         href={href || "#"}
@@ -66,16 +66,18 @@ export function ProjectCard({
             loop
             muted
             playsInline
-            className="pointer-events-none mx-auto h-40 w-full object-cover object-top" // needed because random black line at bottom of video
+            className="pointer-events-none mx-auto h-40 w-full object-cover object-top"
           />
         )}
         {image && (
           <Image
             src={image}
             alt={title}
-            width={500}
-            height={300}
+            width={1920} // Higher resolution for desktop
+            height={1080}
             className="h-40 w-full overflow-hidden object-cover object-top"
+            quality={100} // Ensure high-quality rendering
+            priority // Prioritize loading
           />
         )}
         {active && (
@@ -91,12 +93,25 @@ export function ProjectCard({
       </Link>
       <CardHeader className="px-2">
         <div className="space-y-1">
-          <CardTitle className="mt-1 text-base" style={{ textRendering: 'optimizeLegibility' }}>{title}</CardTitle>
-          <time className="font-sans text-xs" style={{ textRendering: 'optimizeLegibility' }}>{dates}</time>
+          <CardTitle
+            className="mt-1 text-base"
+            style={{
+              textRendering: "optimizeLegibility",
+              WebkitFontSmoothing: "antialiased",
+            }}
+          >
+            {title}
+          </CardTitle>
+          <time
+            className="font-sans text-xs"
+            style={{ textRendering: "optimizeLegibility" }}
+          >
+            {dates}
+          </time>
           <div className="hidden font-sans text-xs underline print:visible">
             {link?.replace("https://", "").replace("www.", "").replace("/", "")}
           </div>
-          <Markdown className="prose max-w-full text-pretty font-sans text-xs text-muted-foreground dark:prose-invert">
+          <Markdown className="prose max-w-full font-sans text-sm text-muted-foreground dark:prose-invert">
             {description}
           </Markdown>
         </div>
