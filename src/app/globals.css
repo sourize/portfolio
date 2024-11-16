@@ -19,11 +19,11 @@
     --secondary: 45 36% 80%; /* Light greenish shade */
     --secondary-foreground: 45 10% 15%; /* Darker for readability */
 
-    --muted: 0 0% 96.1%; /* Muted light tone */
-    --muted-foreground: 0 0% 45.1%; /* Slightly darker text */
+    --muted: 45 36% 85%; /* Muted light tone */
+    --muted-foreground: 45 15% 25%; /* Slightly darker text */
 
-    --accent: 45 25% 50%; /* Matches primary */
-    --accent-foreground: 45 36% 96%;
+    --accent: 0 0% 96.1%; /* Matches primary */
+    --accent-foreground: 0 0% 45.1%
 
     --destructive: 0 70% 50%; /* Muted red for warnings */
     --destructive-foreground: 45 36% 96%; /* Light foreground */
