@@ -23,7 +23,7 @@ export const DATA = {
 
     { href: "/", icon: HomeIcon, label: "Home" },
     { href: "/about", icon: UserIcon, label: "About" },
-    { href: "/blog", icon: PencilLine, label: "Blog" },
+    //{ href: "/blog", icon: PencilLine, label: "Blog" },
     { href: "/projects", icon: Code, label: "Projects" },
   ],
 
