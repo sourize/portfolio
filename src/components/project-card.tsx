@@ -88,7 +88,7 @@ export function ProjectCard({
           <CardTitle className="mt-1 text-base">{title}</CardTitle>
           {active ? (
             <p className="font-sans text-xs text-green-500 animate-pulse">
-              Developing...{" "}
+              Working on...{" "}
             </p>
           ) : (
             <time className="font-sans text-xs">{dates}</time>
