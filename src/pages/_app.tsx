@@ -1,6 +1,7 @@
 // src/pages/_app.tsx
 import { AppProps } from 'next/app';
 import Head from 'next/head';
+import React from 'react';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
