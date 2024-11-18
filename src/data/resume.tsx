@@ -17,7 +17,7 @@ export const DATA = {
     "I'm a Computer Science undergrad at MSIT, specializing in AI and ML. Driven by a passion for technology, I'm focused on using data to tackle real-world challenges and create positive, lasting change.",
   career:
     "My journey in AI and machine learning revolves around building smart solutions that have a real impact. I'm always seeking to innovate and explore new ways to shape the future through technology. Want to learn more? [Click here](/about).",
-  avatarUrl: "/me3.jpg",
+  avatarUrl: "/me1.jpg",
   navbar: [
 
 
