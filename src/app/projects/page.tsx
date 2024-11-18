@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/tabs"
 const BLUR_FADE_DELAY = 0.04;
 
+
 export default function Projects() {
   return (
     <div className="flex flex-col min-h-[100dvh]">

@@ -10,6 +10,16 @@ import Markdown from "react-markdown";
 import { INFO } from "./about";
 import { DATA } from "@/data/resume";
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J41N4GVFYJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-J41N4GVFYJ');
+</script>
+
 const BLUR_FADE_DELAY = 0.04;
 
 export default function About() {
