@@ -54,6 +54,13 @@ export default function Page() {
 
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10">
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-J41N4GVFYJ"></script>
+      <script>
+        {`window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-J41N4GVFYJ');`}
+      </script>
       <section id="hero" className="mt-5">
         <div className="mx-auto w-full max-w-2xl space-y-8">
           <div className="gap-2 flex justify-between">
