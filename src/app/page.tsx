@@ -53,7 +53,7 @@ export default function Page() {
   }, [blogPosts.length]);
 
   return (
-    <main className="flex flex-col min-h-[1000dvh] space-y-7">
+    <main className="flex flex-col min-h-[2000dvh] space-y-7">
       <section id="hero" className="mt-5">
         <div className="mx-auto w-full max-w-2xl space-y-8">
           <div className="gap-2 flex justify-between">
