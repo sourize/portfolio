@@ -31,27 +31,6 @@ interface BlogsI {
 }
 
 export default function Page() {
-  const [blogPosts, setBlogPosts] = useState<BlogsI[]>([]);
-
-  useEffect(() => {
-    const fetchBlogPosts = async () => {
-      try {
-        const response = await fetch("/api/blogs");
-        if (!response.ok) {
-          throw new Error("Failed to fetch blog posts");
-        }
-        const data = await response.json();
-        setBlogPosts(data);
-      } catch (error) {
-        console.error("Error fetching blog posts:", error);
-      }
-    };
-
-    if (blogPosts.length === 0) {
-      fetchBlogPosts();
-    }
-  }, [blogPosts.length]);
-
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-7">
       <section id="hero" className="mt-5">
