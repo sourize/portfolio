@@ -22,6 +22,8 @@ export const metadata: Metadata = {
   description: DATA.description,
   keywords: [
     "Sourish Chatterjee",
+    "sourish ml",
+    "sourish.xyz",
     "Sourish Chatterjee Portfolio",
     "Sourish Chatterjee Projects",
     "Sourish Chatterjee Blogs",
@@ -39,7 +41,6 @@ export const metadata: Metadata = {
     "Sourish Resume",
     "Sourish Contact",
     "Sourish Instagram",
-    "Sourish Youtube",
     "Sourish Email",
     "Sourish LinkedIn",
     "Sourish GitHub",
