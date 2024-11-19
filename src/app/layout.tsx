@@ -17,17 +17,58 @@ export const metadata: Metadata = {
   metadataBase: new URL(DATA.url),
   title: {
     default: DATA.name,
-    template: `%s | ${DATA.name}`,
+    template: `%s - ${DATA.name}`,
   },
   description: DATA.description,
+  keywords: [
+    "Sourish Chatterjee",
+    "SkidGod",
+    "Sourish Chatterjee Portfolio",
+    "Sourish Chatterjee Projects",
+    "Sourish Chatterjee Blogs",
+    "Sourish Chatterjee Resume",
+    "Sourish Chatterjee Contact",
+    "Sourish Chatterjee Instagram",
+    "Sourish Chatterjee Youtube",
+    "Sourish Chatterjee Email",
+    "Sourish Chatterjee LinkedIn",
+    "Sourish Chatterjee GitHub",
+    "Sourish Chatterjee Twitter",
+    "saidevdhal",
+    "Saidev Dhal Portfolio",
+    "Saidev Dhal Projects",
+    "Saidev Dhal Blogs",
+    "Saidev Dhal Resume",
+    "Saidev Dhal Contact",
+    "Saidev Dhal Instagram",
+    "Saidev Dhal Youtube",
+    "Saidev Dhal Email",
+    "Saidev Dhal LinkedIn",
+    "Saidev Dhal GitHub",
+    "Saidev Dhal Twitter",
+    "saidevdhal",
+    "skidgod",
+    "skidgod4444",
+  ],
+  authors: [
+    {
+      name: `${DATA.name}`,
+      url: DATA.url,
+    },
+  ],
+  creator: `${DATA.name}`,
   openGraph: {
-    title: DATA.name,
+    title: `${DATA.name}`,
     description: DATA.description,
     url: DATA.url,
-    siteName: DATA.name,
+    images: [
+      {
+        url: DATA.prevImage,
+      },
+    ],
+    siteName: `${DATA.name}`,
     locale: "en_US",
     type: "website",
-    images: "/land.jpg", // Assumes land.jpg is in the public folder
   },
   robots: {
     index: true,
@@ -41,13 +82,19 @@ export const metadata: Metadata = {
     },
   },
   twitter: {
-    title: DATA.name,
+    title: `${DATA.name}`,
     card: "summary_large_image",
-    images: "/land.jpg", // Twitter card image, same as Open Graph
-  },
-  verification: {
-    google: "",
-    yandex: "",
+    site: DATA.url,
+    creator: `${DATA.name}`,
+    description: DATA.description,
+    images: [
+      {
+        url: DATA.prevImage,
+        width: 1200,
+        height: 630,
+        alt: `${DATA.name}`,
+      },
+    ],
   },
 };
 
@@ -58,27 +105,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        {/* Favicon */}
-        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-
-        {/* Open Graph Meta Tags for Social Sharing */}
-        <meta property="og:title" content={DATA.name} />
-        <meta property="og:description" content={DATA.description} />
-        <meta property="og:url" content={DATA.url} />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content="/land.jpg" />
-
-        {/* Twitter Card Meta Tags */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={DATA.name} />
-        <meta name="twitter:description" content={DATA.description} />
-        <meta name="twitter:image" content="/land.jpg" />
-      </head>
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased max-w-2xl mx-auto py-12 sm:py-24 px-6",
-          fontSans.variable
+          fontSans.variable,
         )}
       >
         <ThemeProvider attribute="class" defaultTheme="light">
@@ -91,3 +121,4 @@ export default function RootLayout({
     </html>
   );
 }
+

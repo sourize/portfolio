@@ -7,6 +7,7 @@ export const DATA = {
   initials: "SC",
   url: "https://sourish.xyz",
   resume: "/Sourish_Chatterjee.pdf",
+  prevImage: "/land.jpg" ,
   location: "WB, India",
   timeZone: "Asia/Kolkata",
   localCode: "en-IN",
