@@ -3,11 +3,11 @@ import { HomeIcon, UserIcon, PencilLine, Code } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 export const DATA = {
-  name: "Sourish Chatterjee | An Aspiring ML Engineer",
+  name: "Sourish Chatterjee",
   initials: "SC",
   url: "https://sourish.xyz",
   resume: "/Sourish_Chatterjee.pdf",
-  prevImage: "/favicon.ico" ,
+  prevImage: "/logo.png" ,
   location: "WB, India",
   timeZone: "Asia/Kolkata",
   localCode: "en-IN",
