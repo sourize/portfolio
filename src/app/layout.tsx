@@ -31,7 +31,6 @@ export const metadata: Metadata = {
     "Sourish Chatterjee Resume",
     "Sourish Chatterjee Contact",
     "Sourish Chatterjee Instagram",
-    "Sourish Chatterjee Youtube",
     "Sourish Chatterjee Email",
     "Sourish Chatterjee LinkedIn",
     "Sourish Chatterjee GitHub",
@@ -53,21 +52,21 @@ export const metadata: Metadata = {
   ],
   authors: [
     {
-      name: `${DATA.name}`,
+      name: DATA.name,
       url: DATA.url,
     },
   ],
-  creator: `${DATA.name}`,
+  creator: DATA.name,
   openGraph: {
-    title: `${DATA.name}`,
+    title: DATA.name,
     description: DATA.description,
     url: DATA.url,
     images: [
       {
-        url: DATA.prevImage,
+        url: `${DATA.url}/prevImage.jpg`, // Ensure `prevImage.jpg` is in the `public/` folder
       },
     ],
-    siteName: `${DATA.name}`,
+    siteName: DATA.name,
     locale: "en_US",
     type: "website",
   },
@@ -83,17 +82,17 @@ export const metadata: Metadata = {
     },
   },
   twitter: {
-    title: `${DATA.name}`,
+    title: DATA.name,
     card: "summary_large_image",
     site: DATA.url,
-    creator: `${DATA.name}`,
+    creator: DATA.name,
     description: DATA.description,
     images: [
       {
-        url: DATA.prevImage,
+        url: `${DATA.url}/prevImage.jpg`, // Ensure `prevImage.jpg` is in the `public/` folder
         width: 1200,
         height: 630,
-        alt: `${DATA.name}`,
+        alt: DATA.name,
       },
     ],
   },
@@ -107,16 +106,17 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="public/favicon.ico" sizes="any" />
-        <link rel="icon" href="public/icon-192x192.png" sizes="192x192" />
-        <link rel="icon" href="public/icon-512x512.png" sizes="512x512" />
-        <link rel="apple-touch-icon" href="public/apple-touch-icon.png" />
-        <link rel="manifest" href="public/site.webmanifest" />
+        {/* Corrected favicon and manifest paths */}
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/icon-192x192.png" sizes="192x192" />
+        <link rel="icon" href="/icon-512x512.png" sizes="512x512" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased max-w-2xl mx-auto py-12 sm:py-24 px-6",
-          fontSans.variable,
+          fontSans.variable
         )}
       >
         <ThemeProvider attribute="class" defaultTheme="light">
@@ -129,4 +129,3 @@ export default function RootLayout({
     </html>
   );
 }
-
