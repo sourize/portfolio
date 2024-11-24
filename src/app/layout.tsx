@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     url: DATA.url,
     images: [
       {
-        url: `${DATA.url}`,
+        url: `${DATA.prevImage}`,
         width: 1200,
         height: 630,
         alt: `${DATA.name}`,
@@ -93,7 +93,7 @@ export const metadata: Metadata = {
     description: DATA.description,
     images: [
       {
-        url: `${DATA.url}`,
+        url: `${DATA.prevImage}`,
         width: 1200,
         height: 630,
         alt: `${DATA.name}`,
