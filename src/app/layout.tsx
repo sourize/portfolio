@@ -107,11 +107,11 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" href="/icon-192x192.png" sizes="192x192" />
-        <link rel="icon" href="/icon-512x512.png" sizes="512x512" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="icon" href="public/favicon.ico" sizes="any" />
+        <link rel="icon" href="public/icon-192x192.png" sizes="192x192" />
+        <link rel="icon" href="public/icon-512x512.png" sizes="512x512" />
+        <link rel="apple-touch-icon" href="public/apple-touch-icon.png" />
+        <link rel="manifest" href="public/site.webmanifest" />
       </head>
       <body
         className={cn(
