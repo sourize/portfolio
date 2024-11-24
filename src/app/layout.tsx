@@ -65,6 +65,9 @@ export const metadata: Metadata = {
     images: [
       {
         url: `${DATA.url}`,
+        width: 1200,
+        height: 630,
+        alt: `${DATA.name}`,
       },
     ],
     siteName: `${DATA.name}`,
