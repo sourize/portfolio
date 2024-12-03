@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export const metadata = {
   title: "Thoughts & Insights",
-  description: "Exploring tech, life, and everything in between. Join me as I share my perspectives on various topics. I hope you find something intriguing!",
+  description: "Exploring tech, life, and everything in between",
 };
 
 const BLUR_FADE_DELAY = 0.04;
