@@ -4,7 +4,7 @@ export const PROJECTS = [
   {
     title: "NIFTY-50 Stock Prediction Model",
     href: "/blog/The-Nifty-50-Stock-Prediction-Using-Machine-Learning",
-    dates: "April 2023 - Present",
+    dates: "April 2023 - May 2023",
     featured: true,
     active: false,
     archived: false,
