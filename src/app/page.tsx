@@ -32,7 +32,7 @@ interface BlogsI {
 
 export default function Page() {
   return (
-    <main className="flex flex-col min-h-[50dvh] space-y-2">
+    <main className="flex flex-col min-h-[100dvh] space-y-6">
       <section id="hero" className="mt-5">
         <div className="mx-auto w-full max-w-4xl space-y-8">
           <div className="gap-2 flex justify-between">
