@@ -91,6 +91,18 @@ export const DATA = {
         link: "https://github.com/sourize/Data-Analysis-of-NIFTY-50-Dataset",
         certificate: "https://drive.google.com/file/d/1SuaJ0b2P5EgZkDH_D8b4AQpKMd0qZIxT/view?usp=drive_link",
     },
+    {
+      company: "Freelance Tutor",
+      badges: [],
+      href: " ",
+      location: "On-Site",
+      title: "Private Tutor",
+      logoUrl: "",
+      start: "Jan 2020",
+      end: "Present",
+      description:
+        "- Provided personalized tutoring to two students in subjects including Physics, Chemistry, Biology, Mathematics, English, and Computer Science.\n- Designed lesson plans tailored to individual learning styles and academic goals, ensuring subject comprehension and improved grades.\n- Supported students in developing critical thinking, problem-solving, and practical skills across multiple disciplines.\n- Built strong rapport with students to foster a positive and engaging learning environment.",
+    },
   ],
   education: [
     {
