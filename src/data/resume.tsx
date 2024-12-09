@@ -96,7 +96,7 @@ export const DATA = {
       badges: [],
       href: " ",
       location: "On-Site",
-      title: "Private Tutor",
+      title: "Private Tutor", 
       logoUrl: "",
       start: "Jan 2020",
       end: "Present",
