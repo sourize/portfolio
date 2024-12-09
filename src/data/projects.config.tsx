@@ -2,7 +2,7 @@ import { Icons } from "@/components/icons";
 
 export const PROJECTS = [
   {
-    title: "NIFTY-50 Stock Prediction Model",
+    title: "Nifty 50 Stock Prediction Model",
     href: "/blog/The-Nifty-50-Stock-Prediction-Using-Machine-Learning",
     dates: "April 2023 - May 2023",
     featured: true,
@@ -77,7 +77,7 @@ export const PROJECTS = [
     title: "Energy Consumption Prediction Model",
     href: "/blog/Energy-Consumption",
     dates: "Jul 2024 - Aug 2024",
-    featured: true,
+    featured: false,
     active: false,
     archived: false,
     description:
@@ -173,6 +173,64 @@ export const PROJECTS = [
       },
     ],
     image: "restaurant.jpeg",
+    video: "",
+  },
+  {
+    title: "Oil Spill Detection Using AIS Data and SAR Images (Hackathon Project)",
+    href: "/blog/SIH2024",
+    dates: "September 2024 - Present",
+    featured: true,
+    active: true,
+    archived: false,
+    description:
+      "Focused on building an AIS-based anomaly detection model for maritime oil spills",
+    technologies: [
+      "Python",
+      "Pandas",
+      "Numpy",
+      "Matplotlib",
+      "Data Preprocessing",
+      "Data Cleaning",
+      "Data Visualization",
+      "Scikit-learn",
+    ],
+    links: [
+      {
+        type: "Code",
+        href: "https://github.com/sourize/AIS_SIH2024",
+        icon: <Icons.github className="size-3" />,
+      },
+    ],
+    image: "ais.jpeg",
+    video: "",
+  },
+  {
+    title: "GPT from Scratch",
+    href: " ",
+    dates: "April 2023 - March 2024",
+    featured: true,
+    active: true,
+    archived: false,
+    description:
+      "Built a custom GPT model inspired by the 'Attention Is All You Need' research paper",
+    technologies: [
+      "Python",
+      "Pandas",
+      "Numpy",
+      "Matplotlib",
+      "Data Preprocessing",
+      "Data Cleaning",
+      "Data Visualization",
+      "Scikit-learn",
+    ],
+    links: [
+      {
+        type: "Code",
+        href: "https://github.com/sourize/gpt",
+        icon: <Icons.github className="size-3" />,
+      },
+    ],
+    image: "gpt.jpeg",
     video: "",
   },
 ];
