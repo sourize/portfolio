@@ -41,7 +41,7 @@ export default function Page() {
                 delay={BLUR_FADE_DELAY}
                 className="text-3xl font-bold tracking-tighter sm:text-4xl xl:text-5xl"
                 yOffset={8}
-                text={`Hey, I'm ${DATA.name.split(" ")[0]}🤖`}
+                text={`Hey, I'm ${DATA.name.split(" ")[0]} 🤖`}
               />
               <BlurFadeText
                 className="max-w-[600px] md:text-lg mt-2"
