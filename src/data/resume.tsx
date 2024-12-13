@@ -13,7 +13,7 @@ export const DATA = {
   localCode: "en-IN",
   locationLink: "",
   description:
-    "Aspiring ML Engineer/Data Scientist, transforming data into impactful insights! I am passionate about leveraging technology to address real-world challenges. With a focus on innovation, I strive to build intelligent solutions that create positive, lasting change.",
+    "Aspiring ML Engineer/Data Scientist, transforming data into impactful insights!",
   summary:
     "I'm a Computer Science undergrad at MSIT, specializing in AI and ML. Driven by a passion for technology, I'm focused on using data to tackle real-world challenges and create positive, lasting change.",
   career:
