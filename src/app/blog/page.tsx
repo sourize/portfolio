@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export const metadata = {
   title: "Blog",
-  description: "My thoughts on machine learning, life, and more.",
+  description: "sharing thoughts and insights while exploring tech, life, and everything in between....",
 };
 
 const BLUR_FADE_DELAY = 0.04;
@@ -21,10 +21,10 @@ export default async function BlogPage() {
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  Thoughts & Insights
+                  My Blogs
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Exploring tech, life, and everything in between. Join me as I share my perspectives on various topics. I hope you find something intriguing!
+                  sharing thoughts and insights while exploring tech, life, and everything in between....
                 </p>
               </div>
             </div>
@@ -52,7 +52,7 @@ export default async function BlogPage() {
                           title={post.metadata.title}
                           description={post.metadata.summary}
                           publishedAt={post.metadata.publishedAt}
-                          iconUrl={post.metadata.icon}
+                          //iconUrl={post.metadata.icon}
                           // readTime={post.metadata.readTime}
                         />
                       </BlurFade>

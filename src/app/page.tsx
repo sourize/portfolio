@@ -97,15 +97,15 @@ export default function Page() {
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-                  Latest Articles
+                  Latest Blogs
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  Insights from My Journey
+                  My Blogs
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  I&apos;ve written some blogs on my learning journey, projects, ML, and some other stuff.{" "}
+                sharing thoughts and insights while exploring tech, life, and everything in between....{" "}
                   <Link href="/blog" className="text-blue-500 hover:underline">
-                    checkout my blog page
+                    checkout more!!
                   </Link>
                   .
                 </p>
@@ -132,7 +132,7 @@ export default function Page() {
                         title={post.metadata.title}
                         description={post.metadata.summary}
                         publishedAt={post.metadata.publishedAt}
-                        iconUrl={post.metadata.icon}
+                        //iconUrl={post.metadata.icon}
                         // readTime={post.metadata.readTime} // Commented out as per the new requirement
                       />
                     </BlurFade>
