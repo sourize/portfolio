@@ -13,10 +13,9 @@ import { LocateFixed, Paperclip } from 'lucide-react';
 import { SKILLS } from "@/data/skills.config";
 import { PROJECTS } from "@/data/projects.config";
 import { DATA } from "@/data/resume";
-import { BlogCard } from "@/components/blog-card";
 import Link from "next/link";
 import Markdown from "react-markdown";
-import { INFO } from './about/about';
+import { BlogCard } from "@/components/blog-card";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -55,16 +54,16 @@ export default function Page() {
   }, [blogPosts.length]);
 
   return (
-    <main className="flex flex-col min-h-[100dvh] space-y-6">
-      <section id="hero" className="mt-5">
-        <div className="mx-auto w-full max-w-4xl space-y-8">
+    <main className="flex flex-col min-h-[100dvh] space-y-10">
+      <section id="hero">
+        <div className="mx-auto w-full max-w-2xl space-y-8">
           <div className="gap-2 flex justify-between">
             <div className="flex-col flex flex-1 space-y-1.5">
               <BlurFadeText
                 delay={BLUR_FADE_DELAY}
-                className="text-3xl font-bold tracking-tighter sm:text-4xl xl:text-5xl"
+                className="text-3xl font-bold tracking-tighter sm:text-4xl xl:text-5xl/none"
                 yOffset={8}
-                text={`👋🏼 hey, i'm sourish`}
+                text={`Hey, I'm ${DATA.name.split(" ")[0]} 👋`}
               />
               <BlurFadeText
                 className="max-w-[600px] md:text-lg mt-2"
@@ -83,14 +82,33 @@ export default function Page() {
       </section>
       <section id="about">
         <BlurFade delay={BLUR_FADE_DELAY * 3}>
-          <h2 className="text-xl font-bold">about</h2>
+          <h2 className="text-2xl font-bold">About Me</h2>
         </BlurFade>
         <BlurFade delay={BLUR_FADE_DELAY * 4}>
-          <Markdown className="prose max-w-full text-pretty font-sans text-base text-muted-foreground dark:prose-invert">
+          <Markdown className="prose max-w-full text-pretty font-sans text-base text-muted-foreground dark:prose-invert justify">
             {DATA.summary}
           </Markdown>
         </BlurFade>
       </section>
+      {/* <section id="photos">
+        <div className="columns-2 gap-4 sm:columns-3">
+          {Array.from({ length: 9 }, (_, i) => {
+            const isLandscape = i % 2 === 0;
+            const width = isLandscape ? 800 : 600;
+            const height = isLandscape ? 600 : 800;
+            return `/gallery/${i + 1}.jpg`;
+          }).map((imageUrl, idx) => (
+            <BlurFade key={imageUrl} delay={0.25 + idx * 0.05} inView>
+              <img
+                className="mb-4 size-full rounded-lg object-contain"
+                src={imageUrl}
+                alt={`Random stock image ${idx + 1}`}
+              />
+            </BlurFade>
+          ))}
+        </div>
+      </section> */}
+    
       <section id="blogs">
         <div className="space-y-12 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 11}>
@@ -133,7 +151,7 @@ export default function Page() {
                         description={post.metadata.summary}
                         publishedAt={post.metadata.publishedAt}
                         iconUrl={post.metadata.icon}
-                        // readTime={post.metadata.readTime} // Commented out as per the new requirement
+                        // readTime={post.metadata.readTime}
                       />
                     </BlurFade>
                   ))}
@@ -144,19 +162,17 @@ export default function Page() {
       </section>
       <section id="projects">
         <div className="flex flex-col items-center">
-        <BlurFade delay={BLUR_FADE_DELAY * 5}>
           <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
             Featured Projects
           </div>
-          </BlurFade>
           <BlurFade delay={BLUR_FADE_DELAY * 11}>
             <div className="space-y-12 w-full">
               <div className="flex flex-col items-center justify-center space-y-4 text-center">
                 <div className="space-y-2">
-                  <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl mt-2">
+                  <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl mt-2">
                     Some of my projects
                   </h2>
-                  <p className="text-muted-foreground md:text-l/relaxed lg:text-base/relaxed l:text-l/relaxed">
+                  <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                     I&apos;ve worked on a variety of ML projects and Data Analytics projects. Here are a few of my favorites.
                     You can find more on my{" "}
                     <Link
@@ -205,7 +221,7 @@ export default function Page() {
                 <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
                   Hackathons
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl mt-2">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
                   I like building things
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
@@ -247,7 +263,7 @@ export default function Page() {
               <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
                 Contact
               </div>
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl mt-2">
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
                 Get in Touch
               </h2>
               <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
@@ -281,6 +297,12 @@ export default function Page() {
       <footer className="mt-20 pb-8 text-center text-sm text-muted-foreground">
         <BlurFade delay={BLUR_FADE_DELAY * 19}>
           <p>© Sourish Chatterjee 2024</p>
+          <p className="mt-2">
+            Template by{" "}
+            <Link href="https://x.com/dillionverma" className="text-blue-500 hover:underline">
+              Dhillon Verma
+            </Link>
+          </p>
         </BlurFade>
       </footer>
     </main>
