@@ -15,7 +15,7 @@ export const DATA = {
   description:
     "Aspiring ML Engineer/Data Scientist, transforming data into impactful insights!",
   summary:
-    "I'm a Computer Science undergrad at MSIT, specializing in AI and ML. Driven by a passion for technology, I'm focused on using data to tackle real-world challenges and create positive, lasting change.",
+    " Currently a CSE 3rd yr undergrad specializing in AI and ML\n\n- Preparing for my upcoming endsem 🙌 \n- As well as exploring & working on LSTM, forecasting and transformer.\n\n Want to learn more? [Click here](/about). \n\nI've worked on a few projects. Here are some of them! 👇",
   career:
     "My journey in AI and machine learning revolves around building smart solutions that have a real impact. I'm always seeking to innovate and explore new ways to shape the future through technology. Want to learn more? [Click here](/about).",
   avatarUrl: "/sourish.png",

@@ -23,17 +23,12 @@ export const PROJECTS = [
     links: [
       {
         type: "Read More",
-        href: "/blog/The-Nifty-50-Stock-Prediction-Using-Machine-Learning",
+        href: "/blog/Predicting-NIFTY50-Stock-Prices-with-LSTM.mdx",
         icon: <Icons.globe className="size-3" />,
       },
       {
         type: "Code",
         href: "https://github.com/sourize/The-Nifty-50-Stock-Prediction-using-Machine-Learning",
-        icon: <Icons.github className="size-3" />,
-      },
-      {
-        type: "Live Website",
-        href: "https://nifty50stockprediction.streamlit.app/",
         icon: <Icons.github className="size-3" />,
       },
     ],

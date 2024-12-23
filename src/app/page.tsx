@@ -41,7 +41,7 @@ export default function Page() {
                 delay={BLUR_FADE_DELAY}
                 className="text-3xl font-bold tracking-tighter sm:text-4xl xl:text-5xl"
                 yOffset={8}
-                text={`Hey, I'm ${DATA.name.split(" ")[0]} 🤖`}
+                text={`👋🏼 hey, i'm sourish`}
               />
               <BlurFadeText
                 className="max-w-[600px] md:text-lg mt-2"
@@ -60,7 +60,7 @@ export default function Page() {
       </section>
       <section id="about">
         <BlurFade delay={BLUR_FADE_DELAY * 3}>
-          <h2 className="text-xl font-bold">About Me</h2>
+          <h2 className="text-xl font-bold">about</h2>
         </BlurFade>
         <BlurFade delay={BLUR_FADE_DELAY * 4}>
           <Markdown className="prose max-w-full text-pretty font-sans text-base text-muted-foreground dark:prose-invert">

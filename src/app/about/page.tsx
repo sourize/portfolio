@@ -20,16 +20,16 @@ export default function About() {
           delay={BLUR_FADE_DELAY}
           className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
           yOffset={8}
-          text={`Hey There, I'm Sourish 👋🏼`}
+          text={`Welcome to my digital abode!`}
         />
         <br>
         
         </br>
-        <BlurFade delay={BLUR_FADE_DELAY * 2}>
-          <p className="text-base text-muted-foreground mb-6">
-            Welcome to my digital abode!
-          </p>
-        </BlurFade>
+        {/* <BlurFade delay={BLUR_FADE_DELAY * 2}> */}
+          {/* <p className="text-base text-muted-foreground mb-6"> */}
+            {/* Welcome to my digital abode! */}
+          {/* </p> */}
+        {/* </BlurFade> */}
         <BlurFade delay={BLUR_FADE_DELAY * 3}>
           <Image
             src="/land.jpg"
