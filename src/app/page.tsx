@@ -102,7 +102,7 @@ export default function Page() {
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl mt-2">
                   My Blogs
                 </h2>
-                <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                <p className="text-muted-foreground md:text-l/relaxed lg:text-base/relaxed l:text-l/relaxed">
                 sharing thoughts and insights while exploring tech, life, and everything in between....{" "}
                   <Link href="/blog" className="text-blue-500 hover:underline">
                     checkout more!!
