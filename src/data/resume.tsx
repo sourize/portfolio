@@ -15,7 +15,7 @@ export const DATA = {
   description:
     "an aspiring ml engineer/data scientist, transforming data into impactful insights!",
   summary:
-    "Currently a CSE 3rd yr undergrad specializing in *AI and ML*. \n\n I'm passionate about creating impactful models that push boundaries, blending creativity with cutting-edge technology. Proficient in Python, C, and machine learning techniques, with a knack for solving real-world problems through data-driven insights.\n For now I am -\n\n- Preparing for my upcoming endsem 🙌 \n- As well as exploring & working on LSTM, forecasting and transformer.\n\n- I Implemented LSTM in stock prediction, [check it out](/blog/Predicting-NIFTY50-Stock-Prices-with-LSTM) \n\n Want to learn more? [Click here](/about).",
+    "I'm a 3rd-year CSE undergraduate specializing in **AI and ML**. With a strong foundation in Python, C, and advanced machine learning techniques, I thrive on solving real-world challenges with data-driven solutions. My focus lies in blending creativity with cutting-edge technology to push boundaries and create impactful models.\n\n **Currently, I’m:** -\n\n- Preparing for my upcoming end-semester exams 🙌 \n- Exploring advanced topics like **LSTM, forecasting, and transformer** models to expand my skill set.\n\n- Delving into stock prediction models using LSTM — [check it out](/blog/Predicting-NIFTY50-Stock-Prices-with-LSTM) \n\n Want to learn more? [Click here](/about).",
   avatarUrl: "/sourish.jpg",
   navbar: [
 
