@@ -103,7 +103,7 @@ export default function Page() {
                   My Blogs
                 </h2>
                 <p className="text-muted-foreground md:text-l/relaxed lg:text-base/relaxed l:text-l/relaxed">
-                sharing thoughts and insights while exploring tech, life, and everything in between....{" "}
+                exploring tech, life, and everything in between....{" "}
                   <Link href="/blog" className="text-blue-500 hover:underline">
                     checkout more!!
                   </Link>
