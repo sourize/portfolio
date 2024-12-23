@@ -2,14 +2,14 @@ import { Icons } from "@/components/icons";
 
 export const PROJECTS = [
   {
-    title: "Nifty 50 Stock Prediction Model",
-    href: "/blog/The-Nifty-50-Stock-Prediction-Using-Machine-Learning",
+    title: "Predicting NIFTY50 Stock Prices with LSTM",
+    href: "/blog/Predicting-NIFTY50-Stock-Prices-with-LSTM",
     dates: "April 2023 - May 2023",
     featured: true,
     active: false,
     archived: false,
     description:
-      "A Predictive Model to predict Nifty-50 Stock.",
+      "A Predictive Model to predict Nifty-50 Stock using LSTM and Random Forest Regression",
     technologies: [
       "Python",
       "Pandas",
@@ -23,7 +23,7 @@ export const PROJECTS = [
     links: [
       {
         type: "Read More",
-        href: "/blog/Predicting-NIFTY50-Stock-Prices-with-LSTM.mdx",
+        href: "/blog/Predicting-NIFTY50-Stock-Prices-with-LSTM",
         icon: <Icons.globe className="size-3" />,
       },
       {
