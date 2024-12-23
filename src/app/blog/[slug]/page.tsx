@@ -1,16 +1,7 @@
-import { Button } from "@/components/ui/button";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
 import { getPost } from "@/data/blog";
 import { DATA } from "@/data/resume";
 import { formatDate } from "@/lib/utils";
-import { ChevronLeft } from "lucide-react";
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
 
@@ -69,14 +60,7 @@ export async function generateMetadata({
       site: DATA.url,
       creator: `${DATA.name}`,
       description,
-      images: [
-        {
-          url: ogImage,
-          width: 1200,
-          height: 630,
-          alt: `${DATA.name}`,
-        },
-      ],
+      images: [ogImage],
     },
   };
 }
@@ -119,38 +103,20 @@ export default async function Blog({
             }),
           }}
         />
-        <div className="flex justify-between items-center mb-2 text-sm max-w-[650px]">
+        <div className="flex justify-start items-center mb-2 text-sm max-w-[650px]">
           <Suspense fallback={<p className="h-5" />}>
             <p className="text-sm text-neutral-600 dark:text-neutral-400">
               - {formatDate(post.metadata.publishedAt)}
             </p>
           </Suspense>
-          <TooltipProvider>
-            <Tooltip>
-              <TooltipTrigger>
-                <Link href="/blog">
-                  <Button
-                    size={"icon"}
-                    variant={"ghost"}
-                    className="hover:animate-pulse"
-                  >
-                    <ChevronLeft className="size-5" />
-                  </Button>
-                </Link>
-              </TooltipTrigger>
-              <TooltipContent>
-                <p>Back to blogs</p>
-              </TooltipContent>
-            </Tooltip>
-          </TooltipProvider>
         </div>
         <h1 className="title font-bold md:text-5xl text-3xl tracking-tighter max-w-[650px]">
           {post.metadata.title}
         </h1>
         <div className="flex justify-start items-center mt-2 mb-8 text-sm max-w-[650px]">
-          <p className="text-sm text-neutral-600 dark:text-neutral-400 ml-1">
+          {/* <p className="text-sm text-neutral-600 dark:text-neutral-400 ml-1">
             - it&apos;s a &quot;{post.metadata.readTime} read&quot; blog.
-          </p>
+          </p> */}
         </div>
         <article
           className="prose dark:prose-invert md:mb-0 mb-10"

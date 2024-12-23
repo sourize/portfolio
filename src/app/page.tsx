@@ -48,8 +48,11 @@ export default function Page() {
         console.error("Error fetching blog posts:", error);
       }
     };
-    fetchBlogPosts();
-  }, []);
+
+    if (blogPosts.length === 0) {
+      fetchBlogPosts();
+    }
+  }, [blogPosts.length]);
 
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-6">
@@ -88,37 +91,55 @@ export default function Page() {
           </Markdown>
         </BlurFade>
       </section>
-      <section id="career">
-        <BlurFade delay={BLUR_FADE_DELAY * 3}>
-          <h2 className="text-xl font-bold">blogs</h2>
-        </BlurFade>
-        <div className="flex flex-col gap-3 w-full">
-          <BlurFade delay={BLUR_FADE_DELAY * 14}>
-            <ul className="divide-y divide-dashed">
-              {blogPosts
-                .filter((post) => post.metadata.featured)
-                .sort(
-                  (a, b) =>
-                    new Date(b.metadata.publishedAt).getTime() -
-                    new Date(a.metadata.publishedAt).getTime(),
-                )
-                .map((post, id) => (
-                  <BlurFade
-                    key={post.slug}
-                    delay={BLUR_FADE_DELAY * 12 + id * 0.05}
-                  >
-                    <BlogCard
-                      href={`/blog/${post.slug}`}
-                      title={post.metadata.title}
-                      description={post.metadata.summary}
-                      publishedAt={post.metadata.publishedAt}
-                      iconUrl={post.metadata.icon}
-                      readTime={post.metadata.readTime}
-                    />
-                  </BlurFade>
-                ))}
-            </ul>
+      <section id="blogs">
+        <div className="space-y-12 w-full py-12">
+          <BlurFade delay={BLUR_FADE_DELAY * 11}>
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+                  Latest Articles
+                </div>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                  Insights from My Journey
+                </h2>
+                <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  I&apos;ve written some blogs on my learning journey, projects, ML, and some other stuff.{" "}
+                  <Link href="/blog" className="text-blue-500 hover:underline">
+                    checkout my blog page
+                  </Link>
+                  .
+                </p>
+              </div>
+            </div>
           </BlurFade>
+          <div className="flex flex-col gap-3 w-full">
+            <BlurFade delay={BLUR_FADE_DELAY * 14}>
+              <ul className="divide-y divide-dashed">
+                {blogPosts
+                  .filter((post) => post.metadata.featured)
+                  .sort(
+                    (a, b) =>
+                      new Date(b.metadata.publishedAt).getTime() -
+                      new Date(a.metadata.publishedAt).getTime()
+                  )
+                  .map((post, id) => (
+                    <BlurFade
+                      key={post.slug}
+                      delay={BLUR_FADE_DELAY * 12 + id * 0.05}
+                    >
+                      <BlogCard
+                        href={`/blog/${post.slug}`}
+                        title={post.metadata.title}
+                        description={post.metadata.summary}
+                        publishedAt={post.metadata.publishedAt}
+                        iconUrl={post.metadata.icon}
+                        // readTime={post.metadata.readTime} // Commented out as per the new requirement
+                      />
+                    </BlurFade>
+                  ))}
+              </ul>
+            </BlurFade>
+          </div>
         </div>
       </section>
       <section id="projects">

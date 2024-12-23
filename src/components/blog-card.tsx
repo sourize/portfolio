@@ -12,7 +12,7 @@ import React from "react";
 interface BlogCardProps {
   iconUrl: string;
   title: string;
-  readTime?: string;
+  // readTime?: string;
   href?: string;
   badges?: readonly string[];
   publishedAt: string;
@@ -24,7 +24,7 @@ export const BlogCard = ({
   badges,
   description,
   iconUrl,
-  readTime,
+  // readTime,
   publishedAt,
 }: BlogCardProps) => {
   return (
@@ -60,9 +60,9 @@ export const BlogCard = ({
                   )}
                 />
               </h3>
-              <div className="text-xs sm:text-sm tabular-nums text-muted-foreground text-right">
+              {/* <div className="text-xs sm:text-sm tabular-nums text-muted-foreground text-right">
                 {readTime} read
-              </div>
+              </div> */}
             </div>
             {publishedAt && (
               <div className="font-sans text-xs text-muted-foreground my-1">
