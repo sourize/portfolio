@@ -13,6 +13,7 @@ import { LocateFixed, Paperclip } from 'lucide-react';
 import { SKILLS } from "@/data/skills.config";
 import { PROJECTS } from "@/data/projects.config";
 import { DATA } from "@/data/resume";
+import { BlogCard } from "@/components/blog-card";
 import Link from "next/link";
 import Markdown from "react-markdown";
 import { INFO } from './about/about';
@@ -32,6 +33,24 @@ interface BlogsI {
 }
 
 export default function Page() {
+  const [blogPosts, setBlogPosts] = useState<BlogsI[]>([]);
+
+  useEffect(() => {
+    const fetchBlogPosts = async () => {
+      try {
+        const response = await fetch("/api/blogs");
+        if (!response.ok) {
+          throw new Error("Failed to fetch blog posts");
+        }
+        const data = await response.json();
+        setBlogPosts(data);
+      } catch (error) {
+        console.error("Error fetching blog posts:", error);
+      }
+    };
+    fetchBlogPosts();
+  }, []);
+
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-6">
       <section id="hero" className="mt-5">
@@ -73,11 +92,34 @@ export default function Page() {
         <BlurFade delay={BLUR_FADE_DELAY * 3}>
           <h2 className="text-xl font-bold">blogs</h2>
         </BlurFade>
-        <BlurFade delay={BLUR_FADE_DELAY * 4}>
-          <Markdown className="prose max-w-full text-pretty font-sans text-base text-muted-foreground dark:prose-invert">
-            {INFO.blog}
-          </Markdown>
-        </BlurFade>
+        <div className="flex flex-col gap-3 w-full">
+          <BlurFade delay={BLUR_FADE_DELAY * 14}>
+            <ul className="divide-y divide-dashed">
+              {blogPosts
+                .filter((post) => post.metadata.featured)
+                .sort(
+                  (a, b) =>
+                    new Date(b.metadata.publishedAt).getTime() -
+                    new Date(a.metadata.publishedAt).getTime(),
+                )
+                .map((post, id) => (
+                  <BlurFade
+                    key={post.slug}
+                    delay={BLUR_FADE_DELAY * 12 + id * 0.05}
+                  >
+                    <BlogCard
+                      href={`/blog/${post.slug}`}
+                      title={post.metadata.title}
+                      description={post.metadata.summary}
+                      publishedAt={post.metadata.publishedAt}
+                      iconUrl={post.metadata.icon}
+                      readTime={post.metadata.readTime}
+                    />
+                  </BlurFade>
+                ))}
+            </ul>
+          </BlurFade>
+        </div>
       </section>
       <section id="projects">
         <div className="flex flex-col items-center">
