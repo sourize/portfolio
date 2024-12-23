@@ -15,7 +15,7 @@ export const DATA = {
   description:
     "an aspiring ml engineer/data scientist, transforming data into impactful insights!",
   summary:
-    " Currently a CSE 3rd yr undergrad specializing in AI and ML\n\n- Preparing for my upcoming endsem 🙌 \n- As well as exploring & working on LSTM, forecasting and transformer.\n\n Want to learn more? [Click here](/about).",
+    "Currently a CSE 3rd yr undergrad specializing in AI and ML\n Passionate about creating impactful models that push boundaries, blending creativity with cutting-edge technology. Proficient in Python, C, and machine learning techniques, with a knack for solving real-world problems through data-driven insights.\n For now I am -\n\n- Preparing for my upcoming endsem 🙌 \n- As well as exploring & working on LSTM, forecasting and transformer.\n\n Want to learn more? [Click here](/about).",
   avatarUrl: "/sourish.png",
   navbar: [
 
