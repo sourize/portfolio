@@ -24,7 +24,7 @@ export default async function BlogPage() {
                   Insights & Explorations
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Exploring technology, life's nuances, and everything in between.
+                  Exploring technology, life&apos;s nuances, and everything in between.
                 </p>
               </div>
             </div>
