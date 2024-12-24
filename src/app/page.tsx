@@ -99,11 +99,11 @@ export default function Page() {
                 <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
                   Latest Blogs
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl mt-2">
-                  My Blogs
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl mt-2">               
+                  Insights & Explorations
                 </h2>
                 <p className="text-muted-foreground md:text-l/relaxed lg:text-base/relaxed l:text-l/relaxed">
-                exploring tech, life, and everything in between....{" "}
+                exploring technology, life&apos;s nuances, and everything in between.{" "}
                   <Link href="/blog" className="text-blue-500 hover:underline">
                     checkout more!!
                   </Link>
