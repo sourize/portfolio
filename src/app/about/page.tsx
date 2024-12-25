@@ -32,7 +32,7 @@ export default function About() {
         {/* </BlurFade> */}
         <BlurFade delay={BLUR_FADE_DELAY * 3}>
           <Image
-            src="/land.jpg"
+            src="/land.webp"
             alt="Landscape"
             width={1920}
             height={1080}
