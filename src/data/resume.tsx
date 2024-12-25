@@ -16,7 +16,7 @@ export const DATA = {
     "an aspiring ml engineer/data scientist, transforming data into impactful insights!",
   summary:
     "I'm a 3rd-year CSE undergrad specializing in _AI and ML_, thriving on solving real-world challenges with data-driven solutions. My focus lies in blending creativity with cutting-edge technology to push boundaries and create impactful models.\n\n **Currently, I'm:** -\n\n- Preparing for my upcoming end-semester exams 🙌 \n- Exploring advanced topics like **LSTM, forecasting, and transformer** models to expand my skill set.\n\n- Applied my LSTM knowledge in stock prediction models — [check it out](/blog/Predicting-NIFTY50-Stock-Prices-with-LSTM) \n\n I'm always eager to learn, innovate, and collaborate. Want to know more? [Click here](/about).",
-  avatarUrl: "/sourishc.png",
+  avatarUrl: "/sourishc.webp",
   navbar: [
 
 
@@ -107,7 +107,7 @@ export const DATA = {
       school: "Meghnad Saha Institute of Technology",
       href: "https://msit.edu.in",
       degree: "B.Tech in CSE with Specialization in AI & ML",
-      logoUrl: "/msit.png",
+      logoUrl: "/msit.webp",
       start: "2022",
       end: "2026",
     },
@@ -115,7 +115,7 @@ export const DATA = {
       school: "DPS Ruby Park",
       href: "https://www.dpskolkata.com/",
       degree: "Class 12th",
-      logoUrl: "/dpsrpk.png",
+      logoUrl: "/dpsrpk.webp",
       start: "2020",
       end: "2022",
     },
@@ -123,7 +123,7 @@ export const DATA = {
       school: "Ram Mohan Mission High School",
       href: "",
       degree: "Class 10th",
-      logoUrl: "/rmmhs.png",
+      logoUrl: "/rmmhs.webp",
       start: "2007",
       end: "2020",
     },
@@ -326,7 +326,7 @@ export const DATA = {
       location: "",
       description:
         "Developing a project that can detect oil spills in marine environment using AIS data and Satellite Imagery.",
-      image:"SIH-Logo.png",
+      image:"SIH-Logo.webp",
       links: [
         {
           type: "My Certificate",
