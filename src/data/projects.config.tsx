@@ -32,7 +32,7 @@ export const PROJECTS = [
         icon: <Icons.github className="size-3" />,
       },
     ],
-    image: "nifty50.jpeg",
+    image: "nift50epg.webp",
     video: "",
   },
   {
