@@ -52,7 +52,7 @@ export default async function BlogPage() {
                           title={post.metadata.title}
                           description={post.metadata.summary}
                           publishedAt={post.metadata.publishedAt}
-                          //iconUrl={post.metadata.icon}
+                          iconUrl={post.metadata.icon}
                           // readTime={post.metadata.readTime}
                         />
                       </BlurFade>

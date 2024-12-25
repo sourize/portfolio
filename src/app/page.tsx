@@ -132,7 +132,7 @@ export default function Page() {
                         title={post.metadata.title}
                         description={post.metadata.summary}
                         publishedAt={post.metadata.publishedAt}
-                        //iconUrl={post.metadata.icon}
+                        iconUrl={post.metadata.icon}
                         // readTime={post.metadata.readTime} // Commented out as per the new requirement
                       />
                     </BlurFade>
